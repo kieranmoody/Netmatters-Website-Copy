@@ -3,6 +3,19 @@ header .icon-phone_in_talk {
     font-size: 32px;
 }
 
+.icons {
+    font-size: 32px;
+    border-radius: 50%;
+    height: 65px;
+    width: 65px;
+    margin: 0 auto 17px;
+    display: block;
+    text-align: center;
+    color: white;
+    font-weight: 400;
+    line-height: 62px;
+}
+
 .icon-menu {
     font-size: 32px;
     display: table-cell;
@@ -27,79 +40,33 @@ header .icon-phone_in_talk {
 }
 
 /*Services Icons*/
-.icon-app_settings_alt {
-    font-size: 32px;
-    background-color: aqua;
-    border-radius: 50%;
-    height: 65px;
-    width: 65px;
-    margin: 0 auto 17px;
-    display: block;
-    text-align: center;
+
+
+
+#consultancy .icons{
+    background-color: #67809f;
 }
 
-.icon-display {
-    font-size: 32px;
-    background-color: aqua;
-    border-radius: 50%;
-    height: 65px;
-    width: 65px;
-    margin: 0 auto 17px;
-    display: block;
-    text-align: center;
+#it-support .icons {
+    background-color: #4183d7;
 }
 
-.icon-bar-graph {
-    font-size: 32px;
-    background-color: aqua;
-    border-radius: 50%;
-    height: 65px;
-    width: 65px;
-    margin: 0 auto 17px;
-    display: block;
-    text-align: center;
+#marketing .icons {
+    background-color: #2ecc71;
 }
 
-.service-box .icon-phone_in_talk {
-    font-size: 32px;
-    background-color: aqua;
-    border-radius: 50%;
-    height: 65px;
-    width: 65px;
-    margin: 0 auto 17px;
-    display: block;
-    text-align: center;
+#telecoms .icons {
+    background-color: #d64541;
 }
 
-.icon-embed2 {
-    font-size: 32px;
-    background-color: aqua;
-    border-radius: 50%;
-    height: 65px;
-    width: 65px;
-    margin: 0 auto 17px;
-    display: block;
-    text-align: center;
+#web-design .icons {
+    background-color: #926fb1;
 }
 
-.icon-security {
-    font-size: 32px;
-    background-color: aqua;
-    border-radius: 50%;
-    height: 65px;
-    width: 65px;
-    margin: 0 auto 17px;
-    display: block;
-    text-align: center;
+#security .icons{
+    background-color: #f62459;
 }
 
-.icon-school {
-    font-size: 32px;
-    background-color: aqua;
-    border-radius: 50%;
-    height: 65px;
-    width: 65px;
-    margin: 0 auto 17px;
-    display: block;
-    text-align: center;
+#training .icons {
+    background-color: #ce4125;
 }

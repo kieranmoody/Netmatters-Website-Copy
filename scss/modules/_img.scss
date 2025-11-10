@@ -1,6 +1,17 @@
+/*
 #still-bar {
     background-image: url("../images/scrollbar1-still.jpg");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+}
+*/
+
+
+#still-bar img {
+    object-fit: cover;
+    height:100%;
+    position: relative;
+    z-index: 1;
+    opacity: 0.5;
 }
