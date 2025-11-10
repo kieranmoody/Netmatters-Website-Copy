@@ -1,0 +1,256 @@
+
+/*Header*/
+
+#still-bar {
+    height: 550px;
+}
+
+header img {
+    height: auto;
+    width: 50%;
+
+    display: block;
+}
+
+input {
+    border: 2px solid rgba(0,0,0,0.2);
+    background-color: rgba(0,0,0,0.2);
+}
+
+/*Still Bar*/
+#still-bar {
+    text-align: center;
+    padding-top: 60px;
+    color: white;
+}
+
+#still-bar h1 {
+    margin-top: 0;
+    margin-bottom: 20px;
+    font-size: 2.5rem;
+    font-weight: 600;
+}
+
+#still-bar div {
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-bottom: 0.375rem;
+    line-height: 1.75rem;
+    letter-spacing: 0.4px;
+}
+
+#still-bar button {
+    margin-top: 1.938rem;
+    margin-bottom: 1.125rem;
+    padding: 5px 20px;
+    font-size: 1.25rem;
+    background-color: #926fb1;
+    border: outset 1px #926fb1;
+    height: auto;
+    border-radius: 3px;
+    line-height: 50px;
+    text-transform: uppercase;
+    color: white;
+}
+
+/*Services*/
+#services {
+    text-align: center;
+}
+
+#services h1 {
+    text-align: left;
+}
+
+#services .service-box {
+    padding: 30px;
+    margin-top: 30px;
+    border: 1px solid rgb(204,204,204);
+    border-radius: 25px;
+    box-shadow: 0 3px 35px rgba(0, 0, 0, 0.1);
+    text-decoration: none;
+    color: rgb(51, 54, 69);
+    display: block;
+}
+
+
+.service-box h3 {
+    margin-bottom: 11px;
+    padding-bottom: 10px;
+    font-size: 1.3rem;
+    font-style: normal;
+    font-weight: 400;
+}
+
+.service-box .service-desc{
+    margin-bottom: 13px; 
+    line-height: 1.375rem;
+    display: block;
+    font-size: 0.8125rem;
+}
+
+.service-box button {
+    padding: 5px 15px;
+    background-color: rgb(247, 179, 34);
+    border-radius: 3px;
+    border-color: #f7b322;
+    font-size: 1.063rem;
+    line-height: 35px;
+    color: white;
+    box-shadow: none;
+}
+
+/*Welcome to Netmatters*/
+
+#welcome {
+    padding: 50px 15px;
+    color: white;
+}
+
+#welcome h1 {
+    margin-top: -6px;
+    margin-bottom: 40px;
+    font-size: 2.25em;
+}
+
+#five-stars span {
+    color: orange;
+    font-size: 50px;
+    display: inline-block;
+    text-align: left;
+}
+
+.netmatters-is {
+    margin-bottom: 25px;
+    display: block;
+    text-align: left;
+    line-height: 1.875rem;
+}
+
+.netmatters-is #intro {
+    font-weight: 600;
+}
+
+#welcome h2 {
+    margin-top: -6px;
+    margin-bottom: 40px;
+    font-size: 2.25rem;
+    font-weight: 400;
+    line-height: 1.1;
+}
+
+#welcome blockquote {
+    margin: 0 0 25px 0;
+    font-size: 1.3rem;
+    font-style: italic;
+    font-weight: 600;
+    line-height: 1.875rem;
+    letter-spacing: 0.4px;
+}
+
+#citation {
+    display: block;
+    margin-bottom: 25px;
+    line-height: 1.875rem;
+    font-size: 1.1rem;
+    letter-spacing: 0.4px;
+}
+
+#citation p {
+    color: #a3a8ac;
+}
+
+#citation a {
+    color: white;
+    font-weight: 600;
+}
+
+#google,
+#trustpilot {
+    padding: 10px 30px;
+    font-size: 20px;
+    margin: 20px 8px 0 0;
+    border-radius: 6px;
+    color: white;
+    line-height: 1.42857143;
+    height: auto;
+    border: 0px;
+    display: inline-block;
+}
+
+#google {
+    background-color: rgb(67, 135, 246);
+
+}
+
+#trustpilot {
+    background-color: rgb(0, 182, 123);
+}
+
+#reviews {
+    color: white;
+}
+
+/*articles*/
+
+#articles {
+padding-top: 50px;
+}
+
+#articles h2 {
+    color: #333645;
+    font-weight: 600;
+    font-size: 2.5rem;
+}
+
+#software {
+    padding: 0 15px;
+    display: block;
+}
+
+#ai {
+    padding: 0 15px;
+    display: block;
+}
+
+#job {
+    padding: 0 15px;
+    display: block;
+}
+/*footer*/
+
+footer li {
+    list-style-type: none;
+    padding: 0;
+    font-size: 0.8125rem;
+    line-height: 1.375rem;
+}
+
+footer h6 {
+    font-size: 1rem;
+    margin-bottom: 26px;
+    font-weight: 400;
+}
+
+footer {
+    padding: 0;
+    color: white;
+}
+
+footer a {
+    text-decoration: none;
+}
+
+footer a:-webkit-any-link {
+  color: white;
+}
+
+footer #floor-wrapper {
+    display: block;
+    margin-left: 0;
+    width: 100%;
+    padding: 15px 15px 10px 15px;
+    font-size: 0.8125rem;
+    line-height: 1.42857143;
+    letter-spacing: 0.4px;
+}

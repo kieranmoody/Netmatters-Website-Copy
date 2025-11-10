@@ -1,0 +1,40 @@
+@use '../utilities/index' as utilities;
+
+html {
+    font-family: "Poppins", sans-serif;
+}
+
+* {
+    box-sizing:border-box;
+    vertical-align: middle;
+}
+
+.container {
+    padding: 0 15px 0 15px;
+    width: auto;
+    display:block;
+}
+
+img {
+    max-width: 100%;
+}
+/*Background colors*/
+
+body {
+    background-color: utilities.$background-color;
+}
+
+header, 
+#services .service-box,
+#articles article {
+    background-color: utilities.$background-base-color;
+}
+
+#welcome,
+footer      {
+    background-color: utilities.$alternative-color;
+}
+
+#floor-wrapper {
+    background-color: utilities.$bottom-color;
+}
