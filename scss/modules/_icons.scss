@@ -5,14 +5,26 @@ header .icon-phone_in_talk {
 
 .icon-menu {
     font-size: 32px;
-    display: block;
+    display: table-cell;
     background-color: rgb(51, 54, 69);
-    margin-left: 20px;
     padding: 5px 15px;
     text-align: center;
-    
+    color: white;
+    font-weight: 400;
+    line-height: 45px;
 }
 
+.icon-magnifier {
+    position: absolute;
+    display: inline-block;
+    right: 5px;
+    font-size: 20px;
+    line-height: 47px;
+    box-sizing: border-box;
+    text-align: center;
+    overflow:visible;
+    margin: 0;
+}
 
 /*Services Icons*/
 .icon-app_settings_alt {
