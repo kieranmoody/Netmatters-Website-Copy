@@ -520,6 +520,27 @@ input {
   box-shadow: none;
 }
 
+#view-our-work {
+  color: #333645;
+  font-weight: 600;
+  font-size: 1.625rem;
+  margin: 30px auto -70px;
+  padding: 0 15px;
+}
+
+#partners {
+  padding: 50px 0;
+  vertical-align: middle;
+  height: 70px;
+  display: block;
+  box-sizing: border-box;
+}
+
+#g-partner,
+#gbc {
+  padding: 0 20px;
+}
+
 /*Welcome to Netmatters*/
 #welcome {
   padding: 50px 15px;
