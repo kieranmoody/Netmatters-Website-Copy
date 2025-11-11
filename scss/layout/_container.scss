@@ -100,6 +100,15 @@ input {
     width: 100%;
 }
 
+#owl-stage {
+    position: absolute;
+    z-index: 2;
+    top: 88%;
+    left: 50%;
+    transform: translate(-50%, -75%);
+    width: 100%;
+}
+
 /*Services*/
 #services h1 {
     font-size: 2.7rem;
@@ -145,6 +154,7 @@ input {
     line-height: 1.375rem;
     display: block;
     font-size: 0.8125rem;
+    letter-spacing: 0.4px;
 }
 
 .service-box button {
@@ -167,19 +177,62 @@ input {
     
 }
 
-#partners {
+#holding {
     padding: 50px 0;
-    vertical-align: middle;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.item {
+    position: relative;
+    width: auto;
     height: 70px;
+}
+
+.partners {
+    position: relative;
+    height: 70px;
+    display: inline-block;
+}
+
+.partners picture {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  display: block;
+  padding: 0 20px;
+}
+
+.partners .colored {
+    z-index: 1;
+    position: absolute;
+    opacity: 0;
+}
+
+.partners .greyscale {
+    z-index: 2;
+    position: relative;
+    opacity: 1;
+}
+
+.partners:hover .greyscale {
+    z-index: 0;
+    opacity: 0
+}
+
+.partners:hover .colored {
+    opacity: 1;
+}
+
+.partners img {
+    height: 100%;
+    width: auto;
     display: block;
-    box-sizing: border-box;
 }
-
-#g-partner,
-#gbc    {
-    padding: 0 20px;
-}
-
 /*Welcome to Netmatters*/
 
 #welcome {
@@ -297,6 +350,17 @@ padding-top: 50px;
     padding: 0 15px;
     display: block;
 }
+
+#ashcroft,
+#traveller {
+    filter: grayscale(1);
+}
+
+#ashcroft:hover,
+#traveller:hover {
+    filter: grayscale(0);
+}
+
 /*footer*/
 
 footer li {
