@@ -363,6 +363,10 @@ a:-webkit-any-link {
   text-decoration: none;
 }
 
+cite {
+  font-style: normal;
+}
+
 /*Header*/
 header {
   display: block;
@@ -605,13 +609,17 @@ input {
   margin-top: -6px;
   margin-bottom: 40px;
   font-size: 2.25em;
+  font-weight: 600;
+  line-height: 1.1;
+  letter-spacing: 0.4px;
 }
 
 #five-stars span {
   color: orange;
-  font-size: 50px;
+  font-size: 48px;
   display: inline-block;
   text-align: left;
+  margin-bottom: 25px;
 }
 
 .netmatters-is {
@@ -619,17 +627,38 @@ input {
   display: block;
   text-align: left;
   line-height: 1.875rem;
+  font-size: 1rem;
+  letter-spacing: 0.4px;
 }
 
-.netmatters-is #intro {
+#intro {
   font-weight: 600;
+}
+
+.info-button {
+  padding: 10px 30px;
+  font-size: 20px;
+  margin-right: 8px;
+  border-radius: 6px;
+  color: white;
+  line-height: 35px;
+  height: auto;
+  border: 0px;
+  display: inline-block;
+  background-color: rgb(39, 41, 54);
+  letter-spacing: 0.4px;
+}
+
+#lower-button {
+  margin-bottom: 50px;
+  margin-top: 20px;
 }
 
 #welcome h2 {
   margin-top: -6px;
   margin-bottom: 40px;
   font-size: 2.25rem;
-  font-weight: 400;
+  font-weight: 600;
   line-height: 1.1;
 }
 
@@ -652,6 +681,7 @@ input {
 
 #citation p {
   color: #a3a8ac;
+  font-weight: 600;
 }
 
 #citation a {
@@ -689,10 +719,10 @@ input {
   padding-top: 50px;
 }
 
-#articles h2 {
-  color: #333645;
+#news {
   font-weight: 600;
   font-size: 2.5rem;
+  margin: 0;
 }
 
 #software {

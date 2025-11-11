@@ -159,11 +159,15 @@
 </div>
         <section class="container" id="welcome"> <!--Welcome to Netmatters-->
             <h1>Welcome To Netmatters</h1>
-            <p class="netmatters-is" id="intro">Netmatters is a leading Bespoke Software, IT Support, and Digital Marketing company based in the East of England with offices in Cambridge, Wymondham, and Great Yarmouth</p> <!--This is in bold-->
+            <p class="netmatters-is" id="intro">Netmatters is a leading <a href="#">Bespoke Software</a>, <a href="#">IT Support</a>, and <a href="#">Digital Marketing</a> company based in the East of England with offices in&nbsp;<a href="#">Cambridge</a>, <a href="#">Wymondham</a>, and <a href="#">Great Yarmouth</a>.</p> <!--This is in bold-->
             <p class="netmatters-is" id="middle-text">We aren't tied into contracts with third-party providers, so you know that our recommendations for your business are based purely with one benefit in mind: to help improve your business with the most appropriate solutions.</p>
             <p class="netmatters-is" id="bottom-text">We pride ourselves on being an ethical business and have a unique business offering and cost model that ensures you get the most from our relationship in an upfront manner.</p>
-            <button><a href="#">WHY CHOOSE US? <span class="icon-arrow-right2"></span></a></button>
-            <button><a href="#">OUR CULTURE <span class="icon-arrow-right2"></span></a></button> <!--Both buttons, both need arrow fixed-->
+            <button class="info-button">
+                <a href="#">WHY CHOOSE US? <span class="icon-arrow-right2"></span></a>
+            </button>
+            <button class="info-button" id="lower-button">
+                <a href="#">OUR CULTURE <span class="icon-arrow-right2"></span></a>
+            </button> <!--Both buttons, both need arrow fixed-->
             <h2>What Our Clients Think</h2>
             <!--Image of 5 stars-->
             <div id="five-stars">
@@ -189,7 +193,9 @@
             </div>
         </section>
         <section class="container" id="articles"> <!--Articles, preview made manually-->
-            <h2>Latest News</h2>
+            <div id="news">
+                <h2>Latest News</h2>
+            </div>
                 <article id="software">
                     <a href="#">  <!--Entire Box is 1 link, Insights is a seperate link-->
                     <img src="images/article1.jpg">
