@@ -900,22 +900,111 @@ input {
 }
 
 /*footer*/
-footer li {
+footer {
+  padding: 27px 0 0;
+  color: white;
+  position: relative;
+}
+
+#top-section p {
+  line-height: 1.1;
+  letter-spacing: 0.4px;
+}
+
+#top-positioning {
+  flex-wrap: wrap;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+footer #footer-positioning #footer-logo img {
+  width: 100%;
+}
+
+footer #footer-top-positioning #footer-section {
+  width: auto;
+}
+
+*, :after, :before {
+  box-sizing: border-box;
+}
+
+footer #footer-positioning #top-section #socials span {
+  padding: 12px 22px 16px;
+  margin-right: 10px;
+  margin-bottom: 10px;
+  width: 35%;
+  text-align: center;
+  text-decoration: none;
+  font-size: 26px;
+  background-color: #212330;
+  font-weight: 400;
+  line-height: 26px;
+}
+
+footer #footer-positioning #socials {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin-bottom: 30px;
+}
+
+footer #top-positioning #top-section p {
+  margin-top: 24px;
+  margin-bottom: 26px;
+  display: block;
+  line-height: 1.15;
+  font-weight: 400;
+  font-size: 1rem;
+}
+
+footer #top-positioning #footer-logo {
+  width: 250px;
+}
+
+footer #footer-positioning #bottom-positioning {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+#bottom-positioning {
+  margin-left: -15px;
+  margin-right: -15px;
+}
+
+footer #footer-positioning #bottom-positioning .footer-menu {
+  margin-bottom: 30px;
+  width: 100%;
+  float: left;
+  position: relative;
+  min-height: 1px;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+footer .footer-menu li {
   list-style-type: none;
   padding: 0;
   font-size: 0.8125rem;
   line-height: 1.375rem;
+  letter-spacing: 0.4px;
 }
 
-footer h6 {
+footer .footer-menu ul {
+  margin: 0;
+}
+
+footer .footer-menu h6 {
   font-size: 1rem;
-  margin-bottom: 26px;
+  margin: 0 0 26px;
   font-weight: 400;
+  line-height: 1.1;
 }
 
-footer {
-  padding: 0;
-  color: white;
+*#bottom-positioning > * {
+  flex: 0 0 auto;
+  max-width: 100%;
 }
 
 footer a {
