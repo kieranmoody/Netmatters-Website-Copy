@@ -194,45 +194,104 @@
         </section>
         <section class="container" id="articles"> <!--Articles, preview made manually-->
             <div id="news">
-                <h2>Latest News</h2>
+                <div id="box">
+                    <h2>Latest News</h2>
+                </div>
             </div>
-                <article id="software">
-                    <a href="#">  <!--Entire Box is 1 link, Insights is a seperate link-->
-                    <img src="images/article1.jpg">
-                    <a href="">Insights</a> <!--Background image behind this-->
-                    <h5>How Much Could Bespoke Software Add to Your E...</h5>
-                    <p>If You're a Managing Director or Senior Manager preparing your business for exit, you know that incr...</p>
-                    <button>READ MORE</button> <!--Button-->
-                    <img src="images/netmatters-m.jpg">
-                    <p>Posted by Netmatters</p>
-                    <p>27th June 2025</p>
-                    </a>
-                </article>
-                <article id="ai">
-                    <a href="#">
-                    <a href="#">Insights</a><!--Background image behind this-->
-                    <img src="images/article2.jpg">
-                    <h5>How Can AI Benefit My Business?</h5>
-                    <p>The idea of integrating AI into your business opporations may seem daunting, but there are undeniable...</p>
-                    <button>READ MORE</button> <!--Button-->
-                    <img src="images/netmatters-m.jpg">
-                    <p>Posted by Netmatters</p>
-                    <p>26th June 2025</p>
-                    </a>
-                </article>
-                <article id="job">
-                    <a href="#">
-                    <img src="images/technician.jpg">
-                    <a href="#">CAREERS</a><!--Background image behind this-->
-                    <h5>1st Line Technician</h5>
-                    <p>Salary Range £25,000 - £29,000 + Pension Hours 40 hours per week, Monday - Friday Location Wymondham...</p>
-                    <button>READ MORE</button> <!--Button-->
-                    <img src="images/bethany-shakespeare-picture.jpg">
-                    <p>Posted by Bethany Shakespeare</p>
-                    <p>20th June 2025</p>
-                    </a>
-                </article>
-                <a href="#">View All <span class="icon-arrow-right2"></span></a>
+            <div id="block">
+                <div class="article-position">
+                    <article id="software">
+                        <a href="#">  <!--Entire Box is 1 link, Insights is a seperate link-->
+                        <div class="image-tag">
+                            <a href="#">Insights</a><!--Background image behind this-->
+                            <div class="face">
+                                <picture>
+                                    <source srcset="images/software-article.webp" type="image/webp">
+                                    <source srcset="images/software-article.png" type="image/png">
+                                    <img src="images/software-article.png">
+                                </picture>
+                            </div>
+                        </div>
+                        <div class="article-desc">
+                            <h5>How Much Could Bespoke Software Add to Your E...</h5>
+                            <p>If You're a Managing Director or Senior Manager preparing your business for exit, you know that incr...</p>
+                            <button>READ MORE</button> <!--Button-->
+                            <div class="footnote">
+                                <div class="logo">
+                                    <img src="images/netmatters-m.jpg">
+                                </div>
+                                <div class="author">
+                                    <strong id="author-name">Posted by Netmatters</strong>
+                                    <br>
+                                    <p> 27th June 2025 </p>
+                                </div>
+                            </div>
+                        </div>
+                        </a>
+                    </article>
+                </div>
+                <div class="article-position">
+                    <article id="ai">
+                        <a href="#">
+                        <div class="image-tag">
+                            <a href="#">Insights</a><!--Background image behind this-->
+                            <div class="face">
+                                <source srcset="images/ai-article.webp" type="image/webp">
+                                <source srcset="images/ai-article.png" type="image/png">
+                                <img src="images/ai-article.png">
+                            </div>
+                        </div>
+                        <div class="article-desc">
+                            <h5>How Can AI Benefit My Business?</h5>
+                            <p>The idea of integrating AI into your business opporations may seem daunting, but there are undeniable...</p>
+                            <button>READ MORE</button> <!--Button-->
+                            <div class="footnote">
+                                <div class="logo">
+                                    <img src="images/netmatters-m.jpg">
+                                </div>
+                                <div class="author">
+                                    <strong id="author-name">Posted by Netmatters</strong>
+                                    <br>
+                                    <p> 26th June 2025 </p>
+                                </div>
+                            </div>
+                        </div>
+                        </a>
+                    </article>
+                </div>
+                <div class="article-position">
+                    <article id="job">
+                        <a href="#">
+                        <div class="image-tag">
+                            <a href="#">CAREERS</a><!--Background image behind this-->
+                            <div class="face">
+                                <img src="https://www.netmatters.co.uk/uploads/article/3487/1st-line-technician-1QNr.png">
+                            </div>
+                        </div>
+                        <div class="article-desc">
+                            <h5>1st Line Technician</h5>
+                            <p>Salary Range £25,000 - £29,000 + Pension Hours 40 hours per week, Monday - Friday Location Wymondham...</p>
+                            <button>READ MORE</button> <!--Button-->
+                            <div class="footnote">
+                                <div class="logo">
+                                    <img src="images/bethany-shakespeare-picture.jpg">
+                                </div>
+                                <div class="author">
+                                    <strong id="author-name">Posted by Bethany Shakespeare</strong>
+                                    <br>
+                                    <p> 20th June 2025 </p>
+                                </div>
+                            </div>
+                        </div>
+                        </a>
+                    </article>
+                </div>
+            </div>
+            <div id="view-all">                
+                <h6>
+                    <a href="#">View All <span class="icon-arrow-right2"></span></a>
+                </h6>
+            </div>
         </section>
         <div id="holding">
             <img src="images/ashcroftlogo.jpg" id="ashcroft">

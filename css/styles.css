@@ -38,6 +38,7 @@ footer {
   background-color: #212330;
 }
 
+/*Normalize*/
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
 /* Document
    ========================================================================== */
@@ -120,7 +121,7 @@ abbr[title] {
  */
 b,
 strong {
-  font-weight: bolder;
+  font-weight: normal;
 }
 
 /**
@@ -367,6 +368,7 @@ cite {
   font-style: normal;
 }
 
+/*Normalize*/
 /*Header*/
 header {
   display: block;
@@ -715,28 +717,175 @@ input {
 }
 
 /*articles*/
-#articles {
-  padding-top: 50px;
+#block {
+  padding-bottom: 50px;
+  padding-top: 15px;
+}
+
+.article-position {
+  padding: 0, 15px;
+  position: relative;
+  min-height: 1px;
 }
 
 #news {
   font-weight: 600;
   font-size: 2.5rem;
   margin: 0;
+  padding: 50px 0 0 0;
 }
 
-#software {
-  padding: 0 15px;
+#box {
+  display: flex;
+  justify-content: space-between;
+}
+
+#news h2 {
+  margin: 0;
+  font-size: 2.25rem;
+  font-weight: 600;
+  color: #333645;
+  line-height: 1.1;
+  letter-spacing: 0.4px;
+}
+
+.articles .article-position .block:not(.top) {
+  border-top: 0;
+  border-radius: 0 0 3px 3px;
+}
+
+.article-desc {
+  display: block;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  padding: 30px;
+  box-shadow: 0 3px 35px rgba(0, 0, 0, 0.1);
+}
+
+.article-desc h5 {
+  font-size: 1rem;
+  line-height: 1.5rem;
+  margin-top: 0;
+  margin-bottom: 15px;
+  color: #67809f;
+  font-weight: 600;
+  letter-spacing: 0.4px;
+}
+
+.article-desc p {
+  display: block;
+  margin-bottom: 25px;
+  line-height: 1.375rem;
+  font-size: 0.8125rem;
+  letter-spacing: 0.4px;
+  color: rgb(102, 102, 102);
+}
+
+.article-desc button {
+  background-color: rgb(247, 179, 34);
+  color: white;
+  border: 1px solid #f7b322;
+  height: auto;
+  line-height: 35px;
+  padding: 5px 15px;
+  font-size: 1.063rem;
+  border-radius: 3px;
+  white-space: normal;
+}
+
+.footnote {
+  margin-top: 30px;
+  padding-top: 30px;
+  border-top: 1px solid #ccc;
+  display: table;
+  width: 100%;
+  font-size: 0.875rem;
+  letter-spacing: 0.4px;
+  line-height: 1.42857143;
+  font-weight: normal;
+}
+
+.footnote > * {
+  display: table-cell;
+  vertical-align: middle;
+}
+
+.footnote .logo {
+  border-radius: 50%;
+  width: 15%;
+}
+
+.footnote .logo img {
+  max-width: 47px;
+}
+
+.footnote .author {
+  padding-left: 20px;
+  line-height: 1.375rem;
+}
+
+.footnote .author strong {
+  color: rgb(51, 54, 69);
+  font-weight: 600;
+}
+
+.author p {
+  margin-bottom: 0;
+  color: rgb(102, 102, 102);
+}
+
+.image-tag {
+  position: relative;
   display: block;
 }
 
-#ai {
-  padding: 0 15px;
-  display: block;
+.image-tag a {
+  background-color: #67809f;
+  position: absolute;
+  right: 0;
+  color: #fff;
+  font-size: 0.75rem;
+  padding: 0 10px;
+  line-height: 1.438rem;
+  text-transform: uppercase;
+  z-index: 1;
+  top: 10px;
 }
 
+#software,
+#ai,
 #job {
+  display: block;
+  margin-top: 30px;
+}
+
+#job .image-tag a {
+  background-color: #4183d7;
+}
+
+#job .article-desc button {
+  background-color: #4183d7;
+  border-color: #4183d7;
+}
+
+#job .article-desc h5 {
+  color: #4183d7;
+}
+
+#view-all {
+  text-align: center;
+  margin-bottom: 20px;
   padding: 0 15px;
+}
+
+#view-all a {
+  font-size: 1.625rem;
+  font-weight: 600;
+  color: #333645;
+}
+
+#view-all h6 {
+  margin: 0 0 15px;
   display: block;
 }
 
