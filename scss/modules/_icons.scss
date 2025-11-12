@@ -17,6 +17,78 @@ header .icon-phone_in_talk {
 }
 
 .icon-menu {
+    padding: 15px;
+    display: inline-block;
+    cursor: pointer;
+    transition-property: opacity,filter;
+    transition-duration: .15s;
+    transition-timing-function: linear;
+    font: inherit;
+    color: inherit;
+    text-transform: none;
+    background-color: rgb(51, 54, 69);
+    border: 0;
+    margin: 0;
+    overflow: visible
+}
+
+.icon-menu:hover {
+    opacity: 1
+}
+
+.menu-box {
+    width: 33px;
+    height: 19px;
+    display: inline-block;
+    position: relative
+}
+
+.menu-pieces {
+    display: block;
+    top: 50%;
+    margin-top: -1.5px
+}
+
+.menu-pieces,.menu-pieces:after,.menu-pieces:before {
+    width: 33px;
+    height: 4px;
+    background-color: white;
+    border-radius: 0;
+    position: absolute;
+    transition-property: transform;
+    transition-duration: .15s;
+    transition-timing-function: ease
+}
+
+.menu-pieces:after,.menu-pieces:before {
+    content: "";
+    display: block
+}
+
+.menu-pieces:before {
+    top: -10px
+}
+
+.menu-pieces:after {
+    bottom: -10px
+}
+
+header #heading #menu-placement {
+    float: right;
+    padding: 7px 0
+}
+
+header #heading #menu-placement>*+* {
+    margin-left: 20px;
+}
+
+header #heading #menu-placement .menu-box span {
+    font-size: 1.438rem;
+    line-height: 45px
+}
+
+/*
+.icon-menu {
     font-size: 32px;
     display: table-cell;
     background-color: rgb(51, 54, 69);
@@ -27,6 +99,45 @@ header .icon-phone_in_talk {
     line-height: 45px;
 }
 
+.menu-pieces {
+    display: block;
+    top: 50%;
+    margin-top: -1.5px;
+    font: inherit;
+}
+
+.menu-box {
+    width: 33px;
+    height: 19px;
+    display: inline-block;
+    position: relative;
+}
+
+.menu-pieces,
+.menu-pieces:after,
+.menu-pieces:before {
+    width: 33px;
+    height: 4px;
+    background-color: #000;
+    border-radius: 0;
+    position: absolute;
+    background-color: white;
+}
+
+.menu-pieces:after,
+.menu-pieces:before {
+    content: "";
+    display: block;
+}
+
+.menu-pieces:before {
+    top: -10px;
+}
+
+.menu-pieces:after {
+    bottom: -10px;
+}
+*/
 .icon-magnifier {
     position: absolute;
     display: inline-block;
@@ -67,10 +178,9 @@ header .icon-phone_in_talk {
     #owl-dot-active {
         background: #869791;
         background-color: white;
-        border-radius: 100%;
+        border-radius: 30px;
         border: 2px solid white;
     }
-
 
 /*Services Icons*/
 

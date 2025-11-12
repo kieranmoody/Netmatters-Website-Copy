@@ -15,8 +15,10 @@ header {
     margin-right: auto;
 }
 
-#still-bar {
-    height: 550px;
+header #heading #top-header {
+    display: table;
+    width: 100%;
+    margin: 0;
 }
 
 header #netmatters {
@@ -52,6 +54,11 @@ input {
 }
 
 /*Still Bar*/
+
+#still-bar {
+    height: 550px;
+}
+
 #still-bar {
     text-align: center;
     color: white;
@@ -108,6 +115,7 @@ input {
     transform: translate(-50%, -75%);
     width: 100%;
 }
+
 
 /*Services*/
 #services h1 {
