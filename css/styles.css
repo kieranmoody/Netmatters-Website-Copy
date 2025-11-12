@@ -407,19 +407,33 @@ header img {
   display: block;
 }
 
-input {
-  border: 2px solid rgba(0, 0, 0, 0.1);
-  border-radius: 2px;
-  background-color: rgba(0, 0, 0, 0.1);
-  padding: 5px 40px 5px 15px;
-  width: 100%;
-  height: 47px;
-  display: inline-block;
-}
-
 #header-phone {
   padding-left: 20px;
   padding-right: 20px;
+}
+
+header #header-floor #bottom-header #search-mobile {
+  background-color: rgba(0, 0, 0, 0.1);
+  outline: 1px solid hsla(0, 0%, 100%, 0.2);
+  border: 2px solid rgba(0, 0, 0, 0.1);
+  transition: none;
+  width: 100%;
+  padding-right: 40px;
+}
+
+#bottom-header #search-mobile {
+  display: inline-block;
+}
+
+.search-tray {
+  height: 47px;
+  padding: 5px 15px;
+  background-image: none;
+  border-radius: 2px;
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+  font-size: 14px;
+  line-height: 1.42857143;
+  color: #555;
 }
 
 /*Still Bar*/
@@ -1120,67 +1134,32 @@ header #heading #menu-placement .menu-box span {
   line-height: 45px;
 }
 
-/*
-.icon-menu {
-    font-size: 32px;
-    display: table-cell;
-    background-color: rgb(51, 54, 69);
-    padding: 5px 15px;
-    text-align: center;
-    color: white;
-    font-weight: 400;
-    line-height: 45px;
-}
-
-.menu-pieces {
-    display: block;
-    top: 50%;
-    margin-top: -1.5px;
-    font: inherit;
-}
-
-.menu-box {
-    width: 33px;
-    height: 19px;
-    display: inline-block;
-    position: relative;
-}
-
-.menu-pieces,
-.menu-pieces:after,
-.menu-pieces:before {
-    width: 33px;
-    height: 4px;
-    background-color: #000;
-    border-radius: 0;
-    position: absolute;
-    background-color: white;
-}
-
-.menu-pieces:after,
-.menu-pieces:before {
-    content: "";
-    display: block;
-}
-
-.menu-pieces:before {
-    top: -10px;
-}
-
-.menu-pieces:after {
-    bottom: -10px;
-}
-*/
-.icon-magnifier {
+header #header-floor #bottom-header button {
+  background: none;
+  border: none;
+  color: #333645;
   position: absolute;
-  display: inline-block;
   right: 5px;
-  font-size: 20px;
   line-height: 47px;
-  box-sizing: border-box;
-  text-align: center;
-  overflow: visible;
-  margin: 0;
+  font-size: 20px;
+  outline: none;
+  font-weight: 400;
+}
+
+.icon-magnifier {
+  position: relative;
+  top: 1px;
+  display: inline-block;
+  font-family: Glyphicons Halflings;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+}
+
+header #header-floor #bottom-header {
+  margin-top: 11px;
+  position: relative;
 }
 
 /*Still Bar*/
