@@ -1,0 +1,163 @@
+/*Header*/
+@media (min-width: 768px) and (max-width: 991px) {
+    #bottom-header-one {
+        display: none;
+    }
+
+    #header-phone {
+        display: none;
+    }
+
+    #bottom-header-two {
+        display: flex;
+        box-sizing: border-box;
+    }
+
+    #menu-and-hidden {
+        display: flex;
+        margin-left: 20px;
+    }
+
+    #search-hidden {
+        background-color: #fff;
+        border: 1px solid #e5e5e5;
+        width: 174px;
+        margin-top: auto;
+        margin-bottom: auto;
+        height: 56px;
+    }
+    #submit-hidden {
+        outline: none;
+        padding: 7px 20px 3px;
+        height: 56px;
+        font-size: 1.063rem;
+        border-radius: 0 3px 3px 0;
+        border: none;
+        vertical-align: bottom;
+        background-color: #999aa2;
+        color: #fff;
+        align-self: center;
+    }
+
+    #submit-hidden a span {
+        font-weight: 400;
+        font-size: 23px;
+        line-height: 1;
+    }
+
+    #menu-placement {
+        margin-left: 20px;
+        display: inline-block;
+    }
+
+    #heading {
+        display: flex;
+        justify-content: space-evenly;
+    }
+}
+
+/*Still-Bar*/
+@media (max-width: 991px) {
+    #still-bar #overlay {
+        text-align: center;
+    }
+    #still-bar img {
+        opacity: 0.5;
+    }
+}
+
+@media (min-width: 553px) {
+    #still-bar #overlay {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+}
+
+@media (min-width: 896px) and (max-width: 991px) {
+    #still-bar #overlay {
+        width: 750px;
+    }
+}
+
+@media (min-width: 992px) {
+    #still-bar #overlay h1 {
+        font-size: 4rem;
+        line-height: 5rem;
+    }
+    #still-bar #overlay p {
+        font-size: 1.625rem;
+        line-height: 2.5rem;
+    }
+    #overlay {
+        width: 970px;
+        text-align: left;
+        padding-top: 3.75rem;
+        padding-bottom: 3.75rem;
+    }
+
+@media (min-width:1260px) {
+    #overlay {
+        width: 1200px;
+    }
+}
+
+@media (min-width:1415px) {
+    #still-bar img {
+        width: 100%;
+    }
+}
+    #still-bar img {
+        opacity: 0.3;
+        background-color: linear-gradient(270deg, transparent 25%, #000);
+    }
+}
+
+
+/*Welcome To Netmatters*/
+
+@media (max-width: 537px) {
+    #lower-button {
+        margin-top: 20px;
+    }
+}
+
+@media (max-width: 991px) {
+    #why-us {
+        margin-bottom: 50px;
+        margin-top: 20px;
+    }
+}
+
+@media (min-width: 992px) {
+    #welcome-positioning {
+        display: flex;
+        flex-wrap: wrap;
+        margin-left: 5%;
+        margin-right: 5%;
+    }
+    .welcome-both {
+        padding: 0 15px;
+        width: 50%;
+        float: left;
+    }
+    #lower-button {
+        margin-top: 20px;
+    }
+    #why-us {
+        display: block;
+        width: 60%
+    }
+}
+
+@media (min-width: 1260px) {
+    #welcome-positioning {
+        margin-left: 2%;
+        margin-right: 2%;
+    }
+    #why-us {
+        width: 100%
+    }
+    #lower-button {
+        margin-top: 0px;
+    }
+}

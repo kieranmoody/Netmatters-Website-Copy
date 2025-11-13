@@ -28,18 +28,29 @@
                             </span>
                         </a>
                     </div>
-                    <div id="menu-placement">
-                        <button class="icon-menu">
-                            <span class="menu-box">
-                                <span class="menu-pieces">
+                    <div id="menu-and-hidden">
+                        <div id="bottom-header-two">
+                            <input placeholder="Search..." class="search-tray" id="search-hidden" name="keyword" type="text" value> 
+                            <button type="submit" id="submit-hidden">
+                            <a href="#">
+                                    <span class="icon-magnifier">
+                                    </span>
+                            </a>
+                            </button>
+                        </div>
+                        <div id="menu-placement">
+                            <button class="icon-menu">
+                                <span class="menu-box">
+                                    <span class="menu-pieces">
+                                    </span>
                                 </span>
-                            </span>
-                        </button>
+                            </button>
+                        </div>
                     </div>
                 </div>
                 <div id="header-floor">
-                    <div id="bottom-header">
-                        <input placeholder="Search..." class="search-tray" id="search-mobile" name="keyword" type="text" value> 
+                    <div id="bottom-header-one">
+                        <input placeholder="Search..." class="search-tray" id="search-first" name="keyword" type="text" value> 
                         <button type="submit" id="submit-button">
                             <a href="#">
                                 <span class="icon-magnifier">
@@ -56,9 +67,11 @@
         <section id="still-bar"> <!--Scroll Bar-->
             <img src="images/scrollbar1-still.jpg">
             <div id="overlay">
-                <h1>The East of England's Leading Technology Company</h1>
+                <h1>The East Of England's Leading Technology Company</h1>
                 <div>
-                    Performance-driven digital and technology services <br> with complete transparency.
+                    <p>
+                        Performance-driven digital and technology services <br> with complete transparency.
+                    </p>
                 </div>
                 <a href="#">
                     Why Choose Us? <span class="icon-arrow-right2"></span>
@@ -193,37 +206,42 @@
         </div>
         <!--Welcome To Netmatters Section-->
         <section class="container" id="welcome"> <!--Welcome to Netmatters-->
-            <h1>Welcome To Netmatters</h1>
-            <p class="netmatters-is" id="intro">Netmatters is a leading <a href="#">Bespoke Software</a>, <a href="#">IT Support</a>, and <a href="#">Digital Marketing</a> company based in the East of England with offices in&nbsp;<a href="#">Cambridge</a>, <a href="#">Wymondham</a>, and <a href="#">Great Yarmouth</a>.</p> <!--This is in bold-->
-            <p class="netmatters-is" id="middle-text">We aren't tied into contracts with third-party providers, so you know that our recommendations for your business are based purely with one benefit in mind: to help improve your business with the most appropriate solutions.</p>
-            <p class="netmatters-is" id="bottom-text">We pride ourselves on being an ethical business and have a unique business offering and cost model that ensures you get the most from our relationship in an upfront manner.</p>
-            <div id="why-us">
-                <a href="#" class="info-button">WHY CHOOSE US? <span class="icon-arrow-right2"></span></a>
-                <a href="#" class="info-button" id="lower-button">OUR CULTURE <span class="icon-arrow-right2"></span></a>
-            </div>
-            </button> <!--Both buttons, both need arrow fixed-->
-            <h2>What Our Clients Think</h2>
-            <!--Image of 5 stars-->
-            <div id="five-stars">
-                <span class="icon-star-full">
-                </span>
-                <span class="icon-star-full">
-                </span>
-                <span class="icon-star-full">
-                </span>
-                <span class="icon-star-full">
-                </span>
-                <span class="icon-star-full">
-                </span>
-            </div>
-            <blockquote>Netmatters stood out from the start. Great guys and very easy to work with. Both the build and digital marketing teams are clearly skilled -they know their stuff! They delivered a website to our (high!) expectations and went over and above to ensure we were satisfied clients - and we are!</blockquote> <!--This is a quote by the person below-->
-            <cite id="citation">
-                <p>Eleanor Bishop, Head of Marketing -</p>
-                <br><a href="#">Ashcroft Partnership LLP</a>
-            </cite>
-            <div id="reviews">
-                <a href="#" id="google">GOOGLE REVIEWS <span class="icon-arrow-right2"></span></a>
-                <a href="#" id="trustpilot">TRUSTPILOT REVIEWS <span class="icon-arrow-right2"></span></a> <!--Button arrow both-->
+            <div id="welcome-positioning">
+                <div class="welcome-both" id="welcome-one">
+                    <h1>Welcome To Netmatters</h1>
+                    <p class="netmatters-is" id="intro">Netmatters is a leading <a href="#">Bespoke Software</a>, <a href="#">IT Support</a>, and <a href="#">Digital Marketing</a> company based in the East of England with offices in&nbsp;<a href="#">Cambridge</a>, <a href="#">Wymondham</a>, and <a href="#">Great Yarmouth</a>.</p> <!--This is in bold-->
+                    <p class="netmatters-is" id="middle-text">We aren't tied into contracts with third-party providers, so you know that our recommendations for your business are based purely with one benefit in mind: to help improve your business with the most appropriate solutions.</p>
+                    <p class="netmatters-is" id="bottom-text">We pride ourselves on being an ethical business and have a unique business offering and cost model that ensures you get the most from our relationship in an upfront manner.</p>
+                    <div id="why-us">
+                        <a href="#" class="info-button">WHY CHOOSE US? <span class="icon-arrow-right2"></span></a>
+                        <a href="#" class="info-button" id="lower-button">OUR CULTURE <span class="icon-arrow-right2"></span></a>
+                    </div>
+                </div>
+                <div class="welcome-both" id="welcome-two">
+                    <h2>What Our Clients Think</h2>
+                    <!--Image of 5 stars-->
+                    <div id="five-stars">
+                        <span class="icon-star-full">
+                        </span>
+                        <span class="icon-star-full">
+                        </span>
+                        <span class="icon-star-full">
+                        </span>
+                        <span class="icon-star-full">
+                        </span>
+                        <span class="icon-star-full">
+                        </span>
+                    </div>
+                    <blockquote>Netmatters stood out from the start. Great guys and very easy to work with. Both the build and digital marketing teams are clearly skilled -they know their stuff! They delivered a website to our (high!) expectations and went over and above to ensure we were satisfied clients - and we are!</blockquote> <!--This is a quote by the person below-->
+                    <cite id="citation">
+                        <p>Eleanor Bishop, Head of Marketing -</p>
+                        <br><a href="#">Ashcroft Partnership LLP</a>
+                    </cite>
+                    <div id="reviews">
+                        <a href="#" id="google">GOOGLE REVIEWS <span class="icon-arrow-right2"></span></a>
+                        <a href="#" id="trustpilot">TRUSTPILOT REVIEWS <span class="icon-arrow-right2"></span></a> <!--Button arrow both-->
+                    </div>
+                </div>
             </div>
         </section>
         <!--Articles Section-->

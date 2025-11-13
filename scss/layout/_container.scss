@@ -43,7 +43,7 @@ header img {
     padding-right: 20px;
 }
 
-header #header-floor #bottom-header #search-mobile {
+header #header-floor #bottom-header-one #search-first {
     background-color: rgba(0, 0, 0, .1);
     outline: 1px solid hsla(0, 0%, 100%, .2);
     border: 2px solid rgba(0, 0, 0, .1);
@@ -52,7 +52,7 @@ header #header-floor #bottom-header #search-mobile {
     padding-right: 40px;
 }
 
-#bottom-header #search-mobile {
+#bottom-header-one #search-first {
     display: inline-block;
 }
 
@@ -67,6 +67,10 @@ header #header-floor #bottom-header #search-mobile {
     color: #555;
 }
 
+#bottom-header-two {
+    display: none;
+}
+search-hidden
 
 /*Still Bar*/
 
@@ -111,6 +115,7 @@ header #header-floor #bottom-header #search-mobile {
     text-transform: uppercase;
     color: white;
     display: inline-block;
+    font-weight: 400;
 }
 
 #overlay {
@@ -509,11 +514,6 @@ header #header-floor #bottom-header #search-mobile {
 
 .info-button:hover {
     background-color: #121318;
-}
-
-#lower-button {
-    margin-bottom: 50px;
-    margin-top: 20px;
 }
 
 #welcome h2 {
