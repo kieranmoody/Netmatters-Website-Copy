@@ -3,6 +3,11 @@ header .icon-phone_in_talk {
     font-size: 32px;
 }
 
+header .icon-phone_in_talk:hover {
+    text-decoration: underline;
+    text-decoration-thickness: 1%;
+}
+
 .icons {
     font-size: 32px;
     border-radius: 50%;
@@ -33,7 +38,7 @@ header .icon-phone_in_talk {
 }
 
 .icon-menu:hover {
-    opacity: 1
+    background-color: rgb(36, 35, 35);
 }
 
 .menu-box {
@@ -98,6 +103,8 @@ header #header-floor #bottom-header button {
     outline: none;
     font-weight: 400;
 }
+
+
 
 .icon-magnifier {
     position: relative;

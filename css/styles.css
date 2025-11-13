@@ -18,6 +18,10 @@ img {
   max-width: 100%;
 }
 
+a {
+  background: transparent;
+}
+
 /*Background colors*/
 body {
   background-color: #f3f3f3;
@@ -49,6 +53,7 @@ footer {
 html {
   line-height: 1.15; /* 1 */
   -webkit-text-size-adjust: 100%; /* 2 */
+  -moz-text-size-adjust: 100%;
 }
 
 /* Sections
@@ -214,6 +219,7 @@ button,
 [type=reset],
 [type=submit] {
   -webkit-appearance: button;
+  -moz-appearance: button;
 }
 
 /**
@@ -297,6 +303,7 @@ textarea {
  */
 [type=search] {
   -webkit-appearance: textfield; /* 1 */
+  -moz-appearance: textfield;
   outline-offset: -2px; /* 2 */
 }
 
@@ -305,6 +312,7 @@ textarea {
  */
 [type=search]::-webkit-search-decoration {
   -webkit-appearance: none;
+  -moz-appearance: none;
 }
 
 /**
@@ -358,7 +366,7 @@ p {
   display: contents;
 }
 
-a:-webkit-any-link {
+a:any-link {
   color: inherit;
   cursor: pointer;
   text-decoration: none;
@@ -465,18 +473,19 @@ header #header-floor #bottom-header #search-mobile {
   letter-spacing: 0.4px;
 }
 
-#still-bar button {
+#still-bar #overlay a {
   margin-top: 1.938rem;
   margin-bottom: 1.125rem;
   padding: 5px 20px;
   font-size: 1.25rem;
   background-color: #926fb1;
-  border: outset 1px #926fb1;
+  border: solid 1px #926fb1;
   height: auto;
   border-radius: 3px;
   line-height: 50px;
   text-transform: uppercase;
   color: white;
+  display: inline-block;
 }
 
 #overlay {
@@ -545,7 +554,7 @@ header #header-floor #bottom-header #search-mobile {
   letter-spacing: 0.4px;
 }
 
-.service-box button {
+.service-box .service-button {
   padding: 5px 15px;
   background-color: rgb(247, 179, 34);
   border-radius: 3px;
@@ -554,14 +563,196 @@ header #header-floor #bottom-header #search-mobile {
   line-height: 35px;
   color: white;
   box-shadow: none;
+  display: inline-block;
 }
 
+/*SERVICES HOVER*/
+#consultancy:hover {
+  background-color: #67809f;
+  color: white;
+}
+
+#consultancy:hover > .service-button {
+  background-color: white;
+  border-color: white;
+  color: #67809f;
+}
+
+#consultancy:hover .icons {
+  background-color: white;
+}
+
+#consultancy:hover .icons span {
+  margin-top: 15px;
+  color: #67809f;
+  font-size: 30px;
+}
+
+#it-support:hover .service-desc {
+  color: white;
+}
+
+#it-support:hover {
+  background-color: #4183d7;
+  color: white;
+}
+
+#it-support:hover > .service-button {
+  background-color: white;
+  border-color: white;
+  color: #4183d7;
+}
+
+#it-support:hover .icons {
+  background-color: white;
+}
+
+#it-support:hover .icons span {
+  margin-top: 15px;
+  color: #4183d7;
+  font-size: 30px;
+}
+
+#it-support:hover .service-desc {
+  color: white;
+}
+
+#marketing:hover {
+  background-color: #2ecc71;
+  color: white;
+}
+
+#marketing:hover > .service-button {
+  background-color: white;
+  border-color: white;
+  color: #2ecc71;
+}
+
+#marketing:hover .icons {
+  background-color: white;
+}
+
+#marketing:hover .icons span {
+  margin-top: 15px;
+  color: #2ecc71;
+  font-size: 30px;
+}
+
+#marketing:hover .service-desc {
+  color: white;
+}
+
+#telecoms:hover {
+  background-color: #d64541;
+  color: white;
+}
+
+#telecoms:hover > .service-button {
+  background-color: white;
+  border-color: white;
+  color: #d64541;
+}
+
+#telecoms:hover .icons {
+  background-color: white;
+}
+
+#telecoms:hover .icons span {
+  margin-top: 15px;
+  color: #d64541;
+  font-size: 30px;
+}
+
+#telecoms:hover .service-desc {
+  color: white;
+}
+
+#web-design:hover {
+  background-color: #926fb1;
+  color: white;
+}
+
+#web-design:hover > .service-button {
+  background-color: white;
+  border-color: white;
+  color: #926fb1;
+}
+
+#web-design:hover .icons {
+  background-color: white;
+}
+
+#web-design:hover .icons span {
+  margin-top: 15px;
+  color: #926fb1;
+  font-size: 30px;
+}
+
+#web-design:hover .service-desc {
+  color: white;
+}
+
+#security:hover {
+  background-color: #f62459;
+  color: white;
+}
+
+#security:hover > .service-button {
+  background-color: white;
+  border-color: white;
+  color: #f62459;
+}
+
+#security:hover .icons {
+  background-color: white;
+}
+
+#security:hover .icons span {
+  margin-top: 15px;
+  color: #f62459;
+  font-size: 30px;
+}
+
+#security:hover .service-desc {
+  color: white;
+}
+
+#training:hover {
+  background-color: #ce4125;
+  color: white;
+}
+
+#training:hover > .service-button {
+  background-color: white;
+  border-color: white;
+  color: #ce4125;
+}
+
+#training:hover .icons {
+  background-color: white;
+}
+
+#training:hover .icons span {
+  margin-top: 15px;
+  color: #ce4125;
+  font-size: 30px;
+}
+
+#training:hover .service-desc {
+  color: white;
+}
+
+/*SERVICES HOVER END*/
 #view-our-work {
   color: #333645;
   font-weight: 600;
   font-size: 1.625rem;
   margin: 30px auto -70px;
   padding: 0 15px;
+}
+
+#view-our-work a:hover {
+  text-decoration: underline;
 }
 
 #holding {
@@ -621,6 +812,11 @@ header #header-floor #bottom-header #search-mobile {
   display: block;
 }
 
+#still-bar #overlay a:hover {
+  background-color: #7e57a0;
+  border-color: #7e57a0;
+}
+
 /*Welcome to Netmatters*/
 #welcome {
   padding: 50px 15px;
@@ -653,8 +849,12 @@ header #header-floor #bottom-header #search-mobile {
   letter-spacing: 0.4px;
 }
 
-#intro {
+#welcome #intro {
   font-weight: 600;
+}
+
+#welcome #intro a:hover {
+  text-decoration: underline;
 }
 
 .info-button {
@@ -669,6 +869,10 @@ header #header-floor #bottom-header #search-mobile {
   display: inline-block;
   background-color: rgb(39, 41, 54);
   letter-spacing: 0.4px;
+}
+
+.info-button:hover {
+  background-color: #121318;
 }
 
 #lower-button {
@@ -711,6 +915,10 @@ header #header-floor #bottom-header #search-mobile {
   font-weight: 600;
 }
 
+#citation a:hover {
+  text-decoration: underline;
+}
+
 #google,
 #trustpilot {
   padding: 10px 30px;
@@ -728,8 +936,16 @@ header #header-floor #bottom-header #search-mobile {
   background-color: rgb(67, 135, 246);
 }
 
+#google:hover {
+  background-color: #166af4;
+}
+
 #trustpilot {
   background-color: rgb(0, 182, 123);
+}
+
+#trustpilot:hover {
+  background-color: #009b69;
 }
 
 #reviews {
@@ -737,6 +953,30 @@ header #header-floor #bottom-header #search-mobile {
 }
 
 /*articles*/
+.article-position .article-link {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 1;
+  background-color: transparent;
+  text-decoration: none;
+}
+
+#job .image-holder .face {
+  display: block;
+  border-radius: 3px 3px 0 0;
+  position: relative;
+}
+
+#job .image-holder .face img {
+  display: block;
+  width: 100%;
+  height: auto;
+  box-sizing: border-box;
+}
+
 #block {
   padding-bottom: 50px;
   padding-top: 15px;
@@ -854,12 +1094,12 @@ header #header-floor #bottom-header #search-mobile {
   color: rgb(102, 102, 102);
 }
 
-.image-tag {
+.image-holder {
   position: relative;
   display: block;
 }
 
-.image-tag a {
+.image-holder a {
   background-color: #67809f;
   position: absolute;
   right: 0;
@@ -872,6 +1112,10 @@ header #header-floor #bottom-header #search-mobile {
   top: 10px;
 }
 
+.image-holder .image-tag:hover {
+  text-decoration: underline;
+}
+
 #software,
 #ai,
 #job {
@@ -879,7 +1123,7 @@ header #header-floor #bottom-header #search-mobile {
   margin-top: 30px;
 }
 
-#job .image-tag a {
+#job .image-holder #special-tag {
   background-color: #4183d7;
 }
 
@@ -907,6 +1151,10 @@ header #header-floor #bottom-header #search-mobile {
 #view-all h6 {
   margin: 0 0 15px;
   display: block;
+}
+
+#view-all h6 a:hover {
+  text-decoration: underline;
 }
 
 #ashcroft,
@@ -950,7 +1198,13 @@ footer #footer-top-positioning #footer-section {
   box-sizing: border-box;
 }
 
-footer #footer-positioning #top-section #socials span {
+#socials a {
+  position: relative;
+  z-index: 1;
+  transition: background-color 0.3s ease;
+}
+
+#socials a {
   padding: 12px 22px 16px;
   margin-right: 10px;
   margin-bottom: 10px;
@@ -961,6 +1215,7 @@ footer #footer-positioning #top-section #socials span {
   background-color: #212330;
   font-weight: 400;
   line-height: 26px;
+  z-index: 1;
 }
 
 footer #footer-positioning #socials {
@@ -968,6 +1223,22 @@ footer #footer-positioning #socials {
   flex-direction: row;
   flex-wrap: wrap;
   margin-bottom: 30px;
+}
+
+#facebook:hover {
+  background-color: #3b5998;
+}
+
+#linkedin:hover {
+  background-color: #0077b5;
+}
+
+#twitter:hover {
+  background-color: #00aced;
+}
+
+#instagram:hover {
+  background-color: #d93175;
 }
 
 footer #top-positioning #top-section p {
@@ -1027,10 +1298,6 @@ footer .footer-menu h6 {
   max-width: 100%;
 }
 
-footer a {
-  text-decoration: none;
-}
-
 footer a:-webkit-any-link {
   color: white;
 }
@@ -1045,9 +1312,19 @@ footer #floor-wrapper {
   letter-spacing: 0.4px;
 }
 
+footer ul li a:hover,
+footer #floor-wrapper a:hover {
+  text-decoration: underline;
+}
+
 /*Header Icons*/
 header .icon-phone_in_talk {
   font-size: 32px;
+}
+
+header .icon-phone_in_talk:hover {
+  text-decoration: underline;
+  text-decoration-thickness: 1%;
 }
 
 .icons {
@@ -1080,7 +1357,7 @@ header .icon-phone_in_talk {
 }
 
 .icon-menu:hover {
-  opacity: 1;
+  background-color: rgb(36, 35, 35);
 }
 
 .menu-box {
@@ -1222,14 +1499,6 @@ header #header-floor #bottom-header {
   background-color: #ce4125;
 }
 
-/*
-#still-bar {
-    background-image: url("../images/scrollbar1-still.jpg");
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-}
-*/
 #still-bar img {
   object-fit: cover;
   height: 100%;
@@ -1239,37 +1508,37 @@ header #header-floor #bottom-header {
 }
 
 /*Services*/
-#consultancy button {
+#consultancy .service-button {
   background-color: #f7b322;
   border: 3px solid #f7b322;
 }
 
-#it-support button {
+#it-support .service-button {
   background-color: #4183d7;
   border: 3px solid #4183d7;
 }
 
-#marketing button {
+#marketing .service-button {
   background-color: #2ecc71;
   border: 3px solid #2ecc71;
 }
 
-#telecoms button {
+#telecoms .service-button {
   background-color: #d64541;
   border: 3px solid #d64541;
 }
 
-#web-design button {
+#web-design .service-button {
   background-color: #926fb1;
   border: 3px solid #926fb1;
 }
 
-#security button {
+#security .service-button {
   background-color: #f62459;
   border: 3px solid #f62459;
 }
 
-#training button {
+#training .service-button {
   background-color: #ce4125;
   border: 3px solid #ce4125;
 }
