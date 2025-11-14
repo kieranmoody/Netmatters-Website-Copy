@@ -70,7 +70,83 @@ header #header-floor #bottom-header-one #search-first {
 #bottom-header-two {
     display: none;
 }
-search-hidden
+
+#contact,
+#support {
+    display: none;
+    height: 56px;
+    line-height: 46px;
+    font-size: 1.125rem;
+    float: left;
+    text-transform: uppercase;
+    padding: 5px 15px;
+    color: white;
+    border-radius: 3px;
+    margin-left: 20px;
+}
+
+#support {
+    background-color: #4183d7;
+    border: 1px solid #4183d7;
+}
+
+#contact {
+    background-color: #999aa2;
+    border: 1px solid #999aa2;
+    margin-right: 20px;
+}
+
+#bottom-header-update {
+    background-color: #333645;
+    display: none;
+    width: 100%;
+}
+
+.bottom-header-service {
+    color: white;
+    position: relative;
+    display: block;
+    padding: 19px 0 18px;
+    text-transform: uppercase;  
+    font-size: 1.125rem;
+    line-height: 1;
+    width: 14.2%;
+} 
+
+#con-and-dev span {
+    color: #67809f;
+    font-size: 1.438rem;
+}
+
+#it span {
+    color: #4183d7;
+    font-size: 1.438rem;
+}
+
+#digital-marketing span {
+    color: #2ecc71;
+    font-size: 1.438rem;
+}
+
+#telecom-services span {
+    color: #d64541;
+    font-size: 1.438rem;
+}
+
+#web span {
+    color: #926fb1;
+    font-size: 1.438rem;
+}
+
+#cyber-security span {
+    color: #f62459;
+    font-size: 1.438rem;
+}
+
+#developer-course span {
+    color: #ce4125;
+    font-size: 1.438rem;
+}
 
 /*Still Bar*/
 
@@ -137,7 +213,6 @@ search-hidden
     width: 100%;
 }
 
-
 /*Services*/
 #services h1 {
     font-size: 2.7rem;
@@ -147,6 +222,10 @@ search-hidden
     font-weight: 400;
     line-height: 1.1;
     letter-spacing: 0.4px;
+}
+
+#service-roof h3 {
+    display: none;
 }
 
 #services {
@@ -199,6 +278,10 @@ search-hidden
 }
 
 /*SERVICES HOVER*/
+
+#service-roof h3:hover {
+    text-decoration: underline;
+}
 
 #consultancy:hover {
     background-color: #67809f;
@@ -457,6 +540,15 @@ search-hidden
     background-color: #7e57a0;
     border-color: #7e57a0;
 }
+
+#partner-three,
+#partner-four,
+#partner-five,
+#partner-six,
+#partner-seven,
+#partner-eight {
+    display: none;
+}
 /*Welcome to Netmatters*/
 
 #welcome {
@@ -591,6 +683,14 @@ search-hidden
 
 /*articles*/
 
+#box h3 {
+    display: none;
+}
+
+#box h3:hover {
+    text-decoration: underline;
+}
+
 .article-position .article-link {
     position: absolute;
     top: 0;
@@ -602,13 +702,13 @@ search-hidden
     text-decoration: none;
 }
 
-#job .image-holder .face {
+.image-holder .face {
     display: block;
     border-radius: 3px 3px 0 0;
     position: relative;
 }
 
-#job .image-holder .face img {
+.face picture img {
     display: block;
     width: 100%;
     height: auto;
@@ -798,13 +898,34 @@ search-hidden
 }
 
 #ashcroft,
-#traveller {
+#traveller,
+#searles,
+#busseys,
+#crane,
+#black-swan,
+#xupes,
+#beat        {
     filter: grayscale(1);
 }
 
 #ashcroft:hover,
-#traveller:hover {
+#traveller:hover,
+#searles:hover,
+#busseys:hover,
+#crane:hover,
+#black-swan:hover,
+#xupes:hover,
+#beat:hover {
     filter: grayscale(0);
+}
+
+#searles,
+#busseys,
+#crane,
+#black-swan,
+#xupes,
+#beat       {
+    display: none;
 }
 
 /*footer*/
@@ -821,14 +942,13 @@ footer {
 }
 
 #top-positioning {
-    flex-wrap: wrap;
-    width: 100%;
     display: flex;
     justify-content: space-between;
 }
 
 footer #footer-positioning #footer-logo img {
     width: 100%;
+    height: auto;
 }
 
 footer #footer-top-positioning #footer-section {
@@ -864,6 +984,7 @@ footer #footer-positioning #socials {
     flex-direction: row;
     flex-wrap: wrap;
     margin-bottom: 30px;
+
 }
 
 #facebook:hover {
@@ -905,7 +1026,7 @@ footer #footer-positioning #bottom-positioning {
     margin-right: -15px;
 }
 
-footer #footer-positioning #bottom-positioning .footer-menu {
+.footer-menu {
     margin-bottom: 30px;
     width: 100%;
     float: left;
@@ -944,16 +1065,31 @@ footer a:-webkit-any-link {
 }
 
 footer #floor-wrapper {
-    display: block;
+    display: flex;
     margin-left: 0;
     width: 100%;
     padding: 15px 15px 10px 15px;
     font-size: 0.8125rem;
     line-height: 1.42857143;
     letter-spacing: 0.4px;
+    flex-direction: column;
+}
+
+#floor-details {
+    display: flex;
+    flex-direction: column;
+}
+
+#floor-wrapper ul {
+    list-style-type: none;
 }
 
 footer ul li a:hover,
 footer #floor-wrapper a:hover {
     text-decoration: underline;
+}
+
+#foot {
+    margin-left: auto;
+    margin-right: auto;
 }

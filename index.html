@@ -28,23 +28,35 @@
                             </span>
                         </a>
                     </div>
-                    <div id="menu-and-hidden">
-                        <div id="bottom-header-two">
-                            <input placeholder="Search..." class="search-tray" id="search-hidden" name="keyword" type="text" value> 
-                            <button type="submit" id="submit-hidden">
-                            <a href="#">
-                                    <span class="icon-magnifier">
-                                    </span>
-                            </a>
-                            </button>
+                    <div id="header-buttons">
+                        <div id="support">
+                            <span class="icon-mouse">
+                            </span>
+                            <p>Support</p>
                         </div>
-                        <div id="menu-placement">
-                            <button class="icon-menu">
-                                <span class="menu-box">
-                                    <span class="menu-pieces">
+                        <div id="contact">
+                            <span class="icon-paperplane">
+                            </span>
+                            <p>Contact</p>
+                        </div>
+                        <div id="menu-and-hidden">
+                            <div id="bottom-header-two">
+                                <input placeholder="Search..." class="search-tray" id="search-hidden" name="keyword" type="text" value> 
+                                <button type="submit" id="submit-hidden">
+                                <a href="#">
+                                        <span class="icon-magnifier">
+                                        </span>
+                                </a>
+                                </button>
+                            </div>
+                            <div id="menu-placement">
+                                <button class="icon-menu">
+                                    <span class="menu-box">
+                                        <span class="menu-pieces">
+                                        </span>
                                     </span>
-                                </span>
-                            </button>
+                                </button>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -58,41 +70,80 @@
                             </a>
                         </button>
                     </div>
+                    <div id="bottom-header-update">
+                        <div class="bottom-header-service" id="con-and-dev">
+                            <span class="icon-app_settings_alt"></span>
+                            <br>
+                            <p>Consultancy & Development</p>
+                        </div>
+                        <div class="bottom-header-service" id="it">
+                            <span class="icon-display"></span>
+                            <br>
+                            <p>IT Support</p>
+                        </div>
+                        <div class="bottom-header-service" id="digital-marketing">
+                            <span class="icon-bar-graph"></span>
+                            <br>
+                            <p>Digital Marketing</p>
+                        </div>
+                        <div class="bottom-header-service" id="telecom-services">
+                            <span class="icon-phone_in_talk"></span>
+                            <br>
+                            <p>Telecoms Services</p>
+                        </div>
+                        <div class="bottom-header-service" id="web">
+                            <span class="icon-embed2"></span>
+                            <br>
+                            <p>Web Design</p>
+                        </div>
+                        <div class="bottom-header-service" id="cyber-security">
+                            <span class="icon-security"></span>
+                            <br>
+                            <p>Cyber Security</p>
+                        </div>
+                        <div class="bottom-header-service" id="developer-course">
+                            <span class="icon-school"></span>
+                            <br>
+                            <p>Developer Course</p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>    
     </header>
     <main>
         <!--Scroll Bar Section-->
-        <section id="still-bar"> <!--Scroll Bar-->
-            <img src="images/scrollbar1-still.jpg">
-            <div id="overlay">
-                <h1>The East Of England's Leading Technology Company</h1>
-                <div>
-                    <p>
-                        Performance-driven digital and technology services <br> with complete transparency.
-                    </p>
+        <section> <!--Scroll Bar-->
+            <div id="still-bar">
+                <img src="images/scrollbar1-still.jpg">
+                <div id="overlay">
+                    <h1>The East Of England's Leading Technology Company</h1>
+                    <div>
+                        <p>
+                            Performance-driven digital and technology services <br> with complete transparency.
+                        </p>
+                    </div>
+                    <a href="#">
+                        Why Choose Us? <span class="icon-arrow-right2"></span>
+                    </a> <!--Button, fix the arrow-->
                 </div>
-                <a href="#">
-                    Why Choose Us? <span class="icon-arrow-right2"></span>
-                </a> <!--Button, fix the arrow-->
-            </div>
-            <div id="owl-stage">
-                <div id="owl-dots">
-                    <span class="owl-dot" id="owl-dot-active">
-                    </span>
-                    <span class="owl-dot">
-                    </span>
-                    <span class="owl-dot">
-                    </span>
-                    <span class="owl-dot">
-                    </span>
-                    <span class="owl-dot">
-                    </span>
-                    <span class="owl-dot">
-                    </span>
-                    <span class="owl-dot">
-                    </span>
+                <div id="owl-stage">
+                    <div id="owl-dots">
+                        <span class="owl-dot" id="owl-dot-active">
+                        </span>
+                        <span class="owl-dot">
+                        </span>
+                        <span class="owl-dot">
+                        </span>
+                        <span class="owl-dot">
+                        </span>
+                        <span class="owl-dot">
+                        </span>
+                        <span class="owl-dot">
+                        </span>
+                        <span class="owl-dot">
+                        </span>
+                    </div>
                 </div>
             </div>
         </section>
@@ -101,70 +152,75 @@
             <div id="services-holding">
                 <div id="service-roof">
                     <h1>Our Services</h1>
+                    <h3><a>View Our Work <span class="icon-arrow-right2"></span></a></h3>
                 </div>
-                <a href="#" class="service-box" id="consultancy">
+                <div id="services-group-one">
+                    <a href="#" class="service-box" id="consultancy">
+                            <div class="icons">
+                                <span class="icon-app_settings_alt">
+                                </span>
+                            </div>
+                            <h3>Consultancy & Development</h3>
+                            <span class="service-desc">Bespoke software solutions & consultancy for all your business needs including integrations and reporting.</span>
+                            <span class="service-button">Read More</span>  <!--Button-->
+                    </a>
+                    <a href="#" class="service-box" id="it-support">
                         <div class="icons">
-                            <span class="icon-app_settings_alt">
+                            <span class="icon-display">
                             </span>
                         </div>
-                        <h3>Consultancy & Development</h3>
-                        <span class="service-desc">Bespoke software solutions & consultancy for all your business needs including integrations and reporting.</span>
-                        <span class="service-button">Read More</span>  <!--Button-->
-                </a>
-                <a href="#" class="service-box" id="it-support">
-                    <div class="icons">
-                        <span class="icon-display">
-                        </span>
-                    </div>
-                    <h3>IT Support</h3>
-                    <span class="service-desc">Fully managed IT support and consultancy packages tailored to meet your exact business needs.</span>
-                    <span class="service-button">Read More</span> <!--Button-->
-                </a>
-                <a href="#" class="service-box" id="marketing">
-                    <div class="icons">
-                        <span class="icon-bar-graph">
-                        </span>
-                    </div>
-                    <h3>Digital Marketing</h3>
-                    <span class="service-desc">Driven brand awareness & ROI through creative digital marketing campaigns</span>
-                    <span class="service-button">Read More</span> <!--Button-->
-                </a>
-                <a href="#" class="service-box" id="telecoms">
-                    <div class="icons">
-                        <span class="icon-phone_in_talk">
-                        </span>
-                    </div>
-                    <h3>Telecoms Services</h3>
-                    <span class="service-desc">Business telephony solutions including mobile & connectivity solutions.</span>
-                    <span class="service-button">Read More</span> <!--Button-->
-                </a>
-                <a href="#" class="service-box" id="web-design">
-                    <div class="icons">
-                        <span class="icon-embed2">
-                        </span>
-                    </div>
-                    <h3>Web Design</h3>
-                    <span class="service-desc">User-centric design for businesses looking to make a lasting impression.</span>
-                    <span class="service-button">Read More</span> <!--Button-->
-                </a>
-                <a href="#" class="service-box" id="security">
-                    <div class="icons">
-                        <span class="icon-security">
-                        </span>
-                    </div>
-                    <h3>Cyber Security</h3>
-                    <span class="service-desc">Prevention, testing, consultancy & breach management services.</span>
-                    <span class="service-button">Read More</span> <!--Button-->
-                </a>
-                <a href="#" class="service-box" id="training">
-                    <div class="icons">
-                        <span class="icon-school">
-                        </span>
-                    </div>
-                    <h3>Developer Training</h3>
-                    <span class="service-desc">Web design & software training courses designed to secure a job in tech.</span>
-                    <span class="service-button">Read More</span> <!--Button-->
-                </a>
+                        <h3>IT Support</h3>
+                        <span class="service-desc">Fully managed IT support and consultancy packages tailored to meet your exact business needs.</span>
+                        <span class="service-button">Read More</span> <!--Button-->
+                    </a>
+                    <a href="#" class="service-box" id="marketing">
+                        <div class="icons">
+                            <span class="icon-bar-graph">
+                            </span>
+                        </div>
+                        <h3>Digital Marketing</h3>
+                        <span class="service-desc">Driven brand awareness & ROI through creative digital marketing campaigns</span>
+                        <span class="service-button">Read More</span> <!--Button-->
+                    </a>
+                </div>
+                <div id="services-group-two">
+                    <a href="#" class="service-box" id="telecoms">
+                        <div class="icons">
+                            <span class="icon-phone_in_talk">
+                            </span>
+                        </div>
+                        <h3>Telecoms Services</h3>
+                        <span class="service-desc">Business telephony solutions including mobile & connectivity solutions.</span>
+                        <span class="service-button">Read More</span> <!--Button-->
+                    </a>
+                    <a href="#" class="service-box" id="web-design">
+                        <div class="icons">
+                            <span class="icon-embed2">
+                            </span>
+                        </div>
+                        <h3>Web Design</h3>
+                        <span class="service-desc">User-centric design for businesses looking to make a lasting impression.</span>
+                        <span class="service-button">Read More</span> <!--Button-->
+                    </a>
+                    <a href="#" class="service-box" id="security">
+                        <div class="icons">
+                            <span class="icon-security">
+                            </span>
+                        </div>
+                        <h3>Cyber Security</h3>
+                        <span class="service-desc">Prevention, testing, consultancy & breach management services.</span>
+                        <span class="service-button">Read More</span> <!--Button-->
+                    </a>
+                    <a href="#" class="service-box" id="training">
+                        <div class="icons">
+                            <span class="icon-school">
+                            </span>
+                        </div>
+                        <h3>Developer Training</h3>
+                        <span class="service-desc">Web design & software training courses designed to secure a job in tech.</span>
+                        <span class="service-button">Read More</span> <!--Button-->
+                    </a>
+                </div>
                 <div id="view-our-work">
                     <a href="#">View Our Work <span class="icon-arrow-right2"></span></a> <!--Link + Fix Arrow-->    
                 </div>
@@ -172,35 +228,131 @@
         </section>
         <!--Partners Mini-Section-->
         <div id="holding">
-            <div class="item">
+            <div class="item" id="partner-one">
                 <div class="partners">
-                <picture class="greyscale">
-                    <source srcset="images/google-partner-bw.webp" type="image/webp">
-                    <source srcset="images/google-partner-bw.jpg" type="image/jpeg">
-                    <img src="images/google-partner-bw.jpg" alt="Google Partner (Greyscale)">
-                </picture>
+                    <picture class="greyscale">
+                        <source srcset="images/google-partner-bw.webp" type="image/webp">
+                        <source srcset="images/google-partner-bw.jpg" type="image/jpeg">
+                        <img src="images/google-partner-bw.jpg" alt="Google Partner Logo (Greyscale)">
+                    </picture>
 
-                <picture class="colored">
-                    <source srcset="images/google-partner-color.webp" type="image/webp">
-                    <source srcset="images/google-partner-color.jpg" type="image/jpeg">
-                    <img src="images/google-partner-color.jpg" alt="Google Partner (Color)">
-                </picture>
+                    <picture class="colored">
+                        <source srcset="images/google-partner-color.webp" type="image/webp">
+                        <source srcset="images/google-partner-color.jpg" type="image/jpeg">
+                        <img src="images/google-partner-color.jpg" alt="Google Partner Logo (Color)">
+                    </picture>
                 </div>
             </div>
 
-            <div class="item">
+            <div class="item" id="partner-two">
                 <div class="partners">
-                <picture class="greyscale">
-                    <source srcset="images/GBC-bw.webp" type="image/webp">
-                    <source srcset="images/GBC-bw.png" type="image/png">
-                    <img src="images/GBC-bw.png" alt="GBC Partner (Greyscale)">
-                </picture>
+                    <picture class="greyscale">
+                        <source srcset="images/GBC-bw.webp" type="image/webp">
+                        <source srcset="images/GBC-bw.png" type="image/png">
+                        <img src="images/GBC-bw.png" alt="GBC Logo (Greyscale)">
+                    </picture>
 
-                <picture class="colored">
-                    <source srcset="images/GBC-color.webp" type="image/webp">
-                    <source srcset="images/GBC-color.png" type="image/png">
-                    <img src="images/GBC-color.png" alt="GBC Partner (Color)">
-                </picture>
+                    <picture class="colored">
+                        <source srcset="images/GBC-color.webp" type="image/webp">
+                        <source srcset="images/GBC-color.png" type="image/png">
+                        <img src="images/GBC-color.png" alt="GBC Logo (Color)">
+                    </picture>
+                </div>
+            </div>
+
+            <div class="item" id="partner-three">
+                <div class="partners">
+                    <picture class="greyscale">
+                        <source srcset="images/norfolk-prohelp-bw.webp" type="image/webp">
+                        <source srcset="images/norfolk-prohelp-bw.png" type="image/png">
+                        <img src="images/norfolk-prohelp-bw.png" alt="Norfolk Prohelp Logo (Greyscale)">
+                    </picture>
+
+                    <picture class="colored">
+                        <source srcset="images/norfolk-prohelp-color.webp" type="image/webp">
+                        <source srcset="images/norfolk-prohelp-color.png" type="image/png">
+                        <img src="images/GBC-color.png" alt="Norfolk Prohelp Logo (Color)">
+                    </picture>
+                </div>
+            </div>
+
+            <div class="item" id="partner-four">
+                <div class="partners">
+                    <picture class="greyscale">
+                        <source srcset="images/investing-in-future-growth-bw.webp" type="image/webp">
+                        <source srcset="images/investing-in-future-growth-bw.jpg" type="image/jpg">
+                        <img src="images/investing-in-future-growth-bw.jpg" alt="Investing in Future Growth Logo (Greyscale)">
+                    </picture>
+
+                    <picture class="colored">
+                        <source srcset="images/investing-in-future-growth-color.webp" type="image/webp">
+                        <source srcset="images/investing-in-future-growth-color.jpg" type="image/jpg">
+                        <img src="images/investing-in-future-growth-color.jpg" alt="Investing in Future Growth Logo (Color)">
+                    </picture>
+                </div>
+            </div>
+
+            <div class="item" id="partner-five">
+                <div class="partners">
+                    <picture class="greyscale">
+                        <source srcset="images/norfolk-carbon-charter-bw.webp" type="image/webp">
+                        <source srcset="images/norfolk-carbon-charter-bw.jpg" type="image/jpg">
+                        <img src="images/norfolk-carbon-charter-bw.png" alt="Norfolk Carbon Charter Logo (Greyscale)">
+                    </picture>
+
+                    <picture class="colored">
+                        <source srcset="images/norfolk-carbon-charter-color.webp" type="image/webp">
+                        <source srcset="images/norfolk-carbon-charter-color.jpg" type="image/jpg">
+                        <img src="images/norfolk-carbon-charter-color.jpg" alt="Norfolk Carbon Charter Logo (Color)">
+                    </picture>
+                </div>
+            </div>
+
+            <div class="item" id="partner-six">
+                <div class="partners">
+                    <picture class="greyscale">
+                        <source srcset="images/PPC-logo-bw.webp" type="image/webp">
+                        <source srcset="images/PPC-logo-bw.jpg" type="image/jpg">
+                        <img src="images/PPC-logo-bw.png" alt="PPC Logo (Greyscale)">
+                    </picture>
+
+                    <picture class="colored">
+                        <source srcset="images/PPC-logo-color.webp" type="image/webp">
+                        <source srcset="images/PPC-logo-color.jpg" type="image/jpg">
+                        <img src="images/PPC-logo-color.jpg" alt="PPC Logo (Color)">
+                    </picture>
+                </div>
+            </div>
+
+            <div class="item" id="partner-seven">
+                <div class="partners">
+                    <picture class="greyscale">
+                        <source srcset="images/princess-royal-training-bw.webp" type="image/webp">
+                        <source srcset="images/princess-royal-training-bw.jpg" type="image/jpg">
+                        <img src="images/princess-royal-training-bw.png" alt="Princess Royal Training Logo (Greyscale)">
+                    </picture>
+
+                    <picture class="colored">
+                        <source srcset="images/princess-royal-training-color.webp" type="image/webp">
+                        <source srcset="images/princess-royal-training-color.jpg" type="image/jpg">
+                        <img src="images/princess-royal-training-color.jpg" alt="Princess Royal Training Logo (Color)">
+                    </picture>
+                </div>
+            </div>
+
+            <div class="item" id="partner-eight">
+                <div class="partners">
+                    <picture class="greyscale">
+                        <source srcset="images/future-50-bw.webp" type="image/webp">
+                        <source srcset="images/future-50-bw.jpg" type="image/jpg">
+                        <img src="images/future-50-bw.png" alt="Future 50 Logo (Greyscale)">
+                    </picture>
+
+                    <picture class="colored">
+                        <source srcset="images/future-50-color.webp" type="image/webp">
+                        <source srcset="images/future-50-color.jpg" type="image/jpg">
+                        <img src="images/future-50-color.jpg" alt="Future 50 Logo (Color)">
+                    </picture>
                 </div>
             </div>
         </div>
@@ -249,25 +401,58 @@
             <div id="news">
                 <div id="box">
                     <h2>Latest News</h2>
+                    <h3><a href="#">View All <span class="icon-arrow-right2"></span></a></h3>
                 </div>
             </div>
             <div id="block">
-                <div class="article-position">
-                    <article id="software">
-                        <a href="#" class="article-link"> <!--Entire Box is 1 link, Insights is a seperate link-->
+                <div id="article-wrap">
+                    <div class="article-position" id="software-position">
+                        <article id="software">
+                            <a href="#" class="article-link"> <!--Entire Box is 1 link, Insights is a seperate link-->
+                                <div class="image-holder">
+                                    <a href="#" class="image-tag">Insights</a><!--Background image behind this-->
+                                    <div class="face">
+                                        <picture>
+                                            <source srcset="images/software-article.webp" type="image/webp">
+                                            <source srcset="images/software-article.png" type="image/png">
+                                            <img src="images/software-article.png">
+                                        </picture>
+                                    </div>
+                                </div>
+                                <div class="article-desc">
+                                    <h5>How Much Could Bespoke Software Add to Your E...</h5>
+                                    <p class="paragraph-sizing">If You're a Managing Director or Senior Manager preparing your business for exit, you know that incr...</p>
+                                    <button>READ MORE</button> <!--Button-->
+                                    <div class="footnote">
+                                        <div class="logo">
+                                            <img src="images/netmatters-m.jpg">
+                                        </div>
+                                        <div class="author">
+                                            <strong id="author-name">Posted by Netmatters</strong>
+                                            <br>
+                                            <p> 27th June 2025 </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </article>
+                    </div>
+                    <div class="article-position" id="ai-position">
+                        <article id="ai">
+                            <a href="#" class="article-link">
                             <div class="image-holder">
                                 <a href="#" class="image-tag">Insights</a><!--Background image behind this-->
                                 <div class="face">
                                     <picture>
-                                        <source srcset="images/software-article.webp" type="image/webp">
-                                        <source srcset="images/software-article.png" type="image/png">
-                                        <img src="images/software-article.png">
+                                        <source srcset="images/ai-article.webp" type="image/webp">
+                                        <source srcset="images/ai-article.png" type="image/png">
+                                        <img src="images/ai-article.png">
                                     </picture>
                                 </div>
                             </div>
                             <div class="article-desc">
-                                <h5>How Much Could Bespoke Software Add to Your E...</h5>
-                                <p>If You're a Managing Director or Senior Manager preparing your business for exit, you know that incr...</p>
+                                <h5>How Can AI Benefit My Business?</h5>
+                                <p class="paragraph-sizing">The idea of integrating AI into your business opporations may seem daunting, but there are undeniable...</p>
                                 <button>READ MORE</button> <!--Button-->
                                 <div class="footnote">
                                     <div class="logo">
@@ -276,68 +461,42 @@
                                     <div class="author">
                                         <strong id="author-name">Posted by Netmatters</strong>
                                         <br>
-                                        <p> 27th June 2025 </p>
+                                        <p> 26th June 2025 </p>
                                     </div>
                                 </div>
                             </div>
-                        </a>
-                    </article>
-                </div>
-                <div class="article-position">
-                    <article id="ai">
-                        <a href="#" class="article-link">
-                        <div class="image-holder">
-                            <a href="#" class="image-tag">Insights</a><!--Background image behind this-->
-                            <div class="face">
-                                <source srcset="images/ai-article.webp" type="image/webp">
-                                <source srcset="images/ai-article.png" type="image/png">
-                                <img src="images/ai-article.png">
-                            </div>
-                        </div>
-                        <div class="article-desc">
-                            <h5>How Can AI Benefit My Business?</h5>
-                            <p>The idea of integrating AI into your business opporations may seem daunting, but there are undeniable...</p>
-                            <button>READ MORE</button> <!--Button-->
-                            <div class="footnote">
-                                <div class="logo">
-                                    <img src="images/netmatters-m.jpg">
-                                </div>
-                                <div class="author">
-                                    <strong id="author-name">Posted by Netmatters</strong>
-                                    <br>
-                                    <p> 26th June 2025 </p>
+                            </a>
+                        </article>
+                    </div>
+                    <div class="article-position" id="job-position">
+                        <article id="job">
+                            <a href="#" class="article-link">
+                            <div class="image-holder">
+                                <a href="#" class="image-tag" id="special-tag">CAREERS</a><!--Background image behind this-->
+                                <div class="face">
+                                    <picture>
+                                        <img src="https://www.netmatters.co.uk/uploads/article/3487/1st-line-technician-1QNr.png">
+                                    </picture>
                                 </div>
                             </div>
-                        </div>
-                        </a>
-                    </article>
-                </div>
-                <div class="article-position">
-                    <article id="job">
-                        <a href="#" class="article-link">
-                        <div class="image-holder">
-                            <a href="#" class="image-tag" id="special-tag">CAREERS</a><!--Background image behind this-->
-                            <div class="face">
-                                <img src="https://www.netmatters.co.uk/uploads/article/3487/1st-line-technician-1QNr.png">
-                            </div>
-                        </div>
-                        <div class="article-desc">
-                            <h5>1st Line Technician</h5>
-                            <p>Salary Range £25,000 - £29,000 + Pension Hours 40 hours per week, Monday - Friday Location Wymondham...</p>
-                            <button>READ MORE</button> <!--Button-->
-                            <div class="footnote">
-                                <div class="logo">
-                                    <img src="images/bethany-shakespeare-picture.jpg">
-                                </div>
-                                <div class="author">
-                                    <strong id="author-name">Posted by Bethany Shakespeare</strong>
-                                    <br>
-                                    <p> 20th June 2025 </p>
+                            <div class="article-desc">
+                                <h5>1st Line Technician</h5>
+                                <p class="paragraph-sizing">Salary Range £25,000 - £29,000 + Pension Hours 40 hours per week, Monday - Friday Location Wymondham...</p>
+                                <button>READ MORE</button> <!--Button-->
+                                <div class="footnote">
+                                    <div class="logo">
+                                        <img src="images/bethany-shakespeare-picture.jpg">
+                                    </div>
+                                    <div class="author">
+                                        <strong id="author-name">Posted by Bethany Shakespeare</strong>
+                                        <br>
+                                        <p> 20th June 2025 </p>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                        </a>
-                    </article>
+                            </a>
+                        </article>
+                    </div>
                 </div>
             </div>
             <div id="view-all">                
@@ -348,13 +507,19 @@
         </section>
         <!--Clients Mini-Section-->
         <div id="holding">
-            <img src="images/ashcroftlogo.jpg" id="ashcroft">
-            <img src="images/onetravellerlogo.jpg" id="traveller">
+            <img src="images/ashcroftlogo.webp" id="ashcroft" alt="Ashcroft Logo">
+            <img src="images/onetravellerlogo.webp" id="traveller" alt="Traveller Logo">
+            <img src="images/searles-logo.webp" id="searles" alt="Searles Logo">
+            <img src="images/busseys-logo.webp" id="busseys" alt="Busseys Logo">
+            <img src="images/crane-logo.webp" id="crane" alt="Crane Logo">
+            <img src="images/black-swan-logo.webp" id="black-swan" alt="Black Swan Logo">
+            <img src="images/xupes-logo.webp" id="xupes" alt="Xupes Logo">
+            <img src="images/beat-logo.webp" id="beat" alt="Beat Logo">
         </div>
     </main>
     <footer>
         <!--Footer Section-->
-        <div class="container">
+        <div class="container" id="foot">
             <div id="footer-positioning">
                 <div id="top-positioning">
                     <div id="top-section">
@@ -444,7 +609,17 @@
         </div>
         <!--Footer's Footer Mini-Section-->
         <div id="floor-wrapper">
-            <p>&copy; Copyright Netmatters 2025. <br>All rights reserved.<br><a href="#">Sitemap</a></p> <!--Special, changes background colour-->
+            <div id="floor-details">
+                <div id="floor-copyright">
+                    &copy; Copyright Netmatters 2025.
+                </div>
+                <div id="floor-copyright-addition">
+                     All rights reserved.
+                </div>
+                <div id="floor-copyright-link">
+                    <li id="floor-link"><a href="#">Sitemap</a></li> <!--Special, changes background colour-->
+                </div>
+            </div>
         </div>
     </footer>
 </body>

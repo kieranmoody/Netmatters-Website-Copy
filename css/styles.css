@@ -448,7 +448,85 @@ header #header-floor #bottom-header-one #search-first {
   display: none;
 }
 
-search-hidden #still-bar {
+#contact,
+#support {
+  display: none;
+  height: 56px;
+  line-height: 46px;
+  font-size: 1.125rem;
+  float: left;
+  text-transform: uppercase;
+  padding: 5px 15px;
+  color: white;
+  border-radius: 3px;
+  margin-left: 20px;
+}
+
+#support {
+  background-color: #4183d7;
+  border: 1px solid #4183d7;
+}
+
+#contact {
+  background-color: #999aa2;
+  border: 1px solid #999aa2;
+  margin-right: 20px;
+}
+
+#bottom-header-update {
+  background-color: #333645;
+  display: none;
+  width: 100%;
+}
+
+.bottom-header-service {
+  color: white;
+  position: relative;
+  display: block;
+  padding: 19px 0 18px;
+  text-transform: uppercase;
+  font-size: 1.125rem;
+  line-height: 1;
+  width: 14.2%;
+}
+
+#con-and-dev span {
+  color: #67809f;
+  font-size: 1.438rem;
+}
+
+#it span {
+  color: #4183d7;
+  font-size: 1.438rem;
+}
+
+#digital-marketing span {
+  color: #2ecc71;
+  font-size: 1.438rem;
+}
+
+#telecom-services span {
+  color: #d64541;
+  font-size: 1.438rem;
+}
+
+#web span {
+  color: #926fb1;
+  font-size: 1.438rem;
+}
+
+#cyber-security span {
+  color: #f62459;
+  font-size: 1.438rem;
+}
+
+#developer-course span {
+  color: #ce4125;
+  font-size: 1.438rem;
+}
+
+/*Still Bar*/
+#still-bar {
   height: 550px;
 }
 
@@ -522,6 +600,10 @@ search-hidden #still-bar {
   letter-spacing: 0.4px;
 }
 
+#service-roof h3 {
+  display: none;
+}
+
 #services {
   text-align: center;
   padding: 50px 15px;
@@ -571,6 +653,10 @@ search-hidden #still-bar {
 }
 
 /*SERVICES HOVER*/
+#service-roof h3:hover {
+  text-decoration: underline;
+}
+
 #consultancy:hover {
   background-color: #67809f;
   color: white;
@@ -821,6 +907,15 @@ search-hidden #still-bar {
   border-color: #7e57a0;
 }
 
+#partner-three,
+#partner-four,
+#partner-five,
+#partner-six,
+#partner-seven,
+#partner-eight {
+  display: none;
+}
+
 /*Welcome to Netmatters*/
 #welcome {
   padding: 50px 15px;
@@ -952,6 +1047,14 @@ search-hidden #still-bar {
 }
 
 /*articles*/
+#box h3 {
+  display: none;
+}
+
+#box h3:hover {
+  text-decoration: underline;
+}
+
 .article-position .article-link {
   position: absolute;
   top: 0;
@@ -963,13 +1066,13 @@ search-hidden #still-bar {
   text-decoration: none;
 }
 
-#job .image-holder .face {
+.image-holder .face {
   display: block;
   border-radius: 3px 3px 0 0;
   position: relative;
 }
 
-#job .image-holder .face img {
+.face picture img {
   display: block;
   width: 100%;
   height: auto;
@@ -1157,13 +1260,34 @@ search-hidden #still-bar {
 }
 
 #ashcroft,
-#traveller {
+#traveller,
+#searles,
+#busseys,
+#crane,
+#black-swan,
+#xupes,
+#beat {
   filter: grayscale(1);
 }
 
 #ashcroft:hover,
-#traveller:hover {
+#traveller:hover,
+#searles:hover,
+#busseys:hover,
+#crane:hover,
+#black-swan:hover,
+#xupes:hover,
+#beat:hover {
   filter: grayscale(0);
+}
+
+#searles,
+#busseys,
+#crane,
+#black-swan,
+#xupes,
+#beat {
+  display: none;
 }
 
 /*footer*/
@@ -1179,14 +1303,13 @@ footer {
 }
 
 #top-positioning {
-  flex-wrap: wrap;
-  width: 100%;
   display: flex;
   justify-content: space-between;
 }
 
 footer #footer-positioning #footer-logo img {
   width: 100%;
+  height: auto;
 }
 
 footer #footer-top-positioning #footer-section {
@@ -1263,7 +1386,7 @@ footer #footer-positioning #bottom-positioning {
   margin-right: -15px;
 }
 
-footer #footer-positioning #bottom-positioning .footer-menu {
+.footer-menu {
   margin-bottom: 30px;
   width: 100%;
   float: left;
@@ -1302,18 +1425,33 @@ footer a:-webkit-any-link {
 }
 
 footer #floor-wrapper {
-  display: block;
+  display: flex;
   margin-left: 0;
   width: 100%;
   padding: 15px 15px 10px 15px;
   font-size: 0.8125rem;
   line-height: 1.42857143;
   letter-spacing: 0.4px;
+  flex-direction: column;
+}
+
+#floor-details {
+  display: flex;
+  flex-direction: column;
+}
+
+#floor-wrapper ul {
+  list-style-type: none;
 }
 
 footer ul li a:hover,
 footer #floor-wrapper a:hover {
   text-decoration: underline;
+}
+
+#foot {
+  margin-left: auto;
+  margin-right: auto;
 }
 
 /*Header Icons*/
@@ -1543,7 +1681,7 @@ header #header-floor #bottom-header-one {
 }
 
 /*Header*/
-@media (min-width: 768px) and (max-width: 991px) {
+@media (min-width: 768px) {
   #bottom-header-one {
     display: none;
   }
@@ -1553,10 +1691,6 @@ header #header-floor #bottom-header-one {
   #bottom-header-two {
     display: flex;
     box-sizing: border-box;
-  }
-  #menu-and-hidden {
-    display: flex;
-    margin-left: 20px;
   }
   #search-hidden {
     background-color: #fff;
@@ -1578,18 +1712,55 @@ header #header-floor #bottom-header-one {
     color: #fff;
     align-self: center;
   }
-  #submit-hidden a span {
-    font-weight: 400;
-    font-size: 23px;
-    line-height: 1;
+  #menu-and-hidden {
+    display: flex;
+    margin-left: 20px;
   }
   #menu-placement {
     margin-left: 20px;
     display: inline-block;
   }
+}
+@media (min-width: 768px) and (max-width: 991px) {
+  #submit-hidden a span {
+    font-weight: 400;
+    font-size: 23px;
+    line-height: 1;
+  }
   #heading {
     display: flex;
     justify-content: space-evenly;
+  }
+}
+@media (min-width: 992px) and (max-width: 1259px) {
+  #search-hidden {
+    display: none;
+  }
+}
+@media (min-width: 992px) {
+  #support {
+    display: block;
+  }
+  #contact {
+    display: block;
+  }
+  header #top-header #netmatters {
+    width: 50%;
+  }
+  #bottom-header-update {
+    display: flex;
+    border: 1px solid #333645;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  header,
+  #heading {
+    padding: 0;
+  }
+  #top-header {
+    padding: 20px 15px;
   }
 }
 /*Still-Bar*/
@@ -1641,7 +1812,110 @@ header #header-floor #bottom-header-one {
 @media (min-width: 992px) {
   #still-bar img {
     opacity: 0.3;
-    background-color: linear-gradient(270deg, transparent 25%, #000);
+    background: linear-gradient(270deg, transparent 25%, #000);
+  }
+}
+/*Services*/
+@media (min-width: 768px) {
+  #service-roof h3 {
+    display: block;
+    float: right;
+    margin-left: 20px;
+    margin-top: 0;
+    font-size: 2.25rem;
+    font-weight: 600;
+    color: #333645;
+    line-height: 1.1;
+    letter-spacing: 0.4px;
+  }
+  #service-roof {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+  }
+  #services-group-two {
+    display: grid;
+    grid-gap: 30px;
+    grid-template-columns: 1fr 1fr;
+  }
+  #services-group-two .service-box {
+    display: flex;
+    flex-direction: column;
+  }
+  #services-group-two .service-box h3 {
+    margin-top: 0;
+  }
+  #view-our-work {
+    display: none;
+  }
+  #services {
+    width: 750px;
+    margin-right: auto;
+    margin-left: auto;
+  }
+  .service-box .service-button {
+    max-width: fit-content;
+    display: grid;
+    justify-self: center;
+    align-self: center;
+  }
+}
+@media (min-width: 992px) {
+  #services-group-one {
+    display: grid;
+    grid-gap: 30px;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+  #services-group-one .service-box {
+    display: flex;
+    flex-direction: column;
+  }
+  #services-group-one .service-box h3 {
+    margin-top: 0;
+  }
+  #services {
+    width: 970px;
+  }
+}
+@media (min-width: 1260px) {
+  #services {
+    width: 1200px;
+  }
+  #services-group-two {
+    display: grid;
+    grid-gap: 30px;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+}
+/*Partners*/
+@media (min-width: 620px) {
+  #partner-three {
+    display: block;
+  }
+}
+@media (min-width: 875px) {
+  #partner-four {
+    display: block;
+  }
+}
+@media (min-width: 1200px) {
+  #partner-five {
+    display: block;
+  }
+}
+@media (min-width: 1450px) {
+  #partner-six {
+    display: block;
+  }
+}
+@media (min-width: 1825px) {
+  #partner-seven {
+    display: block;
+  }
+}
+@media (min-width: 1910px) {
+  #partner-eight {
+    display: block;
   }
 }
 /*Welcome To Netmatters*/
@@ -1686,6 +1960,159 @@ header #header-floor #bottom-header-one {
   }
   #lower-button {
     margin-top: 0px;
+  }
+}
+/*Articles*/
+@media (min-width: 768px) {
+  #box h3 {
+    float: right;
+    margin-left: 20px;
+    margin-bottom: 15px;
+    display: block;
+    font-size: 1.625rem;
+    line-height: 1.1;
+    font-weight: 600;
+    letter-spacing: 0.4px;
+    margin-top: 0;
+    color: #333645;
+  }
+  #box {
+    display: flex;
+  }
+  #job-position {
+    display: none;
+  }
+  #article-wrap {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .article-position {
+    width: 50%;
+    float: left;
+    padding: 0 15px;
+  }
+  #view-all {
+    display: none;
+  }
+  .article-desc h5 {
+    min-height: 3rem;
+  }
+  #articles {
+    margin-left: 5%;
+    margin-right: 5%;
+  }
+}
+@media (min-width: 768px) and (max-width: 1259px) {
+  .article-desc .paragraph-sizing {
+    min-height: 66px;
+  }
+}
+@media (min-width: 992px) {
+  #articles {
+    margin-left: 3%;
+    margin-right: 3%;
+  }
+}
+@media (min-width: 1260px) {
+  #job-position {
+    display: block;
+    width: 33.33333333%;
+    float: left;
+  }
+  #software-position {
+    width: 33.33333333%;
+  }
+  #ai-position {
+    width: 33.33333333%;
+  }
+}
+/*Clients*/
+@media (min-width: 650px) {
+  #searles {
+    display: block;
+  }
+}
+@media (min-width: 930px) {
+  #busseys {
+    display: block;
+  }
+}
+@media (min-width: 1220px) {
+  #crane {
+    display: block;
+  }
+}
+@media (min-width: 1400px) {
+  #black-swan {
+    display: block;
+  }
+}
+@media (min-width: 1700px) {
+  #xupes {
+    display: block;
+  }
+}
+@media (min-width: 1825px) {
+  #beat {
+    display: block;
+  }
+}
+/*Footer*/
+@media (max-width: 767px) {
+  #top-positioning {
+    width: 100%;
+    flex-wrap: wrap;
+  }
+}
+@media (min-width: 481px) {
+  #socials a {
+    max-width: fit-content;
+  }
+}
+@media (min-width: 768px) {
+  #bottom-positioning {
+    flex-grow: 1;
+  }
+  .footer-menu {
+    width: 50%;
+    float: left;
+  }
+  #floor-link {
+    list-style-type: "- ";
+  }
+  footer #floor-wrapper #floor-details {
+    flex-direction: row;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    justify-content: center;
+  }
+  #foot {
+    width: 750px;
+  }
+}
+@media (min-width: 992px) {
+  .footer-menu {
+    float: left;
+  }
+  #foot {
+    width: 970px;
+  }
+}
+@media (min-width: 1260px) {
+  #footer-positioning {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+  #top-positioning {
+    width: 400px;
+  }
+  footer {
+    padding: 47px 0 0;
+  }
+  #foot {
+    width: 1200px;
   }
 }
 
