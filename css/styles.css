@@ -477,6 +477,16 @@ header #header-floor #bottom-header-one #search-first {
   background-color: #333645;
   display: none;
   width: 100%;
+  border: 1px solid #333645;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#header-tabs {
+  display: flex;
+  justify-content: space-between;
 }
 
 .bottom-header-service {
@@ -487,7 +497,13 @@ header #header-floor #bottom-header-one #search-first {
   text-transform: uppercase;
   font-size: 1.125rem;
   line-height: 1;
-  width: 14.2%;
+  width: 14.5%;
+}
+
+small {
+  display: block;
+  font-size: 0.625rem;
+  padding-bottom: 1px;
 }
 
 #con-and-dev span {
@@ -523,6 +539,260 @@ header #header-floor #bottom-header-one #search-first {
 #developer-course span {
   color: #ce4125;
   font-size: 1.438rem;
+}
+
+#con-and-dev:hover {
+  background-color: #67809f;
+}
+
+#it:hover {
+  background-color: #4183d7;
+}
+
+#digital-marketing:hover {
+  background-color: #2ecc71;
+}
+
+#telecom-services:hover {
+  background-color: #d64541;
+}
+
+#web:hover {
+  background-color: #926fb1;
+}
+
+#cyber-security:hover {
+  background-color: #f62459;
+}
+
+#developer-course:hover {
+  background-color: #ce4125;
+}
+
+#con-and-dev:hover span,
+#it:hover span,
+#digital-marketing:hover span,
+#telecom-services:hover span,
+#web:hover span,
+#cyber-security:hover span,
+#developer-course:hover span {
+  color: white;
+}
+
+#con-and-dev:hover .menu-tab:before {
+  border-color: #67809f transparent transparent;
+  border-width: 35px 68px 0;
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: -35px;
+  transform: translateX(-50%);
+  z-index: 90;
+  width: 0;
+  height: 0;
+  border-style: solid;
+}
+
+#it:hover .menu-tab:before {
+  border-color: #4183d7 transparent transparent;
+  border-width: 35px 68px 0;
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: -35px;
+  transform: translateX(-50%);
+  z-index: 90;
+  width: 0;
+  height: 0;
+  border-style: solid;
+}
+
+#digital-marketing:hover .menu-tab:before {
+  border-color: #2ecc71 transparent transparent;
+  border-width: 35px 68px 0;
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: -35px;
+  transform: translateX(-50%);
+  z-index: 90;
+  width: 0;
+  height: 0;
+  border-style: solid;
+}
+
+#telecom-services:hover .menu-tab:before {
+  border-color: #d64541 transparent transparent;
+  border-width: 35px 68px 0;
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: -35px;
+  transform: translateX(-50%);
+  z-index: 90;
+  width: 0;
+  height: 0;
+  border-style: solid;
+}
+
+#web:hover .menu-tab:before {
+  border-color: #926fb1 transparent transparent;
+  border-width: 35px 68px 0;
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: -35px;
+  transform: translateX(-50%);
+  z-index: 90;
+  width: 0;
+  height: 0;
+  border-style: solid;
+}
+
+#cyber-security:hover .menu-tab:before {
+  border-color: #f62459 transparent transparent;
+  border-width: 35px 68px 0;
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: -35px;
+  transform: translateX(-50%);
+  z-index: 90;
+  width: 0;
+  height: 0;
+  border-style: solid;
+}
+
+#developer-course:hover .menu-tab:before {
+  border-color: #ce4125 transparent transparent;
+  border-width: 35px 68px 0;
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: -35px;
+  transform: translateX(-50%);
+  z-index: 90;
+  width: 0;
+  height: 0;
+  border-style: solid;
+}
+
+.dropdown-menu {
+  display: none;
+  margin: 0;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  min-width: 100vw;
+  z-index: 10;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  text-transform: capitalize;
+}
+
+#con-and-dev .dropdown-menu {
+  left: -17px;
+}
+
+#it .dropdown-menu {
+  left: calc(-100% - 17px);
+}
+
+#digital-marketing .dropdown-menu {
+  left: calc(-200% - 17px);
+}
+
+#telecom-services .dropdown-menu {
+  left: calc(-300% - 17px);
+}
+
+#web .dropdown-menu {
+  left: calc(-400% - 17px);
+}
+
+#cyber-security .dropdown-menu {
+  left: calc(-500% - 17px);
+}
+
+#developer-course .dropdown-menu {
+  left: calc(-600% - 17px);
+}
+
+#con-and-dev .dropdown-menu {
+  background-color: #526781;
+}
+
+#it .dropdown-menu {
+  background-color: #286abd;
+}
+
+#digital-marketing .dropdown-menu {
+  background-color: #25a25a;
+}
+
+#telecom-services .dropdown-menu {
+  background-color: #bc2c28;
+}
+
+#web .dropdown-menu {
+  background-color: #79539a;
+}
+
+#cyber-security .dropdown-menu {
+  background-color: #de093f;
+}
+
+#developer-course .dropdown-menu {
+  background-color: #a3331d;
+}
+
+.menu-positioning {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  list-style: none;
+  text-align: left;
+  padding: 0;
+  margin: -15px auto 0 auto;
+}
+
+.menu-positioning::after {
+  clear: both;
+}
+
+.menu-positioning .dropdown-title {
+  width: 100%;
+  margin-bottom: 10px;
+  margin-top: 15px;
+  font-weight: 500;
+  display: block;
+  font-size: 2rem;
+  line-height: 1.1;
+}
+
+.menu-positioning .dropdown-item {
+  width: 33%;
+  margin-top: 15px;
+}
+
+.menu-positioning .dropdown-item a {
+  font-size: 1.2rem;
+  line-height: 1.313rem;
+  padding: 0.625rem 0.938rem 0.625rem 0;
+  display: flex;
+  align-items: center;
+}
+
+.menu-positioning .dropdown-item .item-icon {
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  min-width: 25px;
+}
+
+.menu-positioning .dropdown-item p {
+  display: block;
+  margin-left: 10px;
 }
 
 /*Still Bar*/
@@ -845,12 +1115,13 @@ header #header-floor #bottom-header-one #search-first {
   text-decoration: underline;
 }
 
-#holding {
+.holding {
   padding: 50px 0;
   display: flex;
-  justify-content: space-around;
+  justify-content: space-evenly;
   align-items: center;
   flex-wrap: wrap;
+  overflow: inherit;
 }
 
 .item {
@@ -1259,6 +1530,12 @@ header #header-floor #bottom-header-one #search-first {
   text-decoration: underline;
 }
 
+.transitioned:hover {
+  position: relative;
+  top: -10px;
+  transition: 0.5s ease;
+}
+
 #ashcroft,
 #traveller,
 #searles,
@@ -1288,6 +1565,159 @@ header #header-floor #bottom-header-one #search-first {
 #xupes,
 #beat {
   display: none;
+}
+
+.client img {
+  padding: 0 20px;
+}
+
+.client {
+  display: flex;
+  position: relative;
+}
+
+.client .description {
+  display: none;
+  position: absolute;
+  bottom: 100%;
+  left: -200px;
+  right: -200px;
+}
+
+.client .description .box {
+  background-color: #333645;
+  color: #fff;
+  padding: 20px;
+  font-size: 0.875rem;
+  max-width: 280px;
+  margin: 0 auto 50px;
+  text-align: center;
+}
+
+.client .description .box h3 {
+  position: relative;
+  font-size: 1.125rem;
+  font-weight: 400;
+  line-height: 1.1;
+  letter-spacing: 0.4px;
+  color: #fff;
+  padding-bottom: 17px;
+  margin: 0;
+}
+
+.client .description .box p {
+  font-size: 0.8125rem;
+  line-height: 1.375rem;
+  margin-bottom: 0;
+  letter-spacing: 0.4px;
+}
+
+.client-button-one {
+  color: #fff;
+  background-color: #926fb1;
+  border-color: #926fb1;
+  height: auto;
+  line-height: 35px;
+  padding: 5px 15px;
+  text-transform: uppercase;
+  border-radius: 3px;
+  white-space: normal;
+  font-weight: 400;
+  text-align: center;
+  vertical-align: middle;
+  background-image: none;
+  border: 1px solid transparent;
+  margin-bottom: 0;
+  margin-top: 11px;
+  font-size: 16px;
+  display: flex;
+  justify-content: center;
+  letter-spacing: 0.4px;
+}
+
+.client-button-two {
+  color: #fff;
+  background-color: #2ecc71;
+  border-color: #2ecc71;
+  height: auto;
+  line-height: 35px;
+  padding: 5px 15px;
+  text-transform: uppercase;
+  border-radius: 3px;
+  white-space: normal;
+  font-weight: 400;
+  text-align: center;
+  vertical-align: middle;
+  background-image: none;
+  border: 1px solid transparent;
+  margin-bottom: 0;
+  margin-top: 11px;
+  font-size: 16px;
+  display: flex;
+  justify-content: center;
+  letter-spacing: 0.4px;
+}
+
+.client-button-three {
+  color: #fff;
+  background-color: #f7b322;
+  border-color: #f7b322;
+  height: auto;
+  line-height: 35px;
+  padding: 5px 15px;
+  text-transform: uppercase;
+  border-radius: 3px;
+  white-space: normal;
+  font-weight: 400;
+  text-align: center;
+  vertical-align: middle;
+  background-image: none;
+  border: 1px solid transparent;
+  margin-bottom: 0;
+  margin-top: 11px;
+  font-size: 16px;
+  display: flex;
+  justify-content: center;
+  letter-spacing: 0.4px;
+}
+
+.box .icon-arrow-right2 {
+  margin-left: 12px;
+  vertical-align: middle;
+  margin: auto -4px auto 12px;
+}
+
+.client .description .box .box-bottom {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  margin-left: -36px;
+  line-height: 1.42857143;
+}
+
+#box-bottom-alt {
+  line-height: 1.48 !important;
+}
+
+.client .description .box .box-bottom:after {
+  content: "";
+  margin: auto;
+  display: inline-block;
+  border-color: #333645 transparent transparent;
+  border-style: solid;
+  border-width: 35px 36px 0;
+}
+
+.client:hover .description {
+  display: block;
+}
+
+#client-name {
+  font-weight: 600;
+}
+
+.client .description .box-xupes h3 {
+  padding: 0;
 }
 
 /*footer*/
@@ -1748,12 +2178,10 @@ header #header-floor #bottom-header-one {
     width: 50%;
   }
   #bottom-header-update {
-    display: flex;
-    border: 1px solid #333645;
-    padding-left: 15px;
-    padding-right: 15px;
-    margin-left: auto;
-    margin-right: auto;
+    display: block;
+  }
+  .bottom-header-service:hover .dropdown-menu {
+    display: block;
   }
   header,
   #heading {
@@ -1798,9 +2226,13 @@ header #header-floor #bottom-header-one {
     padding-top: 3.75rem;
     padding-bottom: 3.75rem;
   }
+  .menu-positioning {
+    width: 970px;
+  }
 }
 @media (min-width: 992px) and (min-width: 1260px) {
-  #overlay {
+  #overlay,
+  .menu-positioning {
     width: 1200px;
   }
 }

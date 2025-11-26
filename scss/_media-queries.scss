@@ -78,12 +78,11 @@
     }
 
     #bottom-header-update {
-        display: flex;
-        border: 1px solid #333645;
-        padding-left: 15px;
-        padding-right: 15px;
-        margin-left: auto;
-        margin-right: auto;
+        display: block;
+    }
+
+    .bottom-header-service:hover .dropdown-menu {
+        display: block;
     }
 
     header, 
@@ -135,9 +134,13 @@
         padding-top: 3.75rem;
         padding-bottom: 3.75rem;
     }
+    .menu-positioning {
+        width: 970px;
+    }
 
 @media (min-width:1260px) {
-    #overlay {
+    #overlay,
+    .menu-positioning {
         width: 1200px;
     }
 }
