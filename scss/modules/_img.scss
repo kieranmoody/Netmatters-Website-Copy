@@ -1,4 +1,17 @@
+/*---------------Header Images---------------*/
 
+header #netmatters {
+    height: auto;
+    vertical-align: middle;
+    float: none;
+    width: 100%;
+    display: table-cell;
+}
+
+header img {
+    max-width: 100%;
+    display: block;
+}
 
 #still-bar img {
     object-fit: cover;
@@ -6,4 +19,141 @@
     position: relative;
     z-index: 1;
     opacity: 0.5;
+}
+
+/*---------------Partners Images---------------*/
+
+.partners {
+    position: relative;
+    height: 70px;
+    display: inline-block;
+}
+
+.partners picture {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  display: block;
+  padding: 0 20px;
+}
+
+.partners .colored {
+    z-index: 1;
+    position: absolute;
+    opacity: 0;
+}
+
+.partners .greyscale {
+    z-index: 2;
+    position: relative;
+    opacity: 1;
+}
+
+.partners:hover .greyscale {
+    z-index: 0;
+    opacity: 0
+}
+
+.partners:hover .colored {
+    opacity: 1;
+}
+
+.partners img {
+    height: 100%;
+    width: auto;
+    display: block;
+}
+
+#partner-three,
+#partner-four,
+#partner-five,
+#partner-six,
+#partner-seven,
+#partner-eight {
+    display: none;
+}
+
+/*---------------Articles Images---------------*/
+
+
+.face picture img {
+    display: block;
+    width: 100%;
+    height: auto;
+    box-sizing: border-box;
+}
+
+.image-holder .face {
+    display: block;
+    border-radius: 3px 3px 0 0;
+    position: relative;
+}
+
+.footnote .logo {
+    border-radius: 50%;
+    width: 15%;
+}
+
+.footnote .logo img {
+    max-width: 47px;
+}
+
+.footnote .author {
+    padding-left: 20px;
+    line-height: 1.375rem;
+}
+
+/*---------------Clients Images---------------*/
+
+#ashcroft,
+#traveller,
+#searles,
+#busseys,
+#crane,
+#black-swan,
+#xupes,
+#beat        {
+    filter: grayscale(1);
+}
+
+#ashcroft:hover,
+#traveller:hover,
+#searles:hover,
+#busseys:hover,
+#crane:hover,
+#black-swan:hover,
+#xupes:hover,
+#beat:hover {
+    filter: grayscale(0);
+}
+
+#searles,
+#busseys,
+#crane,
+#black-swan,
+#xupes,
+#beat       {
+    display: none;
+}
+
+.client img {
+    padding: 0 20px;
+}
+
+.client {
+    display: flex;
+    position: relative;
+}
+
+/*---------------Footer Images---------------*/
+
+footer #footer-positioning #footer-logo img {
+    width: 100%;
+    height: auto;
+}
+
+footer #top-positioning #footer-logo {
+    width: 250px;
 }

@@ -1,8 +1,69 @@
-/*Services*/
+/*---------------Header Buttons---------------*/
+
+#contact,
+#support {
+    display: none;
+    height: 56px;
+    line-height: 46px;
+    font-size: 1.125rem;
+    float: left;
+    text-transform: uppercase;
+    padding: 5px 15px;
+    color: white;
+    border-radius: 3px;
+    margin-left: 20px;
+}
+
+#support {
+    background-color: #4183d7;
+    border: 1px solid #4183d7;
+}
+
+#contact {
+    background-color: #999aa2;
+    border: 1px solid #999aa2;
+    margin-right: 20px;
+}
+
+/*---------------Still Bar Buttons---------------*/
+
+#still-bar #overlay a {
+    margin-top: 1.938rem;
+    margin-bottom: 1.125rem;
+    padding: 5px 20px;
+    font-size: 1.25rem;
+    background-color: #926fb1;
+    border: solid 1px #926fb1;
+    height: auto;
+    border-radius: 3px;
+    line-height: 50px;
+    text-transform: uppercase;
+    color: white;
+    display: inline-block;
+    font-weight: 400;
+}
+
+/*---------------Services Buttons---------------*/
+
+.service-box .service-button {
+    padding: 5px 15px;
+    border-radius: 3px;
+    font-size: 1.063rem;
+    line-height: 35px;
+    color: white;
+    box-shadow: none;
+    display: inline-block;
+}
 
 #consultancy .service-button {
     background-color: #f7b322;
     border: 3px solid #f7b322;
+}
+
+#consultancy:hover>.service-button {
+    background-color: white;
+    border-color: white;
+    color: #67809f;
 }
 
 #it-support .service-button {
@@ -10,9 +71,21 @@
     border: 3px solid #4183d7;
 }
 
+#it-support:hover>.service-button {
+    background-color: white;
+    border-color: white;
+    color: #4183d7;
+}
+
 #marketing .service-button {
     background-color: #2ecc71;
     border: 3px solid #2ecc71;
+}
+
+#marketing:hover>.service-button {
+    background-color: white;
+    border-color: white;
+    color: #2ecc71;
 }
 
 #telecoms .service-button {
@@ -20,9 +93,21 @@
     border: 3px solid #d64541;
 }
 
+#telecoms:hover>.service-button {
+    background-color: white;
+    border-color: white;
+    color: #d64541;
+}
+
 #web-design .service-button {
     background-color: #926fb1;
     border: 3px solid #926fb1;
+}
+
+#web-design:hover>.service-button {
+    background-color: white;
+    border-color: white;
+    color: #926fb1;
 }
 
 #security .service-button {
@@ -30,7 +115,207 @@
     border: 3px solid #f62459;
 }
 
+#security:hover>.service-button {
+    background-color: white;
+    border-color: white;
+    color: #f62459;
+}
+
 #training .service-button {
     background-color: #ce4125;
     border: 3px solid #ce4125;
+}
+
+#training:hover>.service-button {
+    background-color: white;
+    border-color: white;
+    color: #ce4125;
+}
+
+/*---------------Welcome to Netmatters Buttons---------------*/
+
+.info-button {
+    padding: 10px 30px;
+    font-size: 20px;
+    margin-right:8px;
+    border-radius: 6px;
+    color: white;
+    line-height: 35px;
+    height: auto;
+    border: 0px;
+    display: inline-block;
+    background-color: rgb(39, 41, 54);
+    letter-spacing: 0.4px;
+}
+
+.info-button:hover {
+    background-color: #121318;
+}
+
+#google,
+#trustpilot {
+    padding: 10px 30px;
+    font-size: 20px;
+    margin: 20px 8px 0 0;
+    border-radius: 6px;
+    color: white;
+    line-height: 1.42857143;
+    height: auto;
+    border: 0px;
+    display: inline-block;
+}
+
+#reviews {
+    color: white;
+}
+
+#google {
+    background-color: rgb(67, 135, 246);
+}
+
+#google:hover {
+    background-color: #166af4;
+}
+
+#trustpilot {
+    background-color: rgb(0, 182, 123);
+}
+
+#trustpilot:hover {
+    background-color: #009b69;
+}
+
+/*---------------Articles Buttons---------------*/
+
+.article-desc button {
+    background-color: rgb(247, 179, 34);
+    color: white;
+    border: 1px solid #f7b322;
+        height: auto;
+    line-height: 35px;
+    padding: 5px 15px;
+    font-size: 1.063rem;
+    border-radius: 3px;
+    white-space: normal;
+}
+
+#job .article-desc button {
+    background-color: #4183d7;
+    border-color: #4183d7;
+}
+
+/*---------------Clients Buttons---------------*/
+
+.client-button-one {
+    color: #fff;
+    background-color: #926fb1;
+    border-color: #926fb1;
+    height: auto;
+    line-height: 35px;
+    padding: 5px 15px;
+    text-transform: uppercase;
+    border-radius: 3px;
+    white-space: normal;
+    font-weight: 400;
+    text-align: center;
+    vertical-align: middle;
+    background-image: none;
+    border: 1px solid transparent;
+    margin-bottom: 0;
+    margin-top: 11px;
+    font-size: 16px;
+    display: flex;
+    justify-content: center;
+    letter-spacing: 0.4px;
+}
+
+.client-button-two {
+    color: #fff;
+    background-color: #2ecc71;
+    border-color: #2ecc71;
+    height: auto;
+    line-height: 35px;
+    padding: 5px 15px;
+    text-transform: uppercase;
+    border-radius: 3px;
+    white-space: normal;
+    font-weight: 400;
+    text-align: center;
+    vertical-align: middle;
+    background-image: none;
+    border: 1px solid transparent;
+    margin-bottom: 0;
+    margin-top: 11px;
+    font-size: 16px;
+    display: flex;
+    justify-content: center;
+    letter-spacing: 0.4px;
+}
+
+.client-button-three {
+    color: #fff;
+    background-color: #f7b322;
+    border-color: #f7b322;
+    height: auto;
+    line-height: 35px;
+    padding: 5px 15px;
+    text-transform: uppercase;
+    border-radius: 3px;
+    white-space: normal;
+    font-weight: 400;
+    text-align: center;
+    vertical-align: middle;
+    background-image: none;
+    border: 1px solid transparent;
+    margin-bottom: 0;
+    margin-top: 11px;
+    font-size: 16px;
+    display: flex;
+    justify-content: center;
+    letter-spacing: 0.4px;
+}
+
+/*---------------Footer Buttons---------------*/
+
+#socials a {
+  position: relative;
+  z-index: 1;
+  transition: background-color 0.3s ease;
+}
+
+#socials a {
+    padding: 12px 22px 16px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    width: 35%;
+    text-align: center;
+    text-decoration: none;
+    font-size: 26px;
+    background-color: #212330;
+    font-weight: 400;
+    line-height: 26px;
+    z-index: 1;
+}
+
+footer #footer-positioning #socials {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-bottom: 30px;
+}
+
+#facebook:hover {
+    background-color: #3b5998;
+}
+
+#linkedin:hover {
+    background-color: #0077b5;
+}
+
+#twitter:hover {
+    background-color: #00aced;
+}
+
+#instagram:hover {
+    background-color: #d93175;
 }

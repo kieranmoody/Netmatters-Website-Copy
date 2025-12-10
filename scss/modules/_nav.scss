@@ -1,0 +1,117 @@
+/*---------------Header Nav---------------*/
+
+.menu-positioning .dropdown-item {
+    width: 33%;
+    margin-top: 15px;
+}
+
+.menu-positioning .dropdown-item a {
+    font-size: 1.2rem;
+    line-height: 1.313rem;
+    padding: .625rem .938rem .625rem 0;
+    display: flex;
+    align-items: center;
+}
+
+.menu-positioning .dropdown-item p {
+    display: block;
+    margin-left: 10px;
+}
+
+/*---------------Services Nav---------------*/
+
+#services .service-box {
+    padding: 30px;
+    margin-top: 30px;
+    border: 1px solid rgb(204,204,204);
+    border-radius: 25px;
+    box-shadow: 0 3px 35px rgba(0, 0, 0, 0.1);
+    text-decoration: none;
+    color: rgb(51, 54, 69);
+    display: block;
+}
+
+#still-bar #overlay a:hover {
+    background-color: #7e57a0;
+    border-color: #7e57a0;
+}
+
+/*---------------Welcome To Netmatters Nav---------------*/
+
+#welcome #intro a:hover {
+    text-decoration: underline;
+}
+
+#citation a {
+    color: white;
+    font-weight: 600;
+}
+
+#citation a:hover {
+    text-decoration: underline;
+}
+
+/*---------------Articles Nav---------------*/
+
+.article-position .article-link {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 1;
+    background-color: transparent;
+    text-decoration: none;
+}
+
+.image-holder a {
+    background-color: #67809f;
+    position: absolute;
+    right: 0;
+    color: #fff;
+    font-size: .75rem;
+    padding: 0 10px;
+    line-height: 1.438rem;
+    text-transform: uppercase;
+    z-index: 1;
+    top: 10px;
+}
+
+.image-holder .image-tag:hover {
+    text-decoration: underline;
+}
+
+#job .image-holder #special-tag {
+    background-color: #4183d7;
+}
+
+#client-name {
+    font-weight: 600;
+}
+
+/*---------------Footer Nav---------------*/
+
+footer .footer-menu li {
+    list-style-type: none;
+    padding: 0;
+    font-size: 0.8125rem;
+    line-height: 1.375rem;
+    letter-spacing: 0.4px;
+}
+
+footer .footer-menu ul {
+    margin: 0;
+}
+
+footer a:-webkit-any-link {
+  color: white;
+}
+
+#floor-wrapper li {
+    list-style-type: none;
+}
+
+footer ul li a:hover,
+footer #floor-wrapper a:hover {
+    text-decoration: underline;
+}

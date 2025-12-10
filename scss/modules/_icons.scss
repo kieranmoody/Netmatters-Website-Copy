@@ -8,6 +8,14 @@ header .icon-phone_in_talk:hover {
     text-decoration-thickness: 1%;
 }
 
+#header-phone {
+    display: table-cell;
+}
+#header-phone {
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
 .icons {
     font-size: 32px;
     border-radius: 50%;
@@ -104,8 +112,6 @@ header #header-floor #bottom-header-one button {
     font-weight: 400;
 }
 
-
-
 .icon-magnifier {
     position: relative;
     top: 1px;
@@ -122,10 +128,59 @@ header #header-floor #bottom-header-one {
     position: relative;
 }
 
+#con-and-dev span {
+    color: #67809f;
+    font-size: 1.438rem;
+}
 
+#it span {
+    color: #4183d7;
+    font-size: 1.438rem;
+}
 
+#digital-marketing span {
+    color: #2ecc71;
+    font-size: 1.438rem;
+}
 
-/*Still Bar*/
+#telecom-services span {
+    color: #d64541;
+    font-size: 1.438rem;
+}
+
+#web span {
+    color: #926fb1;
+    font-size: 1.438rem;
+}
+
+#cyber-security span {
+    color: #f62459;
+    font-size: 1.438rem;
+}
+
+#developer-course span {
+    color: #ce4125;
+    font-size: 1.438rem;
+}
+
+#con-and-dev:hover span,
+#it:hover span,
+#digital-marketing:hover span,
+#telecom-services:hover span,
+#web:hover span,
+#cyber-security:hover span,
+#developer-course:hover span {
+    color: white;
+}
+
+.menu-positioning .dropdown-item .item-icon {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    min-width: 25px;
+}
+
+/*Still Bar Icons*/
 
     #owl-stage {
         margin-top: 10px;
@@ -157,9 +212,16 @@ header #header-floor #bottom-header-one {
         border: 2px solid white;
     }
 
-/*Services Icons*/
+    #owl-stage {
+    position: absolute;
+    z-index: 2;
+    top: 88%;
+    left: 50%;
+    transform: translate(-50%, -75%);
+    width: 100%;
+}
 
-
+/*---------------Services Icons---------------*/
 
 #consultancy .icons{
     background-color: #67809f;
@@ -187,4 +249,97 @@ header #header-floor #bottom-header-one {
 
 #training .icons {
     background-color: #ce4125;
+}
+
+#consultancy:hover .icons {
+    background-color: white;
+}
+
+#consultancy:hover .icons span {
+    margin-top: 15px;
+    color: #67809f;
+    font-size: 30px;
+}
+
+#it-support:hover .icons {
+    background-color: white;
+}
+
+#it-support:hover .icons span {
+    margin-top: 15px;
+    color: #4183d7;
+    font-size: 30px;
+}
+
+#marketing:hover .icons {
+    background-color: white;
+}
+
+#marketing:hover .icons span {
+    margin-top: 15px;
+    color: #2ecc71;
+    font-size: 30px;
+}
+
+#telecoms:hover .icons {
+    background-color: white;
+}
+
+#telecoms:hover .icons span {
+    margin-top: 15px;
+    color: #d64541;
+    font-size: 30px;
+}
+
+#web-design:hover {
+    background-color: #926fb1;
+    color: white;
+}
+
+#web-design:hover .icons {
+    background-color: white;
+}
+
+#web-design:hover .icons span {
+    margin-top: 15px;
+    color: #926fb1;
+    font-size: 30px;
+}
+
+#security:hover .icons {
+    background-color: white;
+}
+
+#security:hover .icons span {
+    margin-top: 15px;
+    color: #f62459;
+    font-size: 30px;
+}
+
+#training:hover .icons {
+    background-color: white;
+}
+
+#training:hover .icons span {
+    margin-top: 15px;
+    color: #ce4125;
+    font-size: 30px;
+}
+
+/*---------------Welcome to Netmatters Icons---------------*/
+
+#five-stars span {
+    color: orange;
+    font-size: 48px;
+    display: inline-block;
+    text-align: left;
+    margin-bottom: 25px;
+}
+
+/*---------------Clients Icons---------------*/
+
+.box .icon-arrow-right2 {
+    margin-left: 12px;
+    vertical-align: middle;
+    margin: auto -4px auto 12px;
 }
