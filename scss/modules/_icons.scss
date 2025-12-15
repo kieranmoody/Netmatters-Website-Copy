@@ -88,7 +88,6 @@ header .icon-phone_in_talk:hover {
 
 header #heading #menu-placement {
     float: right;
-    padding: 7px 0
 }
 
 header #heading #menu-placement>*+* {
@@ -118,7 +117,7 @@ header #header-floor #bottom-header-one button {
     display: inline-block;
     font-family: Glyphicons Halflings;
     font-style: normal;
-    font-weight: 400;
+    font-weight: 600;
     line-height: 1;
     -webkit-font-smoothing: antialiased;
 }
@@ -171,6 +170,7 @@ header #header-floor #bottom-header-one {
 #cyber-security:hover span,
 #developer-course:hover span {
     color: white;
+    text-decoration: none;
 }
 
 .menu-positioning .dropdown-item .item-icon {

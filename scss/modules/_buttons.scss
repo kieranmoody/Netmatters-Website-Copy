@@ -18,11 +18,19 @@
     background-color: #4183d7;
     border: 1px solid #4183d7;
 }
+#support:hover {
+    background-color: #2a6ec6;
+    border-color: #2a6ec6;
+}
 
 #contact {
     background-color: #999aa2;
     border: 1px solid #999aa2;
     margin-right: 20px;
+}
+#contact:hover {
+    background-color: #84858f;
+    border-color: #797a85;
 }
 
 /*---------------Still Bar Buttons---------------*/
@@ -156,7 +164,7 @@
 #trustpilot {
     padding: 10px 30px;
     font-size: 20px;
-    margin: 20px 8px 0 0;
+    margin-top: 20px;
     border-radius: 6px;
     color: white;
     line-height: 1.42857143;
@@ -171,6 +179,7 @@
 
 #google {
     background-color: rgb(67, 135, 246);
+    margin-right: 8px;
 }
 
 #google:hover {

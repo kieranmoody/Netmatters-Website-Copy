@@ -4,9 +4,12 @@ html {
     font-family: "Poppins", sans-serif;
 }
 
+html, body {
+    overflow-x: hidden;
+}
+
 * {
     box-sizing:border-box;
-    vertical-align: middle;
 }
 
 .container {

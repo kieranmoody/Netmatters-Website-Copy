@@ -372,10 +372,13 @@ a:any-link {
     text-decoration: none;
 }
 
-
-
 cite {
   font-style: normal;
+}
+
+* {
+  margin-block-start: 0;
+  margin-block-end: 0;
 }
 
 /*Normalize*/

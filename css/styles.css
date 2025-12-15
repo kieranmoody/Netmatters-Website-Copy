@@ -3,9 +3,12 @@ html {
   font-family: "Poppins", sans-serif;
 }
 
+html, body {
+  overflow-x: hidden;
+}
+
 * {
   box-sizing: border-box;
-  vertical-align: middle;
 }
 
 .container {
@@ -376,6 +379,11 @@ cite {
   font-style: normal;
 }
 
+* {
+  margin-block-start: 0;
+  margin-block-end: 0;
+}
+
 /*Normalize*/
 /*Header*/
 header {
@@ -393,9 +401,8 @@ header {
 }
 
 header #heading #top-header {
-  display: table;
-  width: 100%;
-  margin: 0;
+  display: flex;
+  justify-content: center;
 }
 
 #bottom-header-two {
@@ -406,7 +413,7 @@ header #heading #top-header {
   background-color: #333645;
   display: none;
   width: 100%;
-  border: 1px solid #333645;
+  border: 0 solid #333645;
   padding-left: 15px;
   padding-right: 15px;
   margin-left: auto;
@@ -583,6 +590,10 @@ header #heading #top-header {
   font-weight: 600;
 }
 
+#welcome-positioning {
+  padding: 0;
+}
+
 /*articles*/
 #block {
   padding-bottom: 50px;
@@ -657,6 +668,7 @@ header #heading #top-header {
   transition: 0.5s ease;
 }
 
+/*Clients*/
 .client .description {
   display: none;
   position: absolute;
@@ -768,7 +780,7 @@ footer #floor-wrapper {
   flex-direction: column;
 }
 
-#foot {
+.container {
   margin-left: auto;
   margin-right: auto;
 }
@@ -864,7 +876,6 @@ header .icon-phone_in_talk:hover {
 
 header #heading #menu-placement {
   float: right;
-  padding: 7px 0;
 }
 
 header #heading #menu-placement > * + * {
@@ -894,7 +905,7 @@ header #header-floor #bottom-header-one button {
   display: inline-block;
   font-family: Glyphicons Halflings;
   font-style: normal;
-  font-weight: 400;
+  font-weight: 600;
   line-height: 1;
   -webkit-font-smoothing: antialiased;
 }
@@ -947,6 +958,7 @@ header #header-floor #bottom-header-one {
 #cyber-security:hover span,
 #developer-course:hover span {
   color: white;
+  text-decoration: none;
 }
 
 .menu-positioning .dropdown-item .item-icon {
@@ -1290,10 +1302,20 @@ footer #top-positioning #footer-logo {
   border: 1px solid #4183d7;
 }
 
+#support:hover {
+  background-color: #2a6ec6;
+  border-color: #2a6ec6;
+}
+
 #contact {
   background-color: #999aa2;
   border: 1px solid #999aa2;
   margin-right: 20px;
+}
+
+#contact:hover {
+  background-color: #84858f;
+  border-color: #797a85;
 }
 
 /*---------------Still Bar Buttons---------------*/
@@ -1424,7 +1446,7 @@ footer #top-positioning #footer-logo {
 #trustpilot {
   padding: 10px 30px;
   font-size: 20px;
-  margin: 20px 8px 0 0;
+  margin-top: 20px;
   border-radius: 6px;
   color: white;
   line-height: 1.42857143;
@@ -1439,6 +1461,7 @@ footer #top-positioning #footer-logo {
 
 #google {
   background-color: rgb(67, 135, 246);
+  margin-right: 8px;
 }
 
 #google:hover {
@@ -1627,7 +1650,7 @@ small {
   font-size: 2.7rem;
   margin-top: -13px;
   color: #333645;
-  margin-bottom: 15px;
+  margin: 0;
   font-weight: 400;
   line-height: 1.1;
   letter-spacing: 0.4px;
@@ -1635,6 +1658,8 @@ small {
 
 #service-roof h3 {
   display: none;
+  margin-bottom: 28px;
+  vertical-align: middle;
 }
 
 #services h1 {
@@ -2163,13 +2188,17 @@ header #header-floor #bottom-header-one #search-first {
     outline: none;
     padding: 7px 20px 3px;
     height: 56px;
-    font-size: 1.063rem;
+    font-size: 30px;
     border-radius: 0 3px 3px 0;
     border: none;
     vertical-align: bottom;
     background-color: #999aa2;
     color: #fff;
     align-self: center;
+  }
+  #submit-hidden:hover {
+    background-color: #84858f;
+    border-color: #797a85;
   }
   #menu-and-hidden {
     display: flex;
@@ -2252,7 +2281,7 @@ header #header-floor #bottom-header-one #search-first {
   #overlay {
     width: 970px;
     text-align: left;
-    padding-top: 3.75rem;
+    padding-top: 2rem;
     padding-bottom: 3.75rem;
   }
   .menu-positioning {
@@ -2282,7 +2311,7 @@ header #header-floor #bottom-header-one #search-first {
     display: block;
     float: right;
     margin-left: 20px;
-    margin-top: 0;
+    margin-top: 20px;
     font-size: 2.25rem;
     font-weight: 600;
     color: #333645;
@@ -2395,8 +2424,6 @@ header #header-floor #bottom-header-one #search-first {
   #welcome-positioning {
     display: flex;
     flex-wrap: wrap;
-    margin-left: 5%;
-    margin-right: 5%;
   }
   .welcome-both {
     padding: 0 15px;
@@ -2412,10 +2439,6 @@ header #header-floor #bottom-header-one #search-first {
   }
 }
 @media (min-width: 1260px) {
-  #welcome-positioning {
-    margin-left: 2%;
-    margin-right: 2%;
-  }
   #why-us {
     width: 100%;
   }
@@ -2458,20 +2481,10 @@ header #header-floor #bottom-header-one #search-first {
   .article-desc h5 {
     min-height: 3rem;
   }
-  #articles {
-    margin-left: 5%;
-    margin-right: 5%;
-  }
 }
 @media (min-width: 768px) and (max-width: 1259px) {
   .article-desc .paragraph-sizing {
     min-height: 66px;
-  }
-}
-@media (min-width: 992px) {
-  #articles {
-    margin-left: 3%;
-    margin-right: 3%;
   }
 }
 @media (min-width: 1260px) {
@@ -2548,15 +2561,16 @@ header #header-floor #bottom-header-one #search-first {
     margin-right: auto;
     justify-content: center;
   }
-  #foot {
+  .container {
     width: 750px;
   }
 }
 @media (min-width: 992px) {
   .footer-menu {
     float: left;
+    width: 25%;
   }
-  #foot {
+  .container {
     width: 970px;
   }
 }
@@ -2572,9 +2586,17 @@ header #header-floor #bottom-header-one #search-first {
   footer {
     padding: 47px 0 0;
   }
-  #foot {
+  .container {
     width: 1200px;
   }
 }
+/* Bug Fixes*/
+/* Puts a red outline over every container so overlapping is visable (For bugfixing*/
+/*
+* {
+    pointer-events: auto !important;
+    background: rgba(255,0,0,0.1) !important;
+} 
+*/
 
 /*# sourceMappingURL=styles.css.map */

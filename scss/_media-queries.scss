@@ -26,13 +26,17 @@
         outline: none;
         padding: 7px 20px 3px;
         height: 56px;
-        font-size: 1.063rem;
+        font-size: 30px;
         border-radius: 0 3px 3px 0;
         border: none;
         vertical-align: bottom;
         background-color: #999aa2;
         color: #fff;
         align-self: center;
+    }
+    #submit-hidden:hover {
+        background-color: #84858f;
+        border-color: #797a85;
     }
 
     #menu-and-hidden {
@@ -84,7 +88,7 @@
     .bottom-header-service:hover .dropdown-menu {
         display: block;
     }
-
+    
     header, 
     #heading {
         padding: 0;
@@ -131,7 +135,7 @@
     #overlay {
         width: 970px;
         text-align: left;
-        padding-top: 3.75rem;
+        padding-top: 2rem;
         padding-bottom: 3.75rem;
     }
     .menu-positioning {
@@ -163,7 +167,7 @@
         display: block;
         float: right;
         margin-left: 20px;
-        margin-top: 0;
+        margin-top: 20px;
         font-size: 2.25rem;
         font-weight: 600;
         color: #333645;
@@ -299,8 +303,6 @@
     #welcome-positioning {
         display: flex;
         flex-wrap: wrap;
-        margin-left: 5%;
-        margin-right: 5%;
     }
     .welcome-both {
         padding: 0 15px;
@@ -317,10 +319,6 @@
 }
 
 @media (min-width: 1260px) {
-    #welcome-positioning {
-        margin-left: 2%;
-        margin-right: 2%;
-    }
     #why-us {
         width: 100%
     }
@@ -372,22 +370,11 @@
         min-height: 3rem;
     }
 
-    #articles {
-        margin-left: 5%;
-        margin-right: 5%;
-    }
 }
 
 @media (min-width: 768px) and (max-width: 1259px) {
     .article-desc .paragraph-sizing {
         min-height: 66px;
-    }
-}
-
-@media (min-width: 992px) {
-    #articles {
-        margin-left: 3%;
-        margin-right: 3%;
     }
 }
 
@@ -481,7 +468,7 @@
         justify-content: center;
     }
 
-    #foot {
+    .container {
         width: 750px;
     }
 }
@@ -489,9 +476,10 @@
 @media (min-width: 992px) {
     .footer-menu {
         float: left;
+        width: 25%;
     }
 
-    #foot {
+    .container {
         width: 970px;
     }
 }
@@ -511,8 +499,18 @@
         padding: 47px 0 0;
     }
 
-    #foot {
+    .container {
         width: 1200px;
     }
     
 }
+
+/* Bug Fixes*/
+
+/* Puts a red outline over every container so overlapping is visable (For bugfixing*/
+/*
+* {
+    pointer-events: auto !important;
+    background: rgba(255,0,0,0.1) !important;
+} 
+*/  

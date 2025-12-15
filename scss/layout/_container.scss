@@ -16,9 +16,8 @@ header {
 }
 
 header #heading #top-header {
-    display: table;
-    width: 100%;
-    margin: 0;
+    display: flex;
+    justify-content: center;
 }
 
 #bottom-header-two {
@@ -29,7 +28,7 @@ header #heading #top-header {
     background-color: #333645;
     display: none;
     width: 100%;
-    border: 1px solid #333645;
+    border: 0 solid #333645;
     padding-left: 15px;
     padding-right: 15px;
     margin-left: auto;
@@ -211,6 +210,9 @@ header #heading #top-header {
     font-weight:600;
 }
 
+#welcome-positioning {
+    padding: 0;
+}
 /*articles*/
 
 #block {
@@ -285,6 +287,8 @@ header #heading #top-header {
     top: -10px;
     transition: 0.5s ease;
 }
+
+/*Clients*/
 
 .client .description {
     display: none;
@@ -398,7 +402,7 @@ footer #floor-wrapper {
     flex-direction: column;
 }
 
-#foot {
+.container {
     margin-left: auto;
     margin-right: auto;
 }
