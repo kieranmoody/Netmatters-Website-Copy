@@ -33,10 +33,12 @@
         background-color: #999aa2;
         color: #fff;
         align-self: center;
+        line-height: normal;
     }
     #submit-hidden:hover {
         background-color: #84858f;
         border-color: #797a85;
+        cursor: pointer;
     }
 
     #menu-and-hidden {
@@ -67,6 +69,9 @@
     #search-hidden {
         display: none;
     }
+    #submit-hidden {
+        border-radius: 3px;
+    }
 }
 
 @media (min-width: 992px) {
@@ -78,7 +83,12 @@
     }
 
     header #top-header #netmatters {
-        width: 50%;
+        width: 41.66666667%;
+        float: left;
+    }
+
+    #header-buttons {
+        width: 58.33333333%;;
     }
 
     #bottom-header-update {
@@ -99,6 +109,27 @@
     }
 }
 
+@media (min-width: 1260px) {
+    #it:hover .menu-tab:before,
+    #digital-marketing:hover .menu-tab:before,
+    #telecom-services:hover .menu-tab:before,
+    #web:hover .menu-tab:before,
+    #cyber-security:hover .menu-tab:before,
+    #developer-course:hover .menu-tab:before   {
+        border-width: 35px 83.5px 0;
+        top: 162%;
+    }
+    #con-and-dev:hover .menu-tab:before {
+        border-width: 35px 83.5px 0;
+    }
+    header #top-header #netmatters {
+        width: 33.33333333%;
+        float: left;
+    }
+    #header-buttons {
+        width: 66.66666667%;
+    }
+}
 
 /*Still-Bar*/
 @media (max-width: 991px) {
@@ -141,6 +172,16 @@
     .menu-positioning {
         width: 970px;
     }
+    #still-bar img {
+        opacity: 0.75;
+    }
+    #still-bar::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(270deg, transparent 25%, rgba(0,0,0,.7));
+    }
+}
 
 @media (min-width:1260px) {
     #overlay,
@@ -154,20 +195,14 @@
         width: 100%;
     }
 }
-    #still-bar img {
-        opacity: 0.3;
-        background: linear-gradient(270deg, transparent 25%, #000);
-    }
-}
 
 /*Services*/
 
 @media (min-width: 768px) {
-    #service-roof h3 {
+    #service-roof h2 {
         display: block;
         float: right;
         margin-left: 20px;
-        margin-top: 20px;
         font-size: 2.25rem;
         font-weight: 600;
         color: #333645;
@@ -244,6 +279,10 @@
         display: grid;
         grid-gap: 30px;
         grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+
+    #services h1 {
+        margin-top: 5px;
     }
 }
 

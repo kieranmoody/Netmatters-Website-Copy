@@ -47,6 +47,7 @@ header .icon-phone_in_talk:hover {
 
 .icon-menu:hover {
     background-color: rgb(36, 35, 35);
+    box-shadow: 0 3px 35px rgba(0,0,0,.1);
 }
 
 .menu-box {
@@ -99,7 +100,7 @@ header #heading #menu-placement .menu-box span {
     line-height: 45px
 }
 
-header #header-floor #bottom-header-one button {
+header #header-floor #bottom-header-one #submit-button {
     background: none;
     border: none;
     color: #333645;
@@ -109,6 +110,7 @@ header #header-floor #bottom-header-one button {
     font-size: 20px;
     outline: none;
     font-weight: 400;
+    padding: 1px 6px;
 }
 
 .icon-magnifier {
@@ -212,6 +214,18 @@ header #header-floor #bottom-header-one {
         border: 2px solid white;
     }
 
+    #owl-dot-active:after {
+        content: "";
+        position: relative;
+        display: block;
+        top: -8px;
+        left: -8px;
+        width: 23px;
+        height: 23px;
+        border-radius: 50%;
+        border: 2px solid #fff;
+    }
+
     #owl-stage {
     position: absolute;
     z-index: 2;
@@ -291,11 +305,6 @@ header #header-floor #bottom-header-one {
     font-size: 30px;
 }
 
-#web-design:hover {
-    background-color: #926fb1;
-    color: white;
-}
-
 #web-design:hover .icons {
     background-color: white;
 }
@@ -324,6 +333,10 @@ header #header-floor #bottom-header-one {
     margin-top: 15px;
     color: #ce4125;
     font-size: 30px;
+}
+
+#services-holding [class^="icon-"] {
+    line-height: 62px;
 }
 
 /*---------------Welcome to Netmatters Icons---------------*/

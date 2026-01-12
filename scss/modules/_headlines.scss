@@ -2,7 +2,7 @@
 
 .bottom-header-service {
     color: white;
-    position: relative;
+    position: static;
     display: block;
     padding: 19px 0 18px;
     text-transform: uppercase;  
@@ -41,16 +41,17 @@ small {
 
 #services h1 {
     font-size: 2.7rem;
-    margin-top: -13px;
+    margin-top: 0;
+    margin-bottom: -10px;
     color: #333645;
-    margin: 0;
     font-weight: 400;
     line-height: 1.1;
     letter-spacing: 0.4px;
 }
 
-#service-roof h3 {
+#service-roof h2 {
     display: none;
+    margin-left: 20px;
     margin-bottom: 28px;
     vertical-align: middle;
 }
@@ -133,7 +134,7 @@ small {
     letter-spacing: 0.4px;
 }
 
-.article-desc h5 {
+.article-desc h4 {
     font-size: 1rem;
     line-height: 1.5rem;
     margin-top: 0;
@@ -148,7 +149,7 @@ small {
     font-weight: 600;
 }
 
-#job .article-desc h5 {
+#job .article-desc h4 {
     color: #4183d7;
 }
 
@@ -164,12 +165,12 @@ small {
     color: #333645;
 }
 
-#view-all h6 {
+#view-all h5 {
     margin: 0 0 15px;
     display: block;
 }
 
-#view-all h6 a:hover {
+#view-all h5 a:hover {
     text-decoration: underline;
 }
 
@@ -206,7 +207,7 @@ footer #top-positioning #top-section p {
     letter-spacing: 0.4px;
 }
 
-footer .footer-menu h6 {
+footer .footer-menu h4 {
     font-size: 1rem;
     margin: 0 0 26px;
     font-weight: 400;

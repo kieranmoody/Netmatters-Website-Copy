@@ -40,6 +40,14 @@ header #heading #top-header {
     justify-content: space-between;
 }
 
+#header-floor {
+    position: relative;
+}
+
+.menu-tab {
+    position: relative;
+}
+
 /*Still Bar*/
 
 #still-bar {
@@ -91,59 +99,35 @@ header #heading #top-header {
 
 #consultancy:hover {
     background-color: #67809f;
-    color: white;
-}
-
-#it-support:hover .service-desc {
-    color: white;
 }
 
 #it-support:hover {
     background-color: #4183d7;
-    color: white;
-}
-
-#it-support:hover .service-desc {
-    color: white;
 }
 
 #marketing:hover {
     background-color: #2ecc71;
-    color: white;
-}
-
-#marketing:hover .service-desc {
-    color: white;
 }
 
 #telecoms:hover {
     background-color: #d64541;
-    color: white;
 }
 
-#telecoms:hover .service-desc {
-    color: white;
-}
-
-#web-design:hover .service-desc {
-    color: white;
+#web-design:hover {
+    background-color: #926fb1;
 }
 
 #security:hover {
     background-color: #f62459;
-    color: white;
-}
-
-#security:hover .service-desc {
-    color: white;
 }
 
 #training:hover {
     background-color: #ce4125;
-    color: white;
 }
 
-#training:hover .service-desc {
+.service-box:hover,
+.service-box:hover .service-desc,
+.service-box:hover h3 {
     color: white;
 }
 
@@ -152,10 +136,11 @@ header #heading #top-header {
 .holding {
     padding: 50px 0;
     display: flex;
-    justify-content: space-evenly;
+    justify-content: center;
     align-items: center;
     flex-wrap: wrap;
     overflow: inherit;
+    margin:auto
 }
 
 .item {
@@ -203,15 +188,17 @@ header #heading #top-header {
     line-height: 1.875rem;
     font-size: 1.1rem;
     letter-spacing: 0.4px;
-}
-
-#citation p {
     color: #a3a8ac;
     font-weight:600;
 }
 
 #welcome-positioning {
     padding: 0;
+}
+
+#header-buttons {
+    padding: 7px 15px;
+    float: right;
 }
 /*articles*/
 

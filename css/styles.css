@@ -27,7 +27,7 @@ a {
 
 /*Background colors*/
 body {
-  background-color: #f3f3f3;
+  background-color: #fff;
 }
 
 header,
@@ -425,6 +425,14 @@ header #heading #top-header {
   justify-content: space-between;
 }
 
+#header-floor {
+  position: relative;
+}
+
+.menu-tab {
+  position: relative;
+}
+
 /*Still Bar*/
 #still-bar {
   height: 550px;
@@ -473,59 +481,35 @@ header #heading #top-header {
 /*SERVICES HOVER*/
 #consultancy:hover {
   background-color: #67809f;
-  color: white;
-}
-
-#it-support:hover .service-desc {
-  color: white;
 }
 
 #it-support:hover {
   background-color: #4183d7;
-  color: white;
-}
-
-#it-support:hover .service-desc {
-  color: white;
 }
 
 #marketing:hover {
   background-color: #2ecc71;
-  color: white;
-}
-
-#marketing:hover .service-desc {
-  color: white;
 }
 
 #telecoms:hover {
   background-color: #d64541;
-  color: white;
 }
 
-#telecoms:hover .service-desc {
-  color: white;
-}
-
-#web-design:hover .service-desc {
-  color: white;
+#web-design:hover {
+  background-color: #926fb1;
 }
 
 #security:hover {
   background-color: #f62459;
-  color: white;
-}
-
-#security:hover .service-desc {
-  color: white;
 }
 
 #training:hover {
   background-color: #ce4125;
-  color: white;
 }
 
-#training:hover .service-desc {
+.service-box:hover,
+.service-box:hover .service-desc,
+.service-box:hover h3 {
   color: white;
 }
 
@@ -533,10 +517,11 @@ header #heading #top-header {
 .holding {
   padding: 50px 0;
   display: flex;
-  justify-content: space-evenly;
+  justify-content: center;
   align-items: center;
   flex-wrap: wrap;
   overflow: inherit;
+  margin: auto;
 }
 
 .item {
@@ -583,15 +568,17 @@ header #heading #top-header {
   line-height: 1.875rem;
   font-size: 1.1rem;
   letter-spacing: 0.4px;
-}
-
-#citation p {
   color: #a3a8ac;
   font-weight: 600;
 }
 
 #welcome-positioning {
   padding: 0;
+}
+
+#header-buttons {
+  padding: 7px 15px;
+  float: right;
 }
 
 /*articles*/
@@ -835,6 +822,7 @@ header .icon-phone_in_talk:hover {
 
 .icon-menu:hover {
   background-color: rgb(36, 35, 35);
+  box-shadow: 0 3px 35px rgba(0, 0, 0, 0.1);
 }
 
 .menu-box {
@@ -887,7 +875,7 @@ header #heading #menu-placement .menu-box span {
   line-height: 45px;
 }
 
-header #header-floor #bottom-header-one button {
+header #header-floor #bottom-header-one #submit-button {
   background: none;
   border: none;
   color: #333645;
@@ -897,6 +885,7 @@ header #header-floor #bottom-header-one button {
   font-size: 20px;
   outline: none;
   font-weight: 400;
+  padding: 1px 6px;
 }
 
 .icon-magnifier {
@@ -999,6 +988,18 @@ header #header-floor #bottom-header-one {
   border: 2px solid white;
 }
 
+#owl-dot-active:after {
+  content: "";
+  position: relative;
+  display: block;
+  top: -8px;
+  left: -8px;
+  width: 23px;
+  height: 23px;
+  border-radius: 50%;
+  border: 2px solid #fff;
+}
+
 #owl-stage {
   position: absolute;
   z-index: 2;
@@ -1077,11 +1078,6 @@ header #header-floor #bottom-header-one {
   font-size: 30px;
 }
 
-#web-design:hover {
-  background-color: #926fb1;
-  color: white;
-}
-
 #web-design:hover .icons {
   background-color: white;
 }
@@ -1110,6 +1106,10 @@ header #header-floor #bottom-header-one {
   margin-top: 15px;
   color: #ce4125;
   font-size: 30px;
+}
+
+#services-holding [class^=icon-] {
+  line-height: 62px;
 }
 
 /*---------------Welcome to Netmatters Icons---------------*/
@@ -1224,6 +1224,8 @@ header img {
 
 .footnote .logo img {
   max-width: 47px;
+  border-radius: 50%;
+  overflow: hidden;
 }
 
 .footnote .author {
@@ -1305,6 +1307,8 @@ footer #top-positioning #footer-logo {
 #support:hover {
   background-color: #2a6ec6;
   border-color: #2a6ec6;
+  box-shadow: 0 3px 35px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
 }
 
 #contact {
@@ -1316,6 +1320,8 @@ footer #top-positioning #footer-logo {
 #contact:hover {
   background-color: #84858f;
   border-color: #797a85;
+  box-shadow: 0 3px 35px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
 }
 
 /*---------------Still Bar Buttons---------------*/
@@ -1344,6 +1350,7 @@ footer #top-positioning #footer-logo {
   color: white;
   box-shadow: none;
   display: inline-block;
+  text-transform: uppercase;
 }
 
 #consultancy .service-button {
@@ -1425,17 +1432,17 @@ footer #top-positioning #footer-logo {
 
 /*---------------Welcome to Netmatters Buttons---------------*/
 .info-button {
+  margin-right: 8px;
+  line-height: 35px;
+  background-color: rgb(39, 41, 54);
+  letter-spacing: 0.4px;
   padding: 10px 30px;
   font-size: 20px;
-  margin-right: 8px;
   border-radius: 6px;
   color: white;
-  line-height: 35px;
   height: auto;
   border: 0px;
   display: inline-block;
-  background-color: rgb(39, 41, 54);
-  letter-spacing: 0.4px;
 }
 
 .info-button:hover {
@@ -1444,12 +1451,12 @@ footer #top-positioning #footer-logo {
 
 #google,
 #trustpilot {
+  margin-top: 20px;
+  line-height: 1.42857143;
   padding: 10px 30px;
   font-size: 20px;
-  margin-top: 20px;
   border-radius: 6px;
   color: white;
-  line-height: 1.42857143;
   height: auto;
   border: 0px;
   display: inline-block;
@@ -1497,8 +1504,6 @@ footer #top-positioning #footer-logo {
 /*---------------Clients Buttons---------------*/
 .client-button-one {
   color: #fff;
-  background-color: #926fb1;
-  border-color: #926fb1;
   height: auto;
   line-height: 35px;
   padding: 5px 15px;
@@ -1516,12 +1521,12 @@ footer #top-positioning #footer-logo {
   display: flex;
   justify-content: center;
   letter-spacing: 0.4px;
+  background-color: #926fb1;
+  border-color: #926fb1;
 }
 
 .client-button-two {
   color: #fff;
-  background-color: #2ecc71;
-  border-color: #2ecc71;
   height: auto;
   line-height: 35px;
   padding: 5px 15px;
@@ -1539,12 +1544,12 @@ footer #top-positioning #footer-logo {
   display: flex;
   justify-content: center;
   letter-spacing: 0.4px;
+  background-color: #2ecc71;
+  border-color: #2ecc71;
 }
 
 .client-button-three {
   color: #fff;
-  background-color: #f7b322;
-  border-color: #f7b322;
   height: auto;
   line-height: 35px;
   padding: 5px 15px;
@@ -1562,6 +1567,8 @@ footer #top-positioning #footer-logo {
   display: flex;
   justify-content: center;
   letter-spacing: 0.4px;
+  background-color: #f7b322;
+  border-color: #f7b322;
 }
 
 /*---------------Footer Buttons---------------*/
@@ -1611,7 +1618,7 @@ footer #footer-positioning #socials {
 /*---------------Heading Headlines---------------*/
 .bottom-header-service {
   color: white;
-  position: relative;
+  position: static;
   display: block;
   padding: 19px 0 18px;
   text-transform: uppercase;
@@ -1648,16 +1655,17 @@ small {
 /*---------------Service Headlines---------------*/
 #services h1 {
   font-size: 2.7rem;
-  margin-top: -13px;
+  margin-top: 0;
+  margin-bottom: -10px;
   color: #333645;
-  margin: 0;
   font-weight: 400;
   line-height: 1.1;
   letter-spacing: 0.4px;
 }
 
-#service-roof h3 {
+#service-roof h2 {
   display: none;
+  margin-left: 20px;
   margin-bottom: 28px;
   vertical-align: middle;
 }
@@ -1738,7 +1746,7 @@ small {
   letter-spacing: 0.4px;
 }
 
-.article-desc h5 {
+.article-desc h4 {
   font-size: 1rem;
   line-height: 1.5rem;
   margin-top: 0;
@@ -1753,7 +1761,7 @@ small {
   font-weight: 600;
 }
 
-#job .article-desc h5 {
+#job .article-desc h4 {
   color: #4183d7;
 }
 
@@ -1769,12 +1777,12 @@ small {
   color: #333645;
 }
 
-#view-all h6 {
+#view-all h5 {
   margin: 0 0 15px;
   display: block;
 }
 
-#view-all h6 a:hover {
+#view-all h5 a:hover {
   text-decoration: underline;
 }
 
@@ -1809,7 +1817,7 @@ footer #top-positioning #top-section p {
   letter-spacing: 0.4px;
 }
 
-footer .footer-menu h6 {
+footer .footer-menu h4 {
   font-size: 1rem;
   margin: 0 0 26px;
   font-weight: 400;
@@ -1840,7 +1848,7 @@ footer .footer-menu h6 {
   padding: 30px;
   margin-top: 30px;
   border: 1px solid rgb(204, 204, 204);
-  border-radius: 25px;
+  border-radius: 15px;
   box-shadow: 0 3px 35px rgba(0, 0, 0, 0.1);
   text-decoration: none;
   color: rgb(51, 54, 69);
@@ -1988,9 +1996,8 @@ header #header-floor #bottom-header-one #search-first {
   border-width: 35px 68px 0;
   content: "";
   position: absolute;
-  left: 50%;
-  bottom: -35px;
-  transform: translateX(-50%);
+  bottom: -50px;
+  transform: translateX(-43%);
   z-index: 90;
   width: 0;
   height: 0;
@@ -2002,9 +2009,9 @@ header #header-floor #bottom-header-one #search-first {
   border-width: 35px 68px 0;
   content: "";
   position: absolute;
-  left: 50%;
   bottom: -35px;
-  transform: translateX(-50%);
+  transform: translateX(-43%);
+  top: 130%;
   z-index: 90;
   width: 0;
   height: 0;
@@ -2016,9 +2023,9 @@ header #header-floor #bottom-header-one #search-first {
   border-width: 35px 68px 0;
   content: "";
   position: absolute;
-  left: 50%;
   bottom: -35px;
-  transform: translateX(-50%);
+  transform: translateX(-43%);
+  top: 130%;
   z-index: 90;
   width: 0;
   height: 0;
@@ -2030,9 +2037,9 @@ header #header-floor #bottom-header-one #search-first {
   border-width: 35px 68px 0;
   content: "";
   position: absolute;
-  left: 50%;
   bottom: -35px;
-  transform: translateX(-50%);
+  transform: translateX(-43%);
+  top: 130%;
   z-index: 90;
   width: 0;
   height: 0;
@@ -2044,9 +2051,9 @@ header #header-floor #bottom-header-one #search-first {
   border-width: 35px 68px 0;
   content: "";
   position: absolute;
-  left: 50%;
   bottom: -35px;
-  transform: translateX(-50%);
+  transform: translateX(-42%);
+  top: 130%;
   z-index: 90;
   width: 0;
   height: 0;
@@ -2058,9 +2065,9 @@ header #header-floor #bottom-header-one #search-first {
   border-width: 35px 68px 0;
   content: "";
   position: absolute;
-  left: 50%;
   bottom: -35px;
-  transform: translateX(-50%);
+  transform: translateX(-43%);
+  top: 130%;
   z-index: 90;
   width: 0;
   height: 0;
@@ -2072,9 +2079,8 @@ header #header-floor #bottom-header-one #search-first {
   border-width: 35px 68px 0;
   content: "";
   position: absolute;
-  left: 50%;
   bottom: -35px;
-  transform: translateX(-50%);
+  transform: translateX(-43%);
   z-index: 90;
   width: 0;
   height: 0;
@@ -2083,43 +2089,14 @@ header #header-floor #bottom-header-one #search-first {
 
 .dropdown-menu {
   display: none;
-  margin: 0;
   position: absolute;
   top: 100%;
-  left: 0;
-  min-width: 100vw;
-  z-index: 10;
-  padding-top: 50px;
-  padding-bottom: 50px;
+  width: 100vw;
   text-transform: capitalize;
-}
-
-#con-and-dev .dropdown-menu {
-  left: -17px;
-}
-
-#it .dropdown-menu {
-  left: calc(-100% - 17px);
-}
-
-#digital-marketing .dropdown-menu {
-  left: calc(-200% - 17px);
-}
-
-#telecom-services .dropdown-menu {
-  left: calc(-300% - 17px);
-}
-
-#web .dropdown-menu {
-  left: calc(-400% - 17px);
-}
-
-#cyber-security .dropdown-menu {
-  left: calc(-500% - 17px);
-}
-
-#developer-course .dropdown-menu {
-  left: calc(-600% - 17px);
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 50px 0;
+  z-index: 5;
 }
 
 #con-and-dev .dropdown-menu {
@@ -2195,10 +2172,12 @@ header #header-floor #bottom-header-one #search-first {
     background-color: #999aa2;
     color: #fff;
     align-self: center;
+    line-height: normal;
   }
   #submit-hidden:hover {
     background-color: #84858f;
     border-color: #797a85;
+    cursor: pointer;
   }
   #menu-and-hidden {
     display: flex;
@@ -2224,6 +2203,9 @@ header #header-floor #bottom-header-one #search-first {
   #search-hidden {
     display: none;
   }
+  #submit-hidden {
+    border-radius: 3px;
+  }
 }
 @media (min-width: 992px) {
   #support {
@@ -2233,7 +2215,11 @@ header #header-floor #bottom-header-one #search-first {
     display: block;
   }
   header #top-header #netmatters {
-    width: 50%;
+    width: 41.66666667%;
+    float: left;
+  }
+  #header-buttons {
+    width: 58.33333333%;
   }
   #bottom-header-update {
     display: block;
@@ -2247,6 +2233,27 @@ header #header-floor #bottom-header-one #search-first {
   }
   #top-header {
     padding: 20px 15px;
+  }
+}
+@media (min-width: 1260px) {
+  #it:hover .menu-tab:before,
+  #digital-marketing:hover .menu-tab:before,
+  #telecom-services:hover .menu-tab:before,
+  #web:hover .menu-tab:before,
+  #cyber-security:hover .menu-tab:before,
+  #developer-course:hover .menu-tab:before {
+    border-width: 35px 83.5px 0;
+    top: 162%;
+  }
+  #con-and-dev:hover .menu-tab:before {
+    border-width: 35px 83.5px 0;
+  }
+  header #top-header #netmatters {
+    width: 33.33333333%;
+    float: left;
+  }
+  #header-buttons {
+    width: 66.66666667%;
   }
 }
 /*Still-Bar*/
@@ -2287,31 +2294,33 @@ header #header-floor #bottom-header-one #search-first {
   .menu-positioning {
     width: 970px;
   }
+  #still-bar img {
+    opacity: 0.75;
+  }
+  #still-bar::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(270deg, transparent 25%, rgba(0, 0, 0, 0.7));
+  }
 }
-@media (min-width: 992px) and (min-width: 1260px) {
+@media (min-width: 1260px) {
   #overlay,
   .menu-positioning {
     width: 1200px;
   }
 }
-@media (min-width: 992px) and (min-width: 1415px) {
+@media (min-width: 1415px) {
   #still-bar img {
     width: 100%;
   }
 }
-@media (min-width: 992px) {
-  #still-bar img {
-    opacity: 0.3;
-    background: linear-gradient(270deg, transparent 25%, #000);
-  }
-}
 /*Services*/
 @media (min-width: 768px) {
-  #service-roof h3 {
+  #service-roof h2 {
     display: block;
     float: right;
     margin-left: 20px;
-    margin-top: 20px;
     font-size: 2.25rem;
     font-weight: 600;
     color: #333645;
@@ -2375,6 +2384,9 @@ header #header-floor #bottom-header-one #search-first {
     display: grid;
     grid-gap: 30px;
     grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+  #services h1 {
+    margin-top: 5px;
   }
 }
 /*Partners*/
