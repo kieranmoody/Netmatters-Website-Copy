@@ -3,61 +3,64 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="js/plugins/slick/slick.css">
+    <link rel="stylesheet" href="js/plugins/slick/slick-theme.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="scss/modules/_icons.scss">
+    <link rel="stylesheet" href="css/hamburgers.min.css">
     <link rel="stylesheet" href="css/icons.css">
     <link rel="stylesheet" href="css/styles.css">
     <title>
         Full Service Digital Agency | Cambridgeshire & Norfolk | Netmatters
     </title>
 </head>
-<body>
-    <header>
-        <!--Heading Section-->
+<body id="main">
+    <header class="header-navigation" id="header">
+        <!--Heading Section-->         
         <div id="heading">
-        <div id="full-header">
-            <div class="container" id="top-header">
-                <div id="netmatters">
-                    <a href="#">
-                        <img src="images/netmatters-logo.jpg" alt="Netmatters Logo">
-                    </a>
-                </div>
-                <div id="header-phone">
-                    <a href="#">
-                        <span class="icon-phone_in_talk">
-                        </span>
-                    </a>
-                </div>
-                <div id="header-buttons">
-                    <div id="support">
-                        <span class="icon-mouse">
-                        </span>
-                        <p>Support</p>
+            <div id="full-header">
+                <div class="container" id="top-header">
+                    <div id="netmatters">
+                        <a href="#">
+                            <img src="images/netmatters-logo.jpg" alt="Netmatters Logo">
+                        </a>
                     </div>
-                    <div id="contact">
-                        <span class="icon-paperplane">
-                        </span>
-                        <p>Contact</p>
-                    </div>
-                    <div id="menu-and-hidden">
-                        <div id="bottom-header-two">
-                            <input placeholder="Search..." class="search-tray" id="search-hidden" name="keyword" type="text" value> 
-                            <a href="#" id="submit-hidden">
-                                <span class="icon-magnifier">
-                                </span>
-                            </a>
-                        </div>
-                        <button class="icon-menu" id="menu-placement">
-                            <span class="menu-box">
-                                <span class="menu-pieces">
-                                </span>
+                    <div id="header-phone">
+                        <a href="#">
+                            <span class="icon-phone_in_talk">
                             </span>
-                        </button>
+                        </a>
+                    </div>
+                    <div id="header-buttons">
+                        <div id="support">
+                            <span class="icon-mouse">
+                            </span>
+                            <p>Support</p>
+                        </div>
+                        <div id="contact">
+                            <span class="icon-paperplane">
+                            </span>
+                            <p>Contact</p>
+                        </div>
+                        <div id="menu-and-hidden">
+                            <div id="bottom-header-two">
+                                <input placeholder="Search..." class="search-tray" id="search-hidden" name="keyword" type="text" value> 
+                                <a href="#" id="submit-hidden">
+                                    <span class="icon-magnifier">
+                                    </span>
+                                </a>
+                            </div>
+                            <button class="hamburger hamburger--spin" id="menu-placement" type="button">
+                                <span class="hamburger-box">
+                                    <span class="hamburger-inner">
+                                    </span>
+                                </span>
+                            </button>
+                        </div>
                     </div>
                 </div>
-            </div>
             <div id="header-floor">
                 <div id="bottom-header-one">
                     <input placeholder="Search..." class="search-tray" id="search-first" name="keyword" type="text" value> 
@@ -73,7 +76,7 @@
                                     <span class="icon-app_settings_alt"></span>
                                     <small>Consultancy</small>
                                         & <br> Development
-                                    </a>
+                                </a>
                                 <div class="dropdown-menu">
                                     <ul class="menu-positioning">
                                         <li class="dropdown-title">
@@ -492,42 +495,457 @@
                     </div>
                 </div>
             </div>
-        </div>   
+        </div>
     </header>
     <main>
+        <!--Cookies-->
+        <div id="cookie-wrapper">
+            <button type="button" id="cookie-consent">Manage Consent</button>
+            <div id="cookie-container">
+                <div id="cookie-prompt">
+                    <div id="cookie-box">
+                        <div id="cookie-header">
+                            <h1>Cookies Policu</h1>
+                        </div>
+                        <div id="cookie-body">
+                            <p>
+                                Our website uses cookies. This helps us provide you with a good experience on our website. To see what cookies we use and what they do, and to opt-in on non-essential cookies click "change settings". For a detailed explanation, click on
+                                <a>"Privacy Policy</a>
+                                otherwise click "Accept Cookies" to enter.
+                            </p>
+                        </div>
+                        <div id="cookie-buttons">
+                            <div id="cookie-button-positioning">
+                                <div id="cookie-settings">
+                                    <a>
+                                        Change Settings
+                                    </a>
+                                </div>
+                                <div id="cookie-accept">
+                                    <a id="cookie-accept-button">
+                                        Accept Cookies
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!--Pullout Menu-->
+        <div id="menu-wrapper">
+            <div id="menu-mobile">
+                <a id="menu-contact">
+                    Contact Us
+                </a>
+                <a id="menu-c&d">
+                    <span class="icon-app_settings_alt"></span>
+                    <small>Consultancy</small>
+                    & <br> Development
+                </a>
+                <ul id="menu-c&d-list">
+                    <li class="menu-temp">
+                        <a>Bespoke CRM</a>
+                    </li>
+                    <li class="menu-temp">
+                        <a>Business Automation</a>
+                    </li>
+                    <li class="menu-temp">
+                        <a>Software Integrations</a>
+                    </li>
+                    <li class="menu-temp">
+                        <a>Mobile App Development</a>
+                    </li>
+                    <li class="menu-temp">
+                        <a>Bespoke Databases</a>
+                    </li>
+                    <li class="menu-temp">
+                        <a>Sharepoint Development</a>
+                    </li>
+                    <li class="menu-temp">
+                        <a>Operational Systems</a>
+                    </li>
+                    <li class="menu-temp">
+                        <a>Business Central Implementation</a>
+                    </li>
+                    <li class="menu-temp">
+                        <a>Internet of Things</a>
+                    </li>
+                    <li class="menu-temp">
+                        <a>Intranet Development</a>
+                    </li>
+                    <li class="menu-temp">
+                        <a>Customer Portal Development</a>
+                    </li>
+                    <li class="menu-temp">
+                        <a>Reporting Hub</a>
+                    </li>
+                    <li class="menu-temp">
+                        <a>SAP s/4HANA Management</a>
+                    </li>
+                </ul>
+                <a id="menu-it">
+                    <span class="icon-display"></span>
+                    <small>IT</small>
+                    Support
+                </a>
+                <ul id="menu-it-list">
+                    <li class="menu-temp">
+                        <a>Managed IT Support</a>
+                    </li>
+                    <li class="menu-temp">
+                        <a>Business IT Support</a>
+                    </li>
+                    <li class="menu-temp">
+                        <a>Office 365 For Business</a>
+                    </li>
+                    <li class="menu-temp">
+                        <a>IT Consultancy</a>
+                    </li>
+                    <li class="menu-temp">
+                        <a>Cloud Service Provider</a>
+                    </li>
+                    <li class="menu-temp">
+                        <a>Data Backup & Disaster Recovery</a>
+                    </li>
+                </ul>
+                <a id="menu-marketing">
+                    <span class="icon-bar-graph"></span>
+                    <small>Digital</small>
+                    Marketing
+                </a>
+                <ul id="menu-marketing-list">
+                    <li class="menu-temp">
+                        <a>Search Engine Optimisation (SEO)</a>
+                    </li>
+                    <li class="menu-temp">
+                        <a>Pay Per Click Advertising</a>
+                    </li>
+                    <li class="menu-temp">
+                        <a>Conversion Rate Optimisation (CRO)</a>
+                    </li>
+                    <li class="menu-temp">
+                        <a>Email Marketing</a>
+                    </li>
+                    <li class="menu-temp">
+                        <a>Social Media Marketing</a>
+                    </li>
+                    <li class="menu-temp">
+                        <a>Content Marketing</a>
+                    </li>
+                </ul>
+                <a id="menu-telecoms">
+                    <span class="icon-phone_in_talk"></span>
+                    <small>Telecoms</small>
+                    Services
+                </a>
+                <ul id="menu-telecoms-list">
+                    <li class="menu-temp">
+                        <a>Business Mobile</a>
+                    </li>
+                    <li class="menu-temp">
+                        <a>Phone System Health Check</a>
+                    </li>
+                    <li class="menu-temp">
+                        <a>Business Connectivity</a>
+                    </li>
+                    <li class="menu-temp">
+                        <a>Telecoms Bill Review</a>
+                    </li>
+                    <li class="menu-temp">
+                        <a>3CX Systems</a>
+                    </li>
+                </ul>
+                <a id="menu-design">
+                    <span class="icon-embed2"></span>
+                    <small>Web</small>
+                    Design
+                </a>
+                <ul id="menu-design-list">
+                    <li class="menu-temp">
+                        <a>Bespoke Web Design</a>
+                    </li>
+                    <li class="menu-temp">
+                        <a>Ecommerce Website Design</a>
+                    </li>
+                    <li class="menu-temp">
+                        <a>Pay Monthly Websites</a>
+                    </li>
+                    <li class="menu-temp">
+                        <a>Branding & Design</a>
+                    </li>
+                    <li class="menu-temp">
+                        <a>Mobile App Development</a>
+                    </li>
+                    <li class="menu-temp">
+                        <a>Web Hosting</a>
+                    </li>
+                </ul>
+                <a id="menu-security">
+                    <span class="icon-security"></span>
+                    <small>Cyber</small>
+                    Security
+                </a>
+                <ul id="menu-security-list">
+                    <li class="menu-temp">
+                        <a>Cyber Security Assessment</a>
+                    </li>
+                    <li class="menu-temp">
+                        <a>Cyber Security Management</a>
+                    </li>
+                    <li class="menu-temp">
+                        <a>Cyber Penetration Testing</a>
+                    </li>
+                    <li class="menu-temp">
+                        <a>Cyber Essentials Certification</a>
+                    </li>
+                    <li class="menu-temp">
+                        <a>PCI Compliance</a>
+                    </li>
+                    <li class="menu-temp">
+                        <a>Hacking Prevention</a>
+                    </li>
+                </ul>
+                <a id="menu-developer">
+                    <span class="icon-school"></span>
+                    <small>Developer</small>
+                    Course
+                </a>
+                <ul id="menu-developer-list">
+                    <li class="menu-temp">
+                        <a>Train For A Career In Tech</a>
+                    </li>
+                    <li class="menu-temp">
+                        <a>Skills Bootcamp</a>
+                    </li>
+                    <li class="menu-temp">
+                        <a>Scion Scheme Frequently Asked Questions</a>
+                    </li>
+                    <li class="menu-temp">
+                        <a>Scion Collaborators</a>
+                    </li>
+                </ul>
+                <a class="our-work-menu">
+                    Our Work
+                </a>
+                <ul class="work-list-menu">
+                    <li class="menu-list-perm">
+                        Case Studies
+                    </li>
+                    <li class="menu-list-perm">
+                        Our Digital Marketing Clients
+                    </li>
+                    <li class="menu-list-perm">
+                        Our Website Clients
+                    </li>
+                    <li class="menu-list-perm">
+                        Our IT Clients
+                    </li>
+                    <li class="menu-list-perm">
+                        Our Bespoke Software Clients
+                    </li>
+                    <li class="menu-list-perm">
+                        Our Telecoms Clients
+                    </li>
+                </ul>
+                <a class="our-knowledge-menu">
+                    Our Knowledge
+                </a>
+                <ul class="knowledge-list-menu">
+                    <li class="menu-list-perm">
+                        Technologies
+                    </li>
+                    <li class="menu-list-perm">
+                        Industries
+                    </li>
+                    <li class="menu-list-perm">
+                        News
+                    </li>
+                    <li class="menu-list-perm">
+                        Insights
+                    </li>
+                </ul>
+                <a class="training-menu">
+                    Training
+                </a>
+                <ul class="training-list-menu">
+                    <li class="menu-list-perm">
+                        Train For A Career In Tech
+                    </li>
+                    <li class="menu-list-perm">
+                        Skills Bootcamp
+                    </li>
+                    <li class="menu-list-perm">
+                        SCS Frequently Asked Questions
+                    </li>
+                    <li class="menu-list-perm">
+                        Scion Collaborators
+                    </li>
+                </ul>
+                <a class="our-company-menu">
+                    Our Company
+                </a>
+                <ul class="company-list-menu">
+                    <li class="menu-list-perm">
+                        Why Choose Us?
+                    </li>
+                    <li class="menu-list-perm">
+                        Our Culture
+                    </li>
+                    <li class="menu-list-perm">
+                        Our Team
+                    </li>
+                    <li class="menu-list-perm">
+                        Our Careers
+                    </li>
+                    <li class="menu-list-perm">
+                        Our Benefits
+                    </li>
+                    <li class="menu-list-perm">
+                        Our Accreditations
+                    </li>
+                    <li class="menu-list-perm">
+                        Laptops 4 Learning
+                    </li>
+                </ul>
+                <a class="contact-us-menu">
+                    Contact Us
+                </a>
+                <ul class="contact-list-menu">
+                    <li class="menu-list-perm">
+                        Cambridge Office
+                    </li>
+                    <li class="menu-list-perm">
+                        Wymondham Office
+                    </li>
+                    <li class="menu-list-perm">
+                        Great Yarmouth Office
+                    </li>
+                </ul>
+                <a id="support-menu">
+                    Support
+                </a>
+            </div>
+            <div id="menu-bigger">
+
+            </div>
+        </div>   
         <!--Scroll Bar Section-->
         <section> <!--Scroll Bar-->
-            <div id="still-bar">
-                <picture>
-                <img src="images/scrollbar1-still.jpg" alt="Image of the Netmatters building off in the distance">
-                </picture>
-                <div id="overlay">
-                    <h1>The East Of England's Leading Technology Company</h1>
-                    <div>
-                        <p>
-                            Performance-driven digital and technology services <br> with complete transparency.
-                        </p>
+            <div id="still-bar-wrapper">
+                <div class="still-bar-carousel">
+                    <div class="still-bar-one still-bar">
+                        <picture>
+                            <img src="images/scrollbar1-still.jpg" alt="Image of the Netmatters building off in the distance">
+                        </picture>
+                        <div class="overlay">
+                            <h1>The East Of England's Leading Technology Company</h1>
+                            <div>
+                                <p>
+                                    Performance-driven digital and technology services <br> with complete transparency.
+                                </p>
+                            </div>
+                            <a href="#">
+                                Why Choose Us? <span class="icon-arrow-right2"></span>
+                            </a> <!--Button, fix the arrow-->
+                        </div>
                     </div>
-                    <a href="#">
-                        Why Choose Us? <span class="icon-arrow-right2"></span>
-                    </a> <!--Button, fix the arrow-->
-                </div>
-                <div id="owl-stage">
-                    <div id="owl-dots">
-                        <span class="owl-dot" id="owl-dot-active">
-                        </span>
-                        <span class="owl-dot">
-                        </span>
-                        <span class="owl-dot">
-                        </span>
-                        <span class="owl-dot">
-                        </span>
-                        <span class="owl-dot">
-                        </span>
-                        <span class="owl-dot">
-                        </span>
-                        <span class="owl-dot">
-                        </span>
+                    <div class="still-bar-two still-bar">
+                        <picture>
+                            <img src="images/scrollbar1-still.jpg" alt="Image of the Netmatters building off in the distance">
+                        </picture>
+                        <div class="overlay">
+                            <h1>The East Of England's Leading Technology Company</h1>
+                            <div>
+                                <p>
+                                    Performance-driven digital and technology services <br> with complete transparency.
+                                </p>
+                            </div>
+                            <a href="#">
+                                Why Choose Us? <span class="icon-arrow-right2"></span>
+                            </a> <!--Button, fix the arrow-->
+                        </div>
+                    </div>
+                    <div class="still-bar-three still-bar">
+                        <picture>
+                            <img src="images/scrollbar1-still.jpg" alt="Image of the Netmatters building off in the distance">
+                        </picture>
+                        <div class="overlay">
+                            <h1>The East Of England's Leading Technology Company</h1>
+                            <div>
+                                <p>
+                                    Performance-driven digital and technology services <br> with complete transparency.
+                                </p>
+                            </div>
+                            <a href="#">
+                                Why Choose Us? <span class="icon-arrow-right2"></span>
+                            </a> <!--Button, fix the arrow-->
+                        </div>
+                    </div>
+                    <div class="still-bar-four still-bar">
+                        <picture>
+                            <img src="images/scrollbar1-still.jpg" alt="Image of the Netmatters building off in the distance">
+                        </picture>
+                        <div class="overlay">
+                            <h1>The East Of England's Leading Technology Company</h1>
+                            <div>
+                                <p>
+                                    Performance-driven digital and technology services <br> with complete transparency.
+                                </p>
+                            </div>
+                            <a href="#">
+                                Why Choose Us? <span class="icon-arrow-right2"></span>
+                            </a> <!--Button, fix the arrow-->
+                        </div>
+                    </div>
+                    <div class="still-bar-five still-bar">
+                        <picture>
+                            <img src="images/scrollbar1-still.jpg" alt="Image of the Netmatters building off in the distance">
+                        </picture>
+                        <div class="overlay">
+                            <h1>The East Of England's Leading Technology Company</h1>
+                            <div>
+                                <p>
+                                    Performance-driven digital and technology services <br> with complete transparency.
+                                </p>
+                            </div>
+                            <a href="#">
+                                Why Choose Us? <span class="icon-arrow-right2"></span>
+                            </a> <!--Button, fix the arrow-->
+                        </div>
+                    </div>
+                    <div class="still-bar-six still-bar">
+                        <picture>
+                            <img src="images/scrollbar1-still.jpg" alt="Image of the Netmatters building off in the distance">
+                        </picture>
+                        <div class="overlay">
+                            <h1>The East Of England's Leading Technology Company</h1>
+                            <div>
+                                <p>
+                                    Performance-driven digital and technology services <br> with complete transparency.
+                                </p>
+                            </div>
+                            <a href="#">
+                                Why Choose Us? <span class="icon-arrow-right2"></span>
+                            </a> <!--Button, fix the arrow-->
+                        </div>
+                    </div>
+                    <div class="still-bar-seven still-bar">
+                        <picture>
+                            <img src="images/scrollbar1-still.jpg" alt="Image of the Netmatters building off in the distance">
+                        </picture>
+                        <div class="overlay">
+                            <h1>The East Of England's Leading Technology Company</h1>
+                            <div>
+                                <p>
+                                    Performance-driven digital and technology services <br> with complete transparency.
+                                </p>
+                            </div>
+                            <a href="#">
+                                Why Choose Us? <span class="icon-arrow-right2"></span>
+                            </a> <!--Button, fix the arrow-->
+                        </div>
                     </div>
                 </div>
             </div>
@@ -612,132 +1030,134 @@
             </div>
         </section>
         <!--Partners Mini-Section-->
-        <div class="holding">
-            <div class="item" id="partner-one">
-                <div class="partners">
-                    <picture class="greyscale">
-                        <source srcset="images/google-partner-bw.webp" type="image/webp">
-                        <source srcset="images/google-partner-bw.jpg" type="image/jpeg">
-                        <img src="images/google-partner-bw.jpg" alt="Google Partner Logo (Greyscale)">
-                    </picture>
+        <div class="carousel-wrapper">
+            <div class="partner-carousel">
+                <div class="item" id="partner-one">
+                    <div class="partners">
+                        <picture class="greyscale">
+                            <source srcset="images/google-partner-bw.webp" type="image/webp">
+                            <source srcset="images/google-partner-bw.jpg" type="image/jpeg">
+                            <img src="images/google-partner-bw.jpg" alt="Google Partner Logo (Greyscale)">
+                        </picture>
 
-                    <picture class="colored">
-                        <source srcset="images/google-partner-color.webp" type="image/webp">
-                        <source srcset="images/google-partner-color.jpg" type="image/jpeg">
-                        <img src="images/google-partner-color.jpg" alt="Google Partner Logo (Color)">
-                    </picture>
+                        <picture class="colored">
+                            <source srcset="images/google-partner-color.webp" type="image/webp">
+                            <source srcset="images/google-partner-color.jpg" type="image/jpeg">
+                            <img src="images/google-partner-color.jpg" alt="Google Partner Logo (Color)">
+                        </picture>
+                    </div>
                 </div>
-            </div>
 
-            <div class="item" id="partner-two">
-                <div class="partners">
-                    <picture class="greyscale">
-                        <source srcset="images/GBC-bw.webp" type="image/webp">
-                        <source srcset="images/GBC-bw.png" type="image/png">
-                        <img src="images/GBC-bw.png" alt="GBC Logo (Greyscale)">
-                    </picture>
+                <div class="item" id="partner-two">
+                    <div class="partners">
+                        <picture class="greyscale">
+                            <source srcset="images/GBC-bw.webp" type="image/webp">
+                            <source srcset="images/GBC-bw.png" type="image/png">
+                            <img src="images/GBC-bw.png" alt="GBC Logo (Greyscale)">
+                        </picture>
 
-                    <picture class="colored">
-                        <source srcset="images/GBC-color.webp" type="image/webp">
-                        <source srcset="images/GBC-color.png" type="image/png">
-                        <img src="images/GBC-color.png" alt="GBC Logo (Color)">
-                    </picture>
+                        <picture class="colored">
+                            <source srcset="images/GBC-color.webp" type="image/webp">
+                            <source srcset="images/GBC-color.png" type="image/png">
+                            <img src="images/GBC-color.png" alt="GBC Logo (Color)">
+                        </picture>
+                    </div>
                 </div>
-            </div>
 
-            <div class="item" id="partner-three">
-                <div class="partners">
-                    <picture class="greyscale">
-                        <source srcset="images/norfolk-prohelp-bw.webp" type="image/webp">
-                        <source srcset="images/norfolk-prohelp-bw.png" type="image/png">
-                        <img src="images/norfolk-prohelp-bw.png" alt="Norfolk Prohelp Logo (Greyscale)">
-                    </picture>
+                <div class="item" id="partner-three">
+                    <div class="partners">
+                        <picture class="greyscale">
+                            <source srcset="images/norfolk-prohelp-bw.webp" type="image/webp">
+                            <source srcset="images/norfolk-prohelp-bw.png" type="image/png">
+                            <img src="images/norfolk-prohelp-bw.png" alt="Norfolk Prohelp Logo (Greyscale)">
+                        </picture>
 
-                    <picture class="colored">
-                        <source srcset="images/norfolk-prohelp-color.webp" type="image/webp">
-                        <source srcset="images/norfolk-prohelp-color.png" type="image/png">
-                        <img src="images/GBC-color.png" alt="Norfolk Prohelp Logo (Color)">
-                    </picture>
+                        <picture class="colored">
+                            <source srcset="images/norfolk-prohelp-color.webp" type="image/webp">
+                            <source srcset="images/norfolk-prohelp-color.png" type="image/png">
+                            <img src="images/GBC-color.png" alt="Norfolk Prohelp Logo (Color)">
+                        </picture>
+                    </div>
                 </div>
-            </div>
 
-            <div class="item" id="partner-four">
-                <div class="partners">
-                    <picture class="greyscale">
-                        <source srcset="images/investing-in-future-growth-bw.webp" type="image/webp">
-                        <source srcset="images/investing-in-future-growth-bw.jpg" type="image/jpg">
-                        <img src="images/investing-in-future-growth-bw.jpg" alt="Investing in Future Growth Logo (Greyscale)">
-                    </picture>
+                <div class="item" id="partner-four">
+                    <div class="partners">
+                        <picture class="greyscale">
+                            <source srcset="images/investing-in-future-growth-bw.webp" type="image/webp">
+                            <source srcset="images/investing-in-future-growth-bw.jpg" type="image/jpg">
+                            <img src="images/investing-in-future-growth-bw.jpg" alt="Investing in Future Growth Logo (Greyscale)">
+                        </picture>
 
-                    <picture class="colored">
-                        <source srcset="images/investing-in-future-growth-color.webp" type="image/webp">
-                        <source srcset="images/investing-in-future-growth-color.jpg" type="image/jpg">
-                        <img src="images/investing-in-future-growth-color.jpg" alt="Investing in Future Growth Logo (Color)">
-                    </picture>
+                        <picture class="colored">
+                            <source srcset="images/investing-in-future-growth-color.webp" type="image/webp">
+                            <source srcset="images/investing-in-future-growth-color.jpg" type="image/jpg">
+                            <img src="images/investing-in-future-growth-color.jpg" alt="Investing in Future Growth Logo (Color)">
+                        </picture>
+                    </div>
                 </div>
-            </div>
 
-            <div class="item" id="partner-five">
-                <div class="partners">
-                    <picture class="greyscale">
-                        <source srcset="images/norfolk-carbon-charter-bw.webp" type="image/webp">
-                        <source srcset="images/norfolk-carbon-charter-bw.jpg" type="image/jpg">
-                        <img src="images/norfolk-carbon-charter-bw.png" alt="Norfolk Carbon Charter Logo (Greyscale)">
-                    </picture>
+                <div class="item" id="partner-five">
+                    <div class="partners">
+                        <picture class="greyscale">
+                            <source srcset="images/norfolk-carbon-charter-bw.webp" type="image/webp">
+                            <source srcset="images/norfolk-carbon-charter-bw.jpg" type="image/jpg">
+                            <img src="images/norfolk-carbon-charter-bw.png" alt="Norfolk Carbon Charter Logo (Greyscale)">
+                        </picture>
 
-                    <picture class="colored">
-                        <source srcset="images/norfolk-carbon-charter-color.webp" type="image/webp">
-                        <source srcset="images/norfolk-carbon-charter-color.jpg" type="image/jpg">
-                        <img src="images/norfolk-carbon-charter-color.jpg" alt="Norfolk Carbon Charter Logo (Color)">
-                    </picture>
+                        <picture class="colored">
+                            <source srcset="images/norfolk-carbon-charter-color.webp" type="image/webp">
+                            <source srcset="images/norfolk-carbon-charter-color.jpg" type="image/jpg">
+                            <img src="images/norfolk-carbon-charter-color.jpg" alt="Norfolk Carbon Charter Logo (Color)">
+                        </picture>
+                    </div>
                 </div>
-            </div>
 
-            <div class="item" id="partner-six">
-                <div class="partners">
-                    <picture class="greyscale">
-                        <source srcset="images/PPC-logo-bw.webp" type="image/webp">
-                        <source srcset="images/PPC-logo-bw.jpg" type="image/jpg">
-                        <img src="images/PPC-logo-bw.png" alt="PPC Logo (Greyscale)">
-                    </picture>
+                <div class="item" id="partner-six">
+                    <div class="partners">
+                        <picture class="greyscale">
+                            <source srcset="images/PPC-logo-bw.webp" type="image/webp">
+                            <source srcset="images/PPC-logo-bw.jpg" type="image/jpg">
+                            <img src="images/PPC-logo-bw.png" alt="PPC Logo (Greyscale)">
+                        </picture>
 
-                    <picture class="colored">
-                        <source srcset="images/PPC-logo-color.webp" type="image/webp">
-                        <source srcset="images/PPC-logo-color.jpg" type="image/jpg">
-                        <img src="images/PPC-logo-color.jpg" alt="PPC Logo (Color)">
-                    </picture>
+                        <picture class="colored">
+                            <source srcset="images/PPC-logo-color.webp" type="image/webp">
+                            <source srcset="images/PPC-logo-color.jpg" type="image/jpg">
+                            <img src="images/PPC-logo-color.jpg" alt="PPC Logo (Color)">
+                        </picture>
+                    </div>
                 </div>
-            </div>
 
-            <div class="item" id="partner-seven">
-                <div class="partners">
-                    <picture class="greyscale">
-                        <source srcset="images/princess-royal-training-bw.webp" type="image/webp">
-                        <source srcset="images/princess-royal-training-bw.jpg" type="image/jpg">
-                        <img src="images/princess-royal-training-bw.png" alt="Princess Royal Training Logo (Greyscale)">
-                    </picture>
+                <div class="item" id="partner-seven">
+                    <div class="partners">
+                        <picture class="greyscale">
+                            <source srcset="images/princess-royal-training-bw.webp" type="image/webp">
+                            <source srcset="images/princess-royal-training-bw.jpg" type="image/jpg">
+                            <img src="images/princess-royal-training-bw.png" alt="Princess Royal Training Logo (Greyscale)">
+                        </picture>
 
-                    <picture class="colored">
-                        <source srcset="images/princess-royal-training-color.webp" type="image/webp">
-                        <source srcset="images/princess-royal-training-color.jpg" type="image/jpg">
-                        <img src="images/princess-royal-training-color.jpg" alt="Princess Royal Training Logo (Color)">
-                    </picture>
+                        <picture class="colored">
+                            <source srcset="images/princess-royal-training-color.webp" type="image/webp">
+                            <source srcset="images/princess-royal-training-color.jpg" type="image/jpg">
+                            <img src="images/princess-royal-training-color.jpg" alt="Princess Royal Training Logo (Color)">
+                        </picture>
+                    </div>
                 </div>
-            </div>
 
-            <div class="item" id="partner-eight">
-                <div class="partners">
-                    <picture class="greyscale">
-                        <source srcset="images/future-50-bw.webp" type="image/webp">
-                        <source srcset="images/future-50-bw.jpg" type="image/jpg">
-                        <img src="images/future-50-bw.png" alt="Future 50 Logo (Greyscale)">
-                    </picture>
+                <div class="item" id="partner-eight">
+                    <div class="partners">
+                        <picture class="greyscale">
+                            <source srcset="images/future-50-bw.webp" type="image/webp">
+                            <source srcset="images/future-50-bw.jpg" type="image/jpg">
+                            <img src="images/future-50-bw.png" alt="Future 50 Logo (Greyscale)">
+                        </picture>
 
-                    <picture class="colored">
-                        <source srcset="images/future-50-color.webp" type="image/webp">
-                        <source srcset="images/future-50-color.jpg" type="image/jpg">
-                        <img src="images/future-50-color.jpg" alt="Future 50 Logo (Color)">
-                    </picture>
+                        <picture class="colored">
+                            <source srcset="images/future-50-color.webp" type="image/webp">
+                            <source srcset="images/future-50-color.jpg" type="image/jpg">
+                            <img src="images/future-50-color.jpg" alt="Future 50 Logo (Color)">
+                        </picture>
+                    </div>
                 </div>
             </div>
         </div>
@@ -888,131 +1308,133 @@
             </div>
         </section>
         <!--Clients Mini-Section-->
-        <div class="holding">
-            <div class="client">
-                <img src="images/ashcroftlogo.webp" id="ashcroft" alt="Ashcroft Logo">
-                <div class="description">
-                    <div class="box">
-                        <h3>Ashcroft Partnership LLP</h3>
-                        <p>
-                            Originally founded in 2006 as Ashcroft Anthony, they became Ashcroft Partnership LLP in 2020 and
-                            are one of the top chartered accountancy firms in Cambridge, advising entrepreneurs and
-                            families.
-                        </p>
-                        <a href="#" class="client-button-one">
-                             View Our Case Study 
-                            <span class="icon-arrow-right2">
-                            </span>
-                        </a>
-                        <div class="box-bottom">
+        <div class="carousel-wrapper">
+            <div class="clients-carousel">
+                <div class="client">
+                    <img src="images/ashcroftlogo.webp" id="ashcroft" alt="Ashcroft Logo">
+                    <div class="description">
+                        <div class="box">
+                            <h3>Ashcroft Partnership LLP</h3>
+                            <p>
+                                Originally founded in 2006 as Ashcroft Anthony, they became Ashcroft Partnership LLP in 2020 and
+                                are one of the top chartered accountancy firms in Cambridge, advising entrepreneurs and
+                                families.
+                            </p>
+                            <a href="#" class="client-button-one">
+                                View Our Case Study 
+                                <span class="icon-arrow-right2">
+                                </span>
+                            </a>
+                            <div class="box-bottom">
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
-            <div class="client">
-                <img src="images/onetravellerlogo.webp" id="traveller" alt="Traveller Logo">
-                <div class="description">
-                    <div class="box">
-                        <h3>One Traveller</h3>
-                        <p>
-                            <a href="#" id="client-name">One Traveller</a>
-                            , founded in 2007, is a leading provider of solo holidays for over 50s.
-                    
-                        </p>
-                        <a href="#" class="client-button-one">
-                             View Our Case Study 
-                            <span class="icon-arrow-right2">
-                            </span>
-                        </a>
-                        <div class="box-bottom">
+                <div class="client">
+                    <img src="images/onetravellerlogo.webp" id="traveller" alt="Traveller Logo">
+                    <div class="description">
+                        <div class="box">
+                            <h3>One Traveller</h3>
+                            <p>
+                                <a href="#" id="client-name">One Traveller</a>
+                                , founded in 2007, is a leading provider of solo holidays for over 50s.
+                        
+                            </p>
+                            <a href="#" class="client-button-one">
+                                View Our Case Study 
+                                <span class="icon-arrow-right2">
+                                </span>
+                            </a>
+                            <div class="box-bottom">
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
-            <div class="client">
-                <img src="images/searles-logo.webp" id="searles" alt="Searles Logo">
-                <div class="description">
-                    <div class="box">
-                        <h3>Searles Leisure Resort</h3>
-                        <p>   
-                         Searles Leisure Resort, on the beautiful North Norfolk coast, is an award-winning UK holiday
-                        resort for families. 
-                        </p>
-                        <a href="#" class="client-button-two">
-                             View Our Case Study 
-                            <span class="icon-arrow-right2">
-                            </span>
-                        </a>
-                        <div class="box-bottom">
+                <div class="client">
+                    <img src="images/searles-logo.webp" id="searles" alt="Searles Logo">
+                    <div class="description">
+                        <div class="box">
+                            <h3>Searles Leisure Resort</h3>
+                            <p>   
+                            Searles Leisure Resort, on the beautiful North Norfolk coast, is an award-winning UK holiday
+                            resort for families. 
+                            </p>
+                            <a href="#" class="client-button-two">
+                                View Our Case Study 
+                                <span class="icon-arrow-right2">
+                                </span>
+                            </a>
+                            <div class="box-bottom">
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
-            <div class="client">
-                <img src="images/busseys-logo.webp" id="busseys" alt="Busseys Logo">
-                <div class="description">
-                    <div class="box">
-                        <h3>Busseys</h3>
-                        <p>
-                            One of the UK's leading Ford dealerships.
-                        </p>
-                        <div class="box-bottom" id="box-bottom-alt">
+                <div class="client">
+                    <img src="images/busseys-logo.webp" id="busseys" alt="Busseys Logo">
+                    <div class="description">
+                        <div class="box">
+                            <h3>Busseys</h3>
+                            <p>
+                                One of the UK's leading Ford dealerships.
+                            </p>
+                            <div class="box-bottom" id="box-bottom-alt">
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
-            <div class="client">
-                <img src="images/crane-logo.webp" id="crane" alt="Crane Logo">
-                <div class="description">
-                    <div class="box">
-                        <h3>Crane Garden Buildings</h3>
-                        <p>  
-                        Leading manufacturer and supplier of high-end garden rooms, summerhouses, workshops and sheds in
-                        the UK.
-                        </p>
-                        <div class="box-bottom">
+                <div class="client">
+                    <img src="images/crane-logo.webp" id="crane" alt="Crane Logo">
+                    <div class="description">
+                        <div class="box">
+                            <h3>Crane Garden Buildings</h3>
+                            <p>  
+                            Leading manufacturer and supplier of high-end garden rooms, summerhouses, workshops and sheds in
+                            the UK.
+                            </p>
+                            <div class="box-bottom">
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
-            <div class="client">
-                <img src="images/black-swan-logo.webp" id="black-swan" alt="Black Swan Logo">
-                <div class="description">
-                    <div class="box">
-                        <h3>Black Swan Care Group</h3>
-                        <p>    
-                        Black Swan Care Group own and manage 21 high-quality care and residential homes with a focus on
-                        putting the needs of their residents first.
-                        </p>
-                        <a href="#" class="client-button-three">
-                             View Our Case Study 
-                            <span class="icon-arrow-right2">
-                            </span>
-                        </a>
-                        <div class="box-bottom">
+                <div class="client">
+                    <img src="images/black-swan-logo.webp" id="black-swan" alt="Black Swan Logo">
+                    <div class="description">
+                        <div class="box">
+                            <h3>Black Swan Care Group</h3>
+                            <p>    
+                            Black Swan Care Group own and manage 21 high-quality care and residential homes with a focus on
+                            putting the needs of their residents first.
+                            </p>
+                            <a href="#" class="client-button-three">
+                                View Our Case Study 
+                                <span class="icon-arrow-right2">
+                                </span>
+                            </a>
+                            <div class="box-bottom">
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
-            <div class="client">
-                <img src="images/xupes-logo.webp" id="xupes" alt="Xupes Logo">
-                <div class="description">
-                    <div class="box box-xupes">
-                        <h3>Xupes</h3>
-                        <div class="box-bottom">
+                <div class="client">
+                    <img src="images/xupes-logo.webp" id="xupes" alt="Xupes Logo">
+                    <div class="description">
+                        <div class="box box-xupes">
+                            <h3>Xupes</h3>
+                            <div class="box-bottom">
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
-            <div class="client">
-                <img src="images/beat-logo.webp" id="beat" alt="Beat Logo">
-                <div class="description">
-                    <div class="box">
-                        <h3>Beat</h3>
-                        <p>
-                            The UK's eating disorder charity founded in 1989.
-                        </p>
-                        <div class="box-bottom">
+                <div class="client">
+                    <img src="images/beat-logo.webp" id="beat" alt="Beat Logo">
+                    <div class="description">
+                        <div class="box">
+                            <h3>Beat</h3>
+                            <p>
+                                The UK's eating disorder charity founded in 1989.
+                            </p>
+                            <div class="box-bottom">
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -1126,5 +1548,11 @@
             </div>
         </div>
     </footer>
+    
+    <!--JS Scripts-->
+    <script src="js/plugins/jquery-3.7.1.min.js"></script>
+    <script src="js/plugins/slick/slick.min.js"></script>
+    <script src="js/application.js"></script>
+    
 </body>
 </html>

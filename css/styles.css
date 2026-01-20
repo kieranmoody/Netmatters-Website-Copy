@@ -386,6 +386,40 @@ cite {
 
 /*Normalize*/
 /*Header*/
+.header-navigation {
+  position: relative; /* normal flow at top */
+  width: 100%;
+  z-index: 10; /* normal stacking */
+  transition: transform 0.5s ease-out;
+}
+
+/* sticky overlay when scrolling */
+.header-navigation.sticky {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 9999;
+}
+
+.slideUp {
+  -webkit-transform: translateY(-100%);
+  transform: translateY(-100%);
+  transition: transform 0.5s ease-out;
+  position: fixed;
+  top: 0;
+  z-index: 9999;
+}
+
+.slideDown {
+  -webkit-transform: translateY(0);
+  transform: translateY(0);
+  transition: transform 0.5s ease-out;
+}
+
+.is-hidden {
+  display: none !important;
+}
+
 header {
   display: block;
   padding: 20px 0;
@@ -433,12 +467,27 @@ header #heading #top-header {
   position: relative;
 }
 
+/*Popout Menu Temp*/
+#menu-wrapper {
+  display: none;
+  height: 100%; /* 100% Full-height */
+  width: 0; /* 0 width - change this with JavaScript */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Stay on top */
+  top: 0; /* Stay at the top */
+  left: 0;
+  background-color: #111; /* Black*/
+  overflow-x: hidden; /* Disable horizontal scroll */
+  padding-top: 60px; /* Place content 60px from the top */
+  transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
+}
+
 /*Still Bar*/
-#still-bar {
+#still-bar-wrapper .still-bar-carousel .still-bar {
   height: 550px;
 }
 
-#still-bar {
+.still-bar {
   text-align: center;
   color: white;
   display: block;
@@ -446,7 +495,7 @@ header #heading #top-header {
   background-color: black;
 }
 
-#still-bar div {
+.still-bar div {
   font-size: 1.25rem;
   font-weight: 600;
   margin-bottom: 0.375rem;
@@ -454,7 +503,7 @@ header #heading #top-header {
   letter-spacing: 0.4px;
 }
 
-#overlay {
+.overlay {
   position: absolute;
   z-index: 2;
   top: 50%;
@@ -514,20 +563,17 @@ header #heading #top-header {
 }
 
 /*SERVICES HOVER END*/
-.holding {
+.carousel-wrapper {
   padding: 50px 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;
-  overflow: inherit;
   margin: auto;
+  width: 100%;
 }
 
-.item {
-  position: relative;
+.carousel-wrapper .item {
   width: auto;
-  height: 70px;
+  height: 70px; /* fixed, never scales */
+  flex-shrink: 0;
+  padding: 0 20px;
 }
 
 /*Welcome to Netmatters*/
@@ -706,6 +752,10 @@ header #heading #top-header {
   display: block;
 }
 
+.clients-carousel .slick-list {
+  overflow: visible;
+}
+
 /*footer*/
 footer {
   padding: 27px 0 0;
@@ -804,7 +854,7 @@ header .icon-phone_in_talk:hover {
   line-height: 62px;
 }
 
-.icon-menu {
+.hamburger {
   padding: 15px;
   display: inline-block;
   cursor: pointer;
@@ -820,28 +870,28 @@ header .icon-phone_in_talk:hover {
   overflow: visible;
 }
 
-.icon-menu:hover {
+.hamburger:hover {
   background-color: rgb(36, 35, 35);
   box-shadow: 0 3px 35px rgba(0, 0, 0, 0.1);
 }
 
-.menu-box {
+.hamburger-box {
   width: 33px;
   height: 19px;
   display: inline-block;
   position: relative;
 }
 
-.menu-pieces {
+.hamburger-inner {
   display: block;
   top: 50%;
   margin-top: -1.5px;
 }
 
-.menu-pieces, .menu-pieces:after, .menu-pieces:before {
+.hamburger-inner, .hamburger-inner:after, .hamburger-inner:before {
   width: 33px;
   height: 4px;
-  background-color: white;
+  background-color: white !important;
   border-radius: 0;
   position: absolute;
   transition-property: transform;
@@ -849,16 +899,16 @@ header .icon-phone_in_talk:hover {
   transition-timing-function: ease;
 }
 
-.menu-pieces:after, .menu-pieces:before {
+.hamburger-inner:after, .hamburger-inner:before {
   content: "";
   display: block;
 }
 
-.menu-pieces:before {
+.hamburger-inner:before {
   top: -10px;
 }
 
-.menu-pieces:after {
+.hamburger-inner:after {
   bottom: -10px;
 }
 
@@ -870,7 +920,7 @@ header #heading #menu-placement > * + * {
   margin-left: 20px;
 }
 
-header #heading #menu-placement .menu-box span {
+header #heading #menu-placement .hamburger-box span {
   font-size: 1.438rem;
   line-height: 45px;
 }
@@ -958,20 +1008,21 @@ header #header-floor #bottom-header-one {
 }
 
 /*Still Bar Icons*/
-#owl-stage {
-  margin-top: 10px;
-  display: block;
-}
+/*
+    #owl-stage {
+        margin-top: 10px;
+        display: block;
+    }
 
-#owl-dots {
-  width: 100%;
-  position: absolute;
-  left: 0;
-  right: 0;
-  display: block;
-}
-
-.owl-dot {
+    #owl-dots {
+        width: 100%;
+        position: absolute;
+        left: 0;
+        right: 0;
+        display: block;
+    }
+*/
+.slick-dots li button {
   margin: 5px 7px;
   width: 11px;
   height: 11px;
@@ -981,34 +1032,47 @@ header #header-floor #bottom-header-one {
   text-align: center;
 }
 
-#owl-dot-active {
+.slick-dots li.slick-active button {
   background: #869791;
   background-color: white;
   border-radius: 30px;
-  border: 2px solid white;
+  border: 0px solid white;
 }
 
-#owl-dot-active:after {
+.slick-dots li.slick-active button:after {
   content: "";
   position: relative;
   display: block;
-  top: -8px;
-  left: -8px;
+  top: -11px;
+  left: -11px;
   width: 23px;
   height: 23px;
   border-radius: 50%;
   border: 2px solid #fff;
 }
 
-#owl-stage {
-  position: absolute;
-  z-index: 2;
-  top: 88%;
-  left: 50%;
-  transform: translate(-50%, -75%);
-  width: 100%;
+.slick-dots li button:before {
+  display: none;
 }
 
+.slick-dots {
+  position: absolute;
+  bottom: 50px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 10;
+}
+
+/*
+    #owl-stage {
+    position: absolute;
+    z-index: 2;
+    top: 88%;
+    left: 50%;
+    transform: translate(-50%, -75%);
+    width: 100%;
+}
+*/
 /*---------------Services Icons---------------*/
 #consultancy .icons {
   background-color: #67809f;
@@ -1142,7 +1206,7 @@ header img {
   display: block;
 }
 
-#still-bar img {
+.still-bar img {
   object-fit: cover;
   height: 100%;
   position: relative;
@@ -1194,15 +1258,6 @@ header img {
   display: block;
 }
 
-#partner-three,
-#partner-four,
-#partner-five,
-#partner-six,
-#partner-seven,
-#partner-eight {
-  display: none;
-}
-
 /*---------------Articles Images---------------*/
 .face picture img {
   display: block;
@@ -1234,44 +1289,27 @@ header img {
 }
 
 /*---------------Clients Images---------------*/
-#ashcroft,
-#traveller,
-#searles,
-#busseys,
-#crane,
-#black-swan,
-#xupes,
-#beat {
+.client img {
   filter: grayscale(1);
+  transition: filter 0.3s ease;
 }
 
-#ashcroft:hover,
-#traveller:hover,
-#searles:hover,
-#busseys:hover,
-#crane:hover,
-#black-swan:hover,
-#xupes:hover,
-#beat:hover {
+.client:hover img {
   filter: grayscale(0);
 }
 
-#searles,
-#busseys,
-#crane,
-#black-swan,
-#xupes,
-#beat {
-  display: none;
+.client {
+  position: relative;
+  height: 70px;
+  align-items: center;
 }
 
 .client img {
+  display: block;
   padding: 0 20px;
-}
-
-.client {
-  display: flex;
-  position: relative;
+  width: auto;
+  height: auto;
+  max-height: 70px;
 }
 
 /*---------------Footer Images---------------*/
@@ -1325,7 +1363,7 @@ footer #top-positioning #footer-logo {
 }
 
 /*---------------Still Bar Buttons---------------*/
-#still-bar #overlay a {
+.still-bar .overlay a {
   margin-top: 1.938rem;
   margin-bottom: 1.125rem;
   padding: 5px 20px;
@@ -1644,7 +1682,7 @@ small {
 }
 
 /*---------------Still Bar Headlines---------------*/
-#still-bar h1 {
+.still-bar h1 {
   margin-top: 0;
   margin-bottom: 20px;
   font-size: 2.5rem;
@@ -1855,7 +1893,7 @@ footer .footer-menu h4 {
   display: block;
 }
 
-#still-bar #overlay a:hover {
+.still-bar .overlay a:hover {
   background-color: #7e57a0;
   border-color: #7e57a0;
 }
@@ -2258,34 +2296,34 @@ header #header-floor #bottom-header-one #search-first {
 }
 /*Still-Bar*/
 @media (max-width: 991px) {
-  #still-bar #overlay {
+  .still-bar .overlay {
     text-align: center;
   }
-  #still-bar img {
+  .still-bar img {
     opacity: 0.5;
   }
 }
 @media (min-width: 553px) {
-  #still-bar #overlay {
+  .still-bar .overlay {
     padding-left: 15px;
     padding-right: 15px;
   }
 }
 @media (min-width: 896px) and (max-width: 991px) {
-  #still-bar #overlay {
+  .still-bar .overlay {
     width: 750px;
   }
 }
 @media (min-width: 992px) {
-  #still-bar #overlay h1 {
+  .still-bar .overlay h1 {
     font-size: 4rem;
     line-height: 5rem;
   }
-  #still-bar #overlay p {
+  .still-bar .overlay p {
     font-size: 1.625rem;
     line-height: 2.5rem;
   }
-  #overlay {
+  .overlay {
     width: 970px;
     text-align: left;
     padding-top: 2rem;
@@ -2294,10 +2332,10 @@ header #header-floor #bottom-header-one #search-first {
   .menu-positioning {
     width: 970px;
   }
-  #still-bar img {
+  .still-bar img {
     opacity: 0.75;
   }
-  #still-bar::before {
+  .still-bar::before {
     content: "";
     position: absolute;
     inset: 0;
@@ -2305,13 +2343,13 @@ header #header-floor #bottom-header-one #search-first {
   }
 }
 @media (min-width: 1260px) {
-  #overlay,
+  .overlay,
   .menu-positioning {
     width: 1200px;
   }
 }
 @media (min-width: 1415px) {
-  #still-bar img {
+  .still-bar img {
     width: 100%;
   }
 }
@@ -2390,36 +2428,6 @@ header #header-floor #bottom-header-one #search-first {
   }
 }
 /*Partners*/
-@media (min-width: 620px) {
-  #partner-three {
-    display: block;
-  }
-}
-@media (min-width: 875px) {
-  #partner-four {
-    display: block;
-  }
-}
-@media (min-width: 1200px) {
-  #partner-five {
-    display: block;
-  }
-}
-@media (min-width: 1450px) {
-  #partner-six {
-    display: block;
-  }
-}
-@media (min-width: 1825px) {
-  #partner-seven {
-    display: block;
-  }
-}
-@media (min-width: 1910px) {
-  #partner-eight {
-    display: block;
-  }
-}
 /*Welcome To Netmatters*/
 @media (max-width: 537px) {
   #lower-button {
@@ -2513,36 +2521,6 @@ header #header-floor #bottom-header-one #search-first {
   }
 }
 /*Clients*/
-@media (min-width: 650px) {
-  #searles {
-    display: block;
-  }
-}
-@media (min-width: 930px) {
-  #busseys {
-    display: block;
-  }
-}
-@media (min-width: 1220px) {
-  #crane {
-    display: block;
-  }
-}
-@media (min-width: 1400px) {
-  #black-swan {
-    display: block;
-  }
-}
-@media (min-width: 1700px) {
-  #xupes {
-    display: block;
-  }
-}
-@media (min-width: 1825px) {
-  #beat {
-    display: block;
-  }
-}
 /*Footer*/
 @media (max-width: 767px) {
   #top-positioning {

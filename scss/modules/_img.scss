@@ -13,7 +13,7 @@ header img {
     display: block;
 }
 
-#still-bar img {
+.still-bar img {
     object-fit: cover;
     height:100%;
     position: relative;
@@ -66,15 +66,6 @@ header img {
     display: block;
 }
 
-#partner-three,
-#partner-four,
-#partner-five,
-#partner-six,
-#partner-seven,
-#partner-eight {
-    display: none;
-}
-
 /*---------------Articles Images---------------*/
 
 
@@ -109,45 +100,30 @@ header img {
 
 /*---------------Clients Images---------------*/
 
-#ashcroft,
-#traveller,
-#searles,
-#busseys,
-#crane,
-#black-swan,
-#xupes,
-#beat        {
+
+.client img {
     filter: grayscale(1);
+    transition: filter 0.3s ease;
 }
 
-#ashcroft:hover,
-#traveller:hover,
-#searles:hover,
-#busseys:hover,
-#crane:hover,
-#black-swan:hover,
-#xupes:hover,
-#beat:hover {
+.client:hover img {
     filter: grayscale(0);
 }
 
-#searles,
-#busseys,
-#crane,
-#black-swan,
-#xupes,
-#beat       {
-    display: none;
+.client {
+    position: relative;
+    height: 70px;
+    align-items: center;
 }
 
 .client img {
+    display: block;
     padding: 0 20px;
+    width: auto;
+    height: auto;
+    max-height: 70px;
 }
 
-.client {
-    display: flex;
-    position: relative;
-}
 
 /*---------------Footer Images---------------*/
 

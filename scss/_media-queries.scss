@@ -133,37 +133,37 @@
 
 /*Still-Bar*/
 @media (max-width: 991px) {
-    #still-bar #overlay {
+    .still-bar .overlay {
         text-align: center;
     }
-    #still-bar img {
+    .still-bar img {
         opacity: 0.5;
     }
 }
 
 @media (min-width: 553px) {
-    #still-bar #overlay {
+    .still-bar .overlay {
         padding-left: 15px;
         padding-right: 15px;
     }
 }
 
 @media (min-width: 896px) and (max-width: 991px) {
-    #still-bar #overlay {
+    .still-bar .overlay {
         width: 750px;
     }
 }
 
 @media (min-width: 992px) {
-    #still-bar #overlay h1 {
+    .still-bar .overlay h1 {
         font-size: 4rem;
         line-height: 5rem;
     }
-    #still-bar #overlay p {
+    .still-bar .overlay p {
         font-size: 1.625rem;
         line-height: 2.5rem;
     }
-    #overlay {
+    .overlay {
         width: 970px;
         text-align: left;
         padding-top: 2rem;
@@ -172,10 +172,10 @@
     .menu-positioning {
         width: 970px;
     }
-    #still-bar img {
+    .still-bar img {
         opacity: 0.75;
     }
-    #still-bar::before {
+    .still-bar::before {
         content: "";
         position: absolute;
         inset: 0;
@@ -184,14 +184,14 @@
 }
 
 @media (min-width:1260px) {
-    #overlay,
+    .overlay,
     .menu-positioning {
         width: 1200px;
     }
 }
 
 @media (min-width:1415px) {
-    #still-bar img {
+    .still-bar img {
         width: 100%;
     }
 }
@@ -287,41 +287,6 @@
 }
 
 /*Partners*/
-@media (min-width: 620px) {
-    #partner-three {
-        display:block;
-    }
-}
-
-@media (min-width: 875px) {
-    #partner-four {
-        display:block;
-    }
-}
-
-@media (min-width: 1200px) {
-    #partner-five {
-        display:block;
-    }
-}
-
-@media (min-width: 1450px) {
-    #partner-six {
-        display:block;
-    }
-}
-
-@media (min-width: 1825px) {
-    #partner-seven {
-        display:block;
-    }
-}
-
-@media (min-width: 1910px) {
-    #partner-eight {
-        display:block;
-    }
-}
 
 /*Welcome To Netmatters*/
 
@@ -435,41 +400,7 @@
 
 /*Clients*/
 
-@media (min-width: 650px) {
-    #searles {
-        display:block;
-    }
-}
 
-@media (min-width: 930px) {
-    #busseys {
-        display:block;
-    }
-}
-
-@media (min-width: 1220px) {
-    #crane {
-        display:block;
-    }
-}
-
-@media (min-width: 1400px) {
-    #black-swan {
-        display:block;
-    }
-}
-
-@media (min-width: 1700px) {
-    #xupes {
-        display:block;
-    }
-}
-
-@media (min-width: 1825px) {
-    #beat {
-        display:block;
-    }
-}
 /*Footer*/
 
 @media (max-width: 767px) {
@@ -552,4 +483,4 @@
     pointer-events: auto !important;
     background: rgba(255,0,0,0.1) !important;
 } 
-*/  
+*/

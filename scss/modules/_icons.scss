@@ -29,7 +29,7 @@ header .icon-phone_in_talk:hover {
     line-height: 62px;
 }
 
-.icon-menu {
+.hamburger {
     padding: 15px;
     display: inline-block;
     cursor: pointer;
@@ -45,28 +45,28 @@ header .icon-phone_in_talk:hover {
     overflow: visible
 }
 
-.icon-menu:hover {
+.hamburger:hover {
     background-color: rgb(36, 35, 35);
     box-shadow: 0 3px 35px rgba(0,0,0,.1);
 }
 
-.menu-box {
+.hamburger-box {
     width: 33px;
     height: 19px;
     display: inline-block;
     position: relative
 }
 
-.menu-pieces {
+.hamburger-inner {
     display: block;
     top: 50%;
     margin-top: -1.5px
 }
 
-.menu-pieces,.menu-pieces:after,.menu-pieces:before {
+.hamburger-inner,.hamburger-inner:after,.hamburger-inner:before {
     width: 33px;
     height: 4px;
-    background-color: white;
+    background-color: white !important;
     border-radius: 0;
     position: absolute;
     transition-property: transform;
@@ -74,16 +74,16 @@ header .icon-phone_in_talk:hover {
     transition-timing-function: ease
 }
 
-.menu-pieces:after,.menu-pieces:before {
+.hamburger-inner:after,.hamburger-inner:before {
     content: "";
     display: block
 }
 
-.menu-pieces:before {
+.hamburger-inner:before {
     top: -10px
 }
 
-.menu-pieces:after {
+.hamburger-inner:after {
     bottom: -10px
 }
 
@@ -95,7 +95,7 @@ header #heading #menu-placement>*+* {
     margin-left: 20px;
 }
 
-header #heading #menu-placement .menu-box span {
+header #heading #menu-placement .hamburger-box span {
     font-size: 1.438rem;
     line-height: 45px
 }
@@ -183,7 +183,7 @@ header #header-floor #bottom-header-one {
 }
 
 /*Still Bar Icons*/
-
+/*
     #owl-stage {
         margin-top: 10px;
         display: block;
@@ -196,8 +196,8 @@ header #header-floor #bottom-header-one {
         right: 0;
         display: block;
     }
-
-    .owl-dot {
+*/
+    .slick-dots li button {
         margin: 5px 7px;
         width: 11px;
         height: 11px;
@@ -207,25 +207,37 @@ header #header-floor #bottom-header-one {
         text-align: center;
     }
 
-    #owl-dot-active {
+    .slick-dots li.slick-active button {
         background: #869791;
         background-color: white;
         border-radius: 30px;
-        border: 2px solid white;
+        border: 0px solid white;
     }
 
-    #owl-dot-active:after {
+    .slick-dots li.slick-active button:after {
         content: "";
         position: relative;
         display: block;
-        top: -8px;
-        left: -8px;
+        top: -11px;
+        left: -11px;
         width: 23px;
         height: 23px;
         border-radius: 50%;
         border: 2px solid #fff;
     }
 
+    .slick-dots li button:before {
+        display: none;
+    }
+
+    .slick-dots {
+    position: absolute;    
+    bottom: 50px;          
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 10;
+    }
+/*
     #owl-stage {
     position: absolute;
     z-index: 2;
@@ -234,7 +246,7 @@ header #header-floor #bottom-header-one {
     transform: translate(-50%, -75%);
     width: 100%;
 }
-
+*/
 /*---------------Services Icons---------------*/
 
 #consultancy .icons{
