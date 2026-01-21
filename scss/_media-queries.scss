@@ -162,7 +162,7 @@
 }
 
 @media (min-width: 992px) {
-    .still-bar .overlay h1 {
+    .still-bar .overlay h2 {
         font-size: 4rem;
         line-height: 5rem;
     }
@@ -206,7 +206,7 @@
 /*Services*/
 
 @media (min-width: 768px) {
-    #service-roof h2 {
+    #service-roof #service-title-right {
         display: block;
         float: right;
         margin-left: 20px;
@@ -277,6 +277,12 @@
     }
 }
 
+@media (max-width: 1259px) {
+    #services #service-title-left {
+        margin-bottom: 15px;
+    }
+}
+
 @media (min-width: 1260px) {
     #services {
         width: 1200px;
@@ -288,7 +294,7 @@
         grid-template-columns: 1fr 1fr 1fr 1fr;
     }
 
-    #services h1 {
+    #services #service-title-left {
         margin-top: 5px;
     }
 }

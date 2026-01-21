@@ -48,9 +48,10 @@ small {
     line-height: 1.1;
     letter-spacing: 0.4px;
     text-align: left;
+    display: block;
 }
 
-#service-roof h2 {
+#service-roof #service-title-right {
     display: none;
     margin-left: 20px;
     margin-bottom: 28px;
