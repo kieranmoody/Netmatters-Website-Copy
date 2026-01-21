@@ -1,4 +1,4 @@
-//cookies functionality
+/*cookies functionality*/
 function consentFunctionality() {
   const cookieWrapper = document.querySelector("#cookie-wrapper");
   const cookieAccept = document.querySelector("#cookie-accept-button");
@@ -104,27 +104,25 @@ window.addEventListener('scroll', function() {
 //Hamburger
 var $hamburger = $(".hamburger");
 var $menu = $("#menu-wrapper");
+var $website = $("html")
   $hamburger.on("click", function(e) {
+    e.stopPropagation();
+
     $hamburger.toggleClass("is-active");
     if ($hamburger.hasClass("is-active")) {
-      openNav();
       $menu.css("display", "block");
+      $website.addClass("menu-active");
     } else {
       $menu.css("display", "none");
-      closeNav();
+      $website.removeClass("menu-active");
     }
   });
 
-/* Set the width of the side navigation to 250px and the left margin of the page content to 250px */
-function openNav() {
-  document.getElementById("menu-wrapper").style.width = "250px";
-  document.getElementById("main").style.marginLeft = "250px";
-  document.body.style.backgroundColor = "rgba(0,0,0,0.4)";
-}
-
-/* Set the width of the side navigation to 0 and the left margin of the page content to 0 */
-function closeNav() {
-  document.getElementById("menu-wrapper").style.width = "0";
-  document.getElementById("main").style.marginLeft = "0";
-  document.body.style.backgroundColor = "white";
-}
+var $main = $("#menu-colorchange");
+$main.on("click", function () {
+  if ($website.hasClass("menu-active")) {
+    $hamburger.removeClass("is-active");
+    $menu.css("display", "none");
+    $website.removeClass("menu-active");
+  }
+});

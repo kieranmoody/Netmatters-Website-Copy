@@ -31,9 +31,192 @@
 }
 //sticky header cage
 
-.is-hidden {
-    display: none !important;
+
+
+//cookies
+
+#cookie-consent {
+    position: fixed;
+    line-height: 22px;
+    z-index: 99;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    background: #75788a;
+    font-weight: 600;
+    text-transform: capitalize;
+    color: #fff;
+    border: solid #75788a;
+    border-width: 1px 1px 0 0;
+    border-radius: 0;
+    border-top-right-radius: 10px;
+    padding: 0 10px;
+    cursor: pointer;
+    font-size: .8rem;
 }
+
+#cookie-container {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
+    background-color: rgba(0, 0, 0, .7);
+    display: flex;
+    -webkit-overflow-scrolling: touch;
+    outline: 0;
+    overflow-x: hidden;
+    overflow-y: auto;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    -ms-flex-pack: center!important;
+    padding: 30px;
+}
+
+#cookie-prompt {
+    position: relative;
+    width: auto;
+    margin: 10px;
+}
+
+#cookie-container #cookie-prompt {
+    margin: auto;
+}
+
+#cookie-box {
+    position: relative;
+    background-color: #fff;
+    border: 1px solid #999;
+    border: 1px solid rgba(0, 0, 0, .2);
+    border-radius: 5px;
+    box-shadow: 0 3px 9px rgba(0, 0, 0, .5);
+    background-clip: padding-box;
+    outline: none;
+}
+
+#cookie-header {
+    padding: 15px 20px;
+    border-bottom: 1px solid #e5e5e5;
+    min-height: 16.42857143px;
+}
+#cookie-title {
+    margin: 0;
+    line-height: 1.42857143;
+    font-size: 1.625rem;
+    font-weight: 400;
+    color: #333645;
+    letter-spacing: .4px;
+}
+
+#cookie-body {
+    position: relative;
+    padding: 20px;
+}
+#cookie-body p {
+    display: block;
+    line-height: 1.875rem;
+    margin-bottom: 25px;
+    font-size: 1rem;
+    letter-spacing: .4px;
+    color: #666;
+    font-weight: 400;
+}
+
+#cookie-buttons {
+    padding: 19px 20px 20px;
+    text-align: right;
+    border-top: 1px solid #e5e5e5;
+}
+#cookie-button-positioning {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: -15px;
+    margin-right: -15px;
+}
+
+#cookie-settings {
+    position: relative;
+    min-height: 1px;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-bottom: 30px;
+    width: 100%;
+}
+#cookie-settings a {
+    height: auto;
+    line-height: 35px;
+    padding: 5px 15px;
+    text-transform: uppercase;
+    font-size: 1.063rem;
+    border-radius: 3px;
+    white-space: normal;
+    display: block;
+    width: 100%;
+    color: #fff;
+    background-color: #999aa2;
+    border-color: #999aa2;
+    margin-bottom: 0;
+    font-weight: 400;
+    text-align: center;
+    cursor: pointer;
+    background-image: none;
+    border: 1px solid transparent;
+    user-select: none;
+    letter-spacing: .4px;
+}
+
+#cookie-accept {
+    position: relative;
+    min-height: 1px;
+    padding-left: 15px;
+    padding-right: 15px;
+    width: 100%;
+}
+#cookie-accept a {
+    color: #fff;
+    background-color: #926fb1;
+    border-color: #926fb1;
+    height: auto;
+    line-height: 35px;
+    padding: 5px 15px;
+    text-transform: uppercase;
+    font-size: 1.063rem;
+    border-radius: 3px;
+    white-space: normal;
+    display: block;
+    width: 100%;
+    margin-bottom: 0;
+    font-weight: 400;
+    text-align: center;
+    cursor: pointer;
+    background-image: none;
+    border: 1px solid transparent;
+    user-select: none;
+    letter-spacing: .4px;
+}
+
+@media (min-width: 768px) {
+    #cookie-prompt {
+        width: 600px;
+        margin: 30px auto;
+    }
+    #cookie-box {
+        box-shadow: 0 5px 15px rgba(0, 0, 0, .5);
+    }
+    #cookie-settings, 
+    #cookie-accept      {
+        width: 50%;
+        float: left;
+    }
+    #cookie-settings {
+        margin-bottom: 0;
+    }
+}
+
+// 
+
 
 header {
     display: block;
@@ -84,18 +267,197 @@ header #heading #top-header {
 
 /*Popout Menu Temp*/
 #menu-wrapper {
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 9999999;
+    height: 100%;
+    background: #333645;
+    width: 275px;
+    overflow: auto;
     display: none;
-    height: 100%; /* 100% Full-height */
-    width: 0; /* 0 width - change this with JavaScript */
-    position: fixed; /* Stay in place */
-    z-index: 1; /* Stay on top */
-    top: 0; /* Stay at the top */
-    left: 0;
-    background-color: #111; /* Black*/
-    overflow-x: hidden; /* Disable horizontal scroll */
-    padding-top: 60px; /* Place content 60px from the top */
-    transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
 }
+.menu-active #menu-wrapper {
+    display: block;
+}
+
+#menu-bigger {
+    display: none;
+}
+
+#mobile-menu-s1 {
+    padding: 21px;
+}
+.menu-active #main {
+    position: relative;
+    left: -275px;
+    cursor: pointer;
+}
+.menu-active .header-navigation.sticky {
+    left:-275px;
+}
+
+#menu-colorchange {
+  position: relative;
+}
+#menu-colorchange::after {
+  content: "";
+  position: fixed;
+  inset: 0; /* top:0 right:0 bottom:0 left:0 */
+  background: rgba(0, 0, 0, 0.4);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+  z-index: 999999;
+}
+html.menu-active #menu-colorchange::after {
+  opacity: 1;
+  pointer-events: auto;
+  cursor: pointer;
+}
+
+#menu-contact {
+    font-size: 1.125rem;
+    padding: 19px 0 18px;
+    margin-top: 20px;
+    border-radius: 3px;
+    outline: 1px solid rgba(0, 0, 0, .25);
+    border: 1px solid hsla(0, 0%, 100%, .1);
+    display: block;
+    color: #fff;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+#menu-wrapper .mobile-service  {
+    font-size: 1.125rem;
+    padding: 19px 0 18px;
+    margin-top: 20px;
+    border-radius: 3px;
+    outline: 1px solid rgba(0, 0, 0, .25);
+    border: 1px solid hsla(0, 0%, 100%, .1);
+    display: block;
+    color: #fff;
+    text-align: center;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+}
+
+#menu-cad span {
+    color: #67809f;
+}
+#menu-it span {
+    color: #4183d7;
+}
+#menu-marketing span {
+    color: #2ecc71;
+}
+#menu-telecoms span {
+    color: #d64541;
+}
+#menu-design span {
+    color: #926fb1;
+}
+#menu-security span {
+    color: #f62459;
+}
+#menu-developer span {
+    color: #ce4125;
+}
+
+.menu-service-list  {
+    margin-top: 20px;
+    border-radius: 3px;
+    overflow: hidden;
+    width: auto !important;
+    list-style: none;
+    padding: 0;
+    display: block;
+    font-size: 1rem;
+    letter-spacing: .4px;
+    line-height: 1.42857143;
+}
+
+.menu-temp {
+    border-top: 1px solid rgba(0, 0, 0, .45);
+}
+
+.menu-temp a {
+    border-top: 1px solid hsla(0, 0%, 100%, .05);
+    display: block;
+    color: #fff;
+    text-align: center;
+    text-transform: uppercase;
+    text-decoration: none;
+    background-color: rgba(0, 0, 0, .25);
+    padding: 10px;
+}
+
+#menu-wrapper .menu-perm-title {
+    display: block;
+    color: #fff;
+    padding: 20px;
+    text-transform: uppercase;
+    font-size: 1rem;
+    text-decoration: none;
+    line-height: 1;
+    position: relative;
+}
+
+.work-list-menu {
+    padding-left: 0;
+    width: auto !important;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.menu-list-perm {
+    border-top: 1px solid rgba(0, 0, 0, .45);
+}
+
+.menu-list-perm a {
+    border-top: 1px solid hsla(0, 0%, 100%, .05);
+    display: block;
+    color: #fff;
+    background-color: rgba(0, 0, 0, .25);
+    padding: 15px 20px;
+    text-transform: uppercase;
+    font-size: .875rem;
+    text-decoration: none;
+    position: relative;
+}
+
+.menu-list-perm a:before {
+    content: "\BB";
+    padding-right: 15px;
+}
+
+.menu-hover-styling:hover .menu-perm-title,
+#support-menu:hover,
+#menu-contact:hover,
+.menu-service-list:hover .mobile-service     {
+    background-color: rgba(255, 255, 255, 0.05);
+}
+
+
+
+@media (min-width: 992px) {
+    #menu-mobile {
+        display: none;
+    }
+    #menu-bigger {
+        display: block;
+    }
+    #menu-wrapper {
+        width: 350px;
+    }
+    .menu-active #main, 
+    .menu-active .header-navigation.sticky {
+    left:-350px;
+    }
+}
+
 
 
 /*Still Bar*/

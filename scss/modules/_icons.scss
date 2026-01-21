@@ -48,6 +48,7 @@ header .icon-phone_in_talk:hover {
 .hamburger:hover {
     background-color: rgb(36, 35, 35);
     box-shadow: 0 3px 35px rgba(0,0,0,.1);
+    opacity: 1;
 }
 
 .hamburger-box {
@@ -237,16 +238,7 @@ header #header-floor #bottom-header-one {
     transform: translateX(-50%);
     z-index: 10;
     }
-/*
-    #owl-stage {
-    position: absolute;
-    z-index: 2;
-    top: 88%;
-    left: 50%;
-    transform: translate(-50%, -75%);
-    width: 100%;
-}
-*/
+
 /*---------------Services Icons---------------*/
 
 #consultancy .icons{

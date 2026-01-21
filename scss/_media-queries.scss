@@ -117,7 +117,8 @@
     #cyber-security:hover .menu-tab:before,
     #developer-course:hover .menu-tab:before   {
         border-width: 35px 83.5px 0;
-        top: 162%;
+        top: 160%;
+        transform: translateX(-43%);
     }
     #con-and-dev:hover .menu-tab:before {
         border-width: 35px 83.5px 0;
@@ -128,6 +129,12 @@
     }
     #header-buttons {
         width: 66.66666667%;
+    }
+    #con-and-dev:hover .menu-tab:before {
+        transform: translateX(-43%);
+    }
+    #web:hover .menu-tab:before {
+        transform: translateX(-41%);
     }
 }
 

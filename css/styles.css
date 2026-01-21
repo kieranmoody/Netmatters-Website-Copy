@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /*colors*/
 html {
   font-family: "Poppins", sans-serif;
@@ -79,7 +80,7 @@ main {
  * Correct the font size and margin on `h1` elements within `section` and
  * `article` contexts in Chrome, Firefox, and Safari.
  */
-h1 {
+h1, h2 {
   font-size: 2em;
   margin: 0.67em 0;
 }
@@ -416,10 +417,190 @@ cite {
   transition: transform 0.5s ease-out;
 }
 
-.is-hidden {
-  display: none !important;
+#cookie-consent {
+  position: fixed;
+  line-height: 22px;
+  z-index: 99;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  background: #75788a;
+  font-weight: 600;
+  text-transform: capitalize;
+  color: #fff;
+  border: solid #75788a;
+  border-width: 1px 1px 0 0;
+  border-radius: 0;
+  border-top-right-radius: 10px;
+  padding: 0 10px;
+  cursor: pointer;
+  font-size: 0.8rem;
 }
 
+#cookie-container {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  background-color: rgba(0, 0, 0, 0.7);
+  display: flex;
+  -webkit-overflow-scrolling: touch;
+  outline: 0;
+  overflow-x: hidden;
+  overflow-y: auto;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  -ms-flex-pack: center !important;
+  padding: 30px;
+}
+
+#cookie-prompt {
+  position: relative;
+  width: auto;
+  margin: 10px;
+}
+
+#cookie-container #cookie-prompt {
+  margin: auto;
+}
+
+#cookie-box {
+  position: relative;
+  background-color: #fff;
+  border: 1px solid #999;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+  box-shadow: 0 3px 9px rgba(0, 0, 0, 0.5);
+  background-clip: padding-box;
+  outline: none;
+}
+
+#cookie-header {
+  padding: 15px 20px;
+  border-bottom: 1px solid #e5e5e5;
+  min-height: 16.42857143px;
+}
+
+#cookie-title {
+  margin: 0;
+  line-height: 1.42857143;
+  font-size: 1.625rem;
+  font-weight: 400;
+  color: #333645;
+  letter-spacing: 0.4px;
+}
+
+#cookie-body {
+  position: relative;
+  padding: 20px;
+}
+
+#cookie-body p {
+  display: block;
+  line-height: 1.875rem;
+  margin-bottom: 25px;
+  font-size: 1rem;
+  letter-spacing: 0.4px;
+  color: #666;
+  font-weight: 400;
+}
+
+#cookie-buttons {
+  padding: 19px 20px 20px;
+  text-align: right;
+  border-top: 1px solid #e5e5e5;
+}
+
+#cookie-button-positioning {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: -15px;
+  margin-right: -15px;
+}
+
+#cookie-settings {
+  position: relative;
+  min-height: 1px;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-bottom: 30px;
+  width: 100%;
+}
+
+#cookie-settings a {
+  height: auto;
+  line-height: 35px;
+  padding: 5px 15px;
+  text-transform: uppercase;
+  font-size: 1.063rem;
+  border-radius: 3px;
+  white-space: normal;
+  display: block;
+  width: 100%;
+  color: #fff;
+  background-color: #999aa2;
+  border-color: #999aa2;
+  margin-bottom: 0;
+  font-weight: 400;
+  text-align: center;
+  cursor: pointer;
+  background-image: none;
+  border: 1px solid transparent;
+  user-select: none;
+  letter-spacing: 0.4px;
+}
+
+#cookie-accept {
+  position: relative;
+  min-height: 1px;
+  padding-left: 15px;
+  padding-right: 15px;
+  width: 100%;
+}
+
+#cookie-accept a {
+  color: #fff;
+  background-color: #926fb1;
+  border-color: #926fb1;
+  height: auto;
+  line-height: 35px;
+  padding: 5px 15px;
+  text-transform: uppercase;
+  font-size: 1.063rem;
+  border-radius: 3px;
+  white-space: normal;
+  display: block;
+  width: 100%;
+  margin-bottom: 0;
+  font-weight: 400;
+  text-align: center;
+  cursor: pointer;
+  background-image: none;
+  border: 1px solid transparent;
+  user-select: none;
+  letter-spacing: 0.4px;
+}
+
+@media (min-width: 768px) {
+  #cookie-prompt {
+    width: 600px;
+    margin: 30px auto;
+  }
+  #cookie-box {
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+  }
+  #cookie-settings,
+  #cookie-accept {
+    width: 50%;
+    float: left;
+  }
+  #cookie-settings {
+    margin-bottom: 0;
+  }
+}
 header {
   display: block;
   padding: 20px 0;
@@ -469,19 +650,205 @@ header #heading #top-header {
 
 /*Popout Menu Temp*/
 #menu-wrapper {
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 9999999;
+  height: 100%;
+  background: #333645;
+  width: 275px;
+  overflow: auto;
   display: none;
-  height: 100%; /* 100% Full-height */
-  width: 0; /* 0 width - change this with JavaScript */
-  position: fixed; /* Stay in place */
-  z-index: 1; /* Stay on top */
-  top: 0; /* Stay at the top */
-  left: 0;
-  background-color: #111; /* Black*/
-  overflow-x: hidden; /* Disable horizontal scroll */
-  padding-top: 60px; /* Place content 60px from the top */
-  transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
 }
 
+.menu-active #menu-wrapper {
+  display: block;
+}
+
+#menu-bigger {
+  display: none;
+}
+
+#mobile-menu-s1 {
+  padding: 21px;
+}
+
+.menu-active #main {
+  position: relative;
+  left: -275px;
+  cursor: pointer;
+}
+
+.menu-active .header-navigation.sticky {
+  left: -275px;
+}
+
+#menu-colorchange {
+  position: relative;
+}
+
+#menu-colorchange::after {
+  content: "";
+  position: fixed;
+  inset: 0; /* top:0 right:0 bottom:0 left:0 */
+  background: rgba(0, 0, 0, 0.4);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+  z-index: 999999;
+}
+
+html.menu-active #menu-colorchange::after {
+  opacity: 1;
+  pointer-events: auto;
+  cursor: pointer;
+}
+
+#menu-contact {
+  font-size: 1.125rem;
+  padding: 19px 0 18px;
+  margin-top: 20px;
+  border-radius: 3px;
+  outline: 1px solid rgba(0, 0, 0, 0.25);
+  border: 1px solid hsla(0, 0%, 100%, 0.1);
+  display: block;
+  color: #fff;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+#menu-wrapper .mobile-service {
+  font-size: 1.125rem;
+  padding: 19px 0 18px;
+  margin-top: 20px;
+  border-radius: 3px;
+  outline: 1px solid rgba(0, 0, 0, 0.25);
+  border: 1px solid hsla(0, 0%, 100%, 0.1);
+  display: block;
+  color: #fff;
+  text-align: center;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+
+#menu-cad span {
+  color: #67809f;
+}
+
+#menu-it span {
+  color: #4183d7;
+}
+
+#menu-marketing span {
+  color: #2ecc71;
+}
+
+#menu-telecoms span {
+  color: #d64541;
+}
+
+#menu-design span {
+  color: #926fb1;
+}
+
+#menu-security span {
+  color: #f62459;
+}
+
+#menu-developer span {
+  color: #ce4125;
+}
+
+.menu-service-list {
+  margin-top: 20px;
+  border-radius: 3px;
+  overflow: hidden;
+  width: auto !important;
+  list-style: none;
+  padding: 0;
+  display: block;
+  font-size: 1rem;
+  letter-spacing: 0.4px;
+  line-height: 1.42857143;
+}
+
+.menu-temp {
+  border-top: 1px solid rgba(0, 0, 0, 0.45);
+}
+
+.menu-temp a {
+  border-top: 1px solid hsla(0, 0%, 100%, 0.05);
+  display: block;
+  color: #fff;
+  text-align: center;
+  text-transform: uppercase;
+  text-decoration: none;
+  background-color: rgba(0, 0, 0, 0.25);
+  padding: 10px;
+}
+
+#menu-wrapper .menu-perm-title {
+  display: block;
+  color: #fff;
+  padding: 20px;
+  text-transform: uppercase;
+  font-size: 1rem;
+  text-decoration: none;
+  line-height: 1;
+  position: relative;
+}
+
+.work-list-menu {
+  padding-left: 0;
+  width: auto !important;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.menu-list-perm {
+  border-top: 1px solid rgba(0, 0, 0, 0.45);
+}
+
+.menu-list-perm a {
+  border-top: 1px solid hsla(0, 0%, 100%, 0.05);
+  display: block;
+  color: #fff;
+  background-color: rgba(0, 0, 0, 0.25);
+  padding: 15px 20px;
+  text-transform: uppercase;
+  font-size: 0.875rem;
+  text-decoration: none;
+  position: relative;
+}
+
+.menu-list-perm a:before {
+  content: "»";
+  padding-right: 15px;
+}
+
+.menu-hover-styling:hover .menu-perm-title,
+#support-menu:hover,
+#menu-contact:hover,
+.menu-service-list:hover .mobile-service {
+  background-color: rgba(255, 255, 255, 0.05);
+}
+
+@media (min-width: 992px) {
+  #menu-mobile {
+    display: none;
+  }
+  #menu-bigger {
+    display: block;
+  }
+  #menu-wrapper {
+    width: 350px;
+  }
+  .menu-active #main,
+  .menu-active .header-navigation.sticky {
+    left: -350px;
+  }
+}
 /*Still Bar*/
 #still-bar-wrapper .still-bar-carousel .still-bar {
   height: 550px;
@@ -873,6 +1240,7 @@ header .icon-phone_in_talk:hover {
 .hamburger:hover {
   background-color: rgb(36, 35, 35);
   box-shadow: 0 3px 35px rgba(0, 0, 0, 0.1);
+  opacity: 1;
 }
 
 .hamburger-box {
@@ -1063,16 +1431,6 @@ header #header-floor #bottom-header-one {
   z-index: 10;
 }
 
-/*
-    #owl-stage {
-    position: absolute;
-    z-index: 2;
-    top: 88%;
-    left: 50%;
-    transform: translate(-50%, -75%);
-    width: 100%;
-}
-*/
 /*---------------Services Icons---------------*/
 #consultancy .icons {
   background-color: #67809f;
@@ -1379,6 +1737,36 @@ footer #top-positioning #footer-logo {
   font-weight: 400;
 }
 
+.still-bar-two .overlay a {
+  background-color: #f7b322;
+  border-color: #f7b322;
+}
+
+.still-bar-three .overlay a {
+  background-color: #4183d7;
+  border-color: #4183d7;
+}
+
+.still-bar-four .overlay a {
+  background-color: #2ecc71;
+  border-color: #2ecc71;
+}
+
+.still-bar-five .overlay a {
+  background-color: #d64541;
+  border-color: #d64541;
+}
+
+.still-bar-six .overlay a {
+  background-color: #926fb1;
+  border-color: #926fb1;
+}
+
+.still-bar-seven .overlay a {
+  background-color: #f62459;
+  border-color: #f62459;
+}
+
 /*---------------Services Buttons---------------*/
 .service-box .service-button {
   padding: 5px 15px;
@@ -1682,7 +2070,7 @@ small {
 }
 
 /*---------------Still Bar Headlines---------------*/
-.still-bar h1 {
+.still-bar h2 {
   margin-top: 0;
   margin-bottom: 20px;
   font-size: 2.5rem;
@@ -1691,7 +2079,7 @@ small {
 }
 
 /*---------------Service Headlines---------------*/
-#services h1 {
+#services #service-title-left {
   font-size: 2.7rem;
   margin-top: 0;
   margin-bottom: -10px;
@@ -1699,6 +2087,7 @@ small {
   font-weight: 400;
   line-height: 1.1;
   letter-spacing: 0.4px;
+  text-align: left;
 }
 
 #service-roof h2 {
@@ -1706,10 +2095,6 @@ small {
   margin-left: 20px;
   margin-bottom: 28px;
   vertical-align: middle;
-}
-
-#services h1 {
-  text-align: left;
 }
 
 #service-roof h3:hover {
@@ -1737,7 +2122,7 @@ small {
 }
 
 /*---------------Welcome To Netmatters Headlines---------------*/
-#welcome h1 {
+#welcome h2 {
   margin-top: -6px;
   margin-bottom: 40px;
   font-size: 2.25em;
@@ -1746,7 +2131,7 @@ small {
   letter-spacing: 0.4px;
 }
 
-#welcome h2 {
+#welcome h3 {
   margin-top: -6px;
   margin-bottom: 40px;
   font-size: 2.25rem;
@@ -2034,8 +2419,8 @@ header #header-floor #bottom-header-one #search-first {
   border-width: 35px 68px 0;
   content: "";
   position: absolute;
-  bottom: -50px;
-  transform: translateX(-43%);
+  bottom: -48px;
+  transform: translateX(-41%);
   z-index: 90;
   width: 0;
   height: 0;
@@ -2048,7 +2433,7 @@ header #header-floor #bottom-header-one #search-first {
   content: "";
   position: absolute;
   bottom: -35px;
-  transform: translateX(-43%);
+  transform: translateX(-41%);
   top: 130%;
   z-index: 90;
   width: 0;
@@ -2062,7 +2447,7 @@ header #header-floor #bottom-header-one #search-first {
   content: "";
   position: absolute;
   bottom: -35px;
-  transform: translateX(-43%);
+  transform: translateX(-41%);
   top: 130%;
   z-index: 90;
   width: 0;
@@ -2076,7 +2461,7 @@ header #header-floor #bottom-header-one #search-first {
   content: "";
   position: absolute;
   bottom: -35px;
-  transform: translateX(-43%);
+  transform: translateX(-42%);
   top: 130%;
   z-index: 90;
   width: 0;
@@ -2090,7 +2475,7 @@ header #header-floor #bottom-header-one #search-first {
   content: "";
   position: absolute;
   bottom: -35px;
-  transform: translateX(-42%);
+  transform: translateX(-39.5%);
   top: 130%;
   z-index: 90;
   width: 0;
@@ -2104,7 +2489,7 @@ header #header-floor #bottom-header-one #search-first {
   content: "";
   position: absolute;
   bottom: -35px;
-  transform: translateX(-43%);
+  transform: translateX(-41%);
   top: 130%;
   z-index: 90;
   width: 0;
@@ -2117,8 +2502,8 @@ header #header-floor #bottom-header-one #search-first {
   border-width: 35px 68px 0;
   content: "";
   position: absolute;
-  bottom: -35px;
-  transform: translateX(-43%);
+  top: 130%;
+  transform: translateX(-41%);
   z-index: 90;
   width: 0;
   height: 0;
@@ -2281,7 +2666,8 @@ header #header-floor #bottom-header-one #search-first {
   #cyber-security:hover .menu-tab:before,
   #developer-course:hover .menu-tab:before {
     border-width: 35px 83.5px 0;
-    top: 162%;
+    top: 160%;
+    transform: translateX(-43%);
   }
   #con-and-dev:hover .menu-tab:before {
     border-width: 35px 83.5px 0;
@@ -2292,6 +2678,12 @@ header #header-floor #bottom-header-one #search-first {
   }
   #header-buttons {
     width: 66.66666667%;
+  }
+  #con-and-dev:hover .menu-tab:before {
+    transform: translateX(-43%);
+  }
+  #web:hover .menu-tab:before {
+    transform: translateX(-41%);
   }
 }
 /*Still-Bar*/

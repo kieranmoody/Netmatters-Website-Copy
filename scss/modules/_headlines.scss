@@ -29,7 +29,7 @@ small {
 
 /*---------------Still Bar Headlines---------------*/
 
-.still-bar h1 {
+.still-bar h2 {
     margin-top: 0;
     margin-bottom: 20px;
     font-size: 2.5rem;
@@ -39,7 +39,7 @@ small {
 
 /*---------------Service Headlines---------------*/
 
-#services h1 {
+#services #service-title-left {
     font-size: 2.7rem;
     margin-top: 0;
     margin-bottom: -10px;
@@ -47,6 +47,7 @@ small {
     font-weight: 400;
     line-height: 1.1;
     letter-spacing: 0.4px;
+    text-align: left;
 }
 
 #service-roof h2 {
@@ -54,10 +55,6 @@ small {
     margin-left: 20px;
     margin-bottom: 28px;
     vertical-align: middle;
-}
-
-#services h1 {
-    text-align: left;
 }
 
 #service-roof h3:hover {
@@ -86,7 +83,7 @@ small {
 
 /*---------------Welcome To Netmatters Headlines---------------*/
 
-#welcome h1 {
+#welcome h2 {
     margin-top: -6px;
     margin-bottom: 40px;
     font-size: 2.25em;
@@ -95,7 +92,7 @@ small {
     letter-spacing: 0.4px;
 }
 
-#welcome h2 {
+#welcome h3 {
     margin-top: -6px;
     margin-bottom: 40px;
     font-size: 2.25rem;
