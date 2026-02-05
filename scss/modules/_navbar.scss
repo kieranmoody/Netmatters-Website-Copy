@@ -1,6 +1,6 @@
 /*---------------Header Navbar---------------*/
 
-header #header-floor #bottom-header-one #search-first {
+header .header-floor .bottom-header-one .search-first {
     background-color: rgba(0, 0, 0, .1);
     outline: 1px solid hsla(0, 0%, 100%, .2);
     border: 2px solid rgba(0, 0, 0, .1);
@@ -9,7 +9,7 @@ header #header-floor #bottom-header-one #search-first {
     padding-right: 40px;
 }
 
-#bottom-header-one #search-first {
+.bottom-header-one .search-first {
     display: inline-block;
 }
 
@@ -26,35 +26,35 @@ header #header-floor #bottom-header-one #search-first {
 
 /*---------------Header Dropdown Menu---------------*/
 
-#con-and-dev:hover {
+.con-and-dev:hover {
     background-color: #67809f;
 }
 
-#it:hover {
+.it:hover {
     background-color: #4183d7;
 }
 
-#digital-marketing:hover {
+.digital-marketing:hover {
     background-color: #2ecc71;
 }
 
-#telecom-services:hover {
+.telecom-services:hover {
     background-color: #d64541;
 }
 
-#web:hover {
+.web:hover {
     background-color: #926fb1;
 }
 
-#cyber-security:hover {
+.cyber-security:hover {
     background-color: #f62459;
 }
 
-#developer-course:hover {
+.developer-course:hover {
     background-color: #ce4125;
 }
 
-#con-and-dev:hover .menu-tab:before {
+.con-and-dev:hover .menu-tab:before {
     border-color: #67809f transparent transparent;
     border-width: 35px 68px 0;
     content: "";
@@ -67,7 +67,7 @@ header #header-floor #bottom-header-one #search-first {
     border-style: solid;
 }
 
-#it:hover .menu-tab:before {
+.it:hover .menu-tab:before {
     border-color: #4183d7 transparent transparent;
     border-width: 35px 68px 0;
     content: "";
@@ -81,7 +81,7 @@ header #header-floor #bottom-header-one #search-first {
     border-style: solid;
 }
 
-#digital-marketing:hover .menu-tab:before {
+.digital-marketing:hover .menu-tab:before {
     border-color: #2ecc71 transparent transparent;
     border-width: 35px 68px 0;
     content: "";
@@ -95,7 +95,7 @@ header #header-floor #bottom-header-one #search-first {
     border-style: solid;
 }
 
-#telecom-services:hover .menu-tab:before {
+.telecom-services:hover .menu-tab:before {
     border-color: #d64541 transparent transparent;
     border-width: 35px 68px 0;
     content: "";
@@ -109,7 +109,7 @@ header #header-floor #bottom-header-one #search-first {
     border-style: solid;
 }
 
-#web:hover .menu-tab:before {
+.web:hover .menu-tab:before {
     border-color: #926fb1 transparent transparent;
     border-width: 35px 68px 0;
     content: "";
@@ -123,7 +123,7 @@ header #header-floor #bottom-header-one #search-first {
     border-style: solid;
 }
 
-#cyber-security:hover .menu-tab:before {
+.cyber-security:hover .menu-tab:before {
     border-color: #f62459 transparent transparent;
     border-width: 35px 68px 0;
     content: "";
@@ -137,7 +137,7 @@ header #header-floor #bottom-header-one #search-first {
     border-style: solid;
 }
 
-#developer-course:hover .menu-tab:before {
+.developer-course:hover .menu-tab:before {
     border-color: #ce4125 transparent transparent;
     border-width: 35px 68px 0;
     content: "";
@@ -162,39 +162,31 @@ header #header-floor #bottom-header-one #search-first {
     z-index: 5;
 }
 
-
-
-
-  
-
-
-
-
-#con-and-dev .dropdown-menu {
+.con-and-dev .dropdown-menu {
     background-color: #526781;
 }
 
-#it .dropdown-menu {
+.it .dropdown-menu {
     background-color: #286abd;
 }
 
-#digital-marketing .dropdown-menu {
+.digital-marketing .dropdown-menu {
     background-color: #25a25a;
 }
 
-#telecom-services .dropdown-menu {
+.telecom-services .dropdown-menu {
     background-color: #bc2c28;
 }
 
-#web .dropdown-menu {
+.web .dropdown-menu {
     background-color: #79539a;
 }
 
-#cyber-security .dropdown-menu {
+.cyber-security .dropdown-menu {
     background-color: #de093f;
 }
 
-#developer-course .dropdown-menu {
+.developer-course .dropdown-menu {
     background-color: #a3331d;
 }
 

@@ -21,14 +21,28 @@
     transform: translateY(-100%);
     transition: transform .5s ease-out;
     position: fixed;
-    top: 0;
     z-index: 9999;
 }
+
+.slideUp .menu-tab:before,
+.slideUp .dropdown-menu {
+    display: none !important;
+}
+
 .slideDown {
     -webkit-transform: translateY(0);
     transform: translateY(0);
     transition: transform .5s ease-out;
 }
+
+#header {
+    display: block;
+}
+
+#sticky-header {
+    display: none;
+}
+
 //sticky header cage
 
 
@@ -217,6 +231,14 @@
 
 // 
 
+.netmatters-container {
+    height: auto;
+    vertical-align: middle;
+    float: none;
+    width: 100%;
+    display: table-cell;
+    padding: 0 15px;
+}
 
 header {
     display: block;
@@ -225,23 +247,22 @@ header {
     text-align: center;
 }
 
-#heading {
+.heading {
     padding-left: 15px;
     padding-right: 15px;
     margin-left: auto;
     margin-right: auto;
 }
 
-header #heading #top-header {
-    display: flex;
-    justify-content: center;
+header .heading .top-header {
+    display: table;
 }
 
-#bottom-header-two {
+.bottom-header-two {
     display: none;
 }
 
-#bottom-header-update {
+.bottom-header-update {
     background-color: #333645;
     display: none;
     width: 100%;
@@ -252,12 +273,12 @@ header #heading #top-header {
     margin-right: auto;
 }
 
-#header-tabs {
+.header-tabs {
     display: flex;
     justify-content: space-between;
 }
 
-#header-floor {
+.header-floor {
     position: relative;
 }
 
@@ -605,7 +626,7 @@ html.menu-active #menu-colorchange::after {
     padding: 0;
 }
 
-#header-buttons {
+.header-buttons {
     padding: 7px 15px;
     float: right;
 }

@@ -1,8 +1,8 @@
 /*---------------Header Buttons---------------*/
 @use '../utilities/index' as *;
 
-#contact,
-#support {
+.contact,
+.support {
     display: none;
     height: 56px;
     line-height: 46px;
@@ -15,23 +15,23 @@
     margin-left: 20px;
 }
 
-#support {
+.support {
     background-color: #4183d7;
     border: 1px solid #4183d7;
 }
-#support:hover {
+.support:hover {
     background-color: #2a6ec6;
     border-color: #2a6ec6;
     box-shadow: 0 3px 35px rgba(0,0,0,.1);
     cursor: pointer;
 }
 
-#contact {
+.contact {
     background-color: #999aa2;
     border: 1px solid #999aa2;
     margin-right: 20px;
 }
-#contact:hover {
+.contact:hover {
     background-color: #84858f;
     border-color: #797a85;
     box-shadow: 0 3px 35px rgba(0,0,0,.1);

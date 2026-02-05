@@ -75,25 +75,27 @@ $(document).ready(function () {
 
 var new_scroll_position = 0;
 var last_scroll_position;
-var header = document.getElementById("header");
+var stickyHeader = document.getElementById("sticky-header");
 
 window.addEventListener('scroll', function() {
     last_scroll_position = window.scrollY;
 
     // add sticky class once you scroll past top
     if (last_scroll_position > 0) {
-        header.classList.add('sticky');
+        stickyHeader.classList.add('sticky');
+        stickyHeader.style.display = "block";
     } else {
-        header.classList.remove('sticky');
+        stickyHeader.classList.remove('sticky');
+        stickyHeader.style.display = "none";
     }
 
     // scroll hide/show logic
     if (new_scroll_position < last_scroll_position && last_scroll_position > 80) {
-        header.classList.remove("slideDown");
-        header.classList.add("slideUp");
+        stickyHeader.classList.remove("slideDown");
+        stickyHeader.classList.add("slideUp");
     } else if (new_scroll_position > last_scroll_position) {
-        header.classList.remove("slideUp");
-        header.classList.add("slideDown");
+        stickyHeader.classList.remove("slideUp");
+        stickyHeader.classList.add("slideDown");
     }
 
     new_scroll_position = last_scroll_position;

@@ -8,12 +8,11 @@ header .icon-phone_in_talk:hover {
     text-decoration-thickness: 1%;
 }
 
-#header-phone {
+.header-phone {
     display: table-cell;
-}
-#header-phone {
-    padding-left: 20px;
-    padding-right: 20px;
+    padding-left: 15px;
+    padding-right: 5px;
+    vertical-align: middle;
 }
 
 .icons {
@@ -88,20 +87,20 @@ header .icon-phone_in_talk:hover {
     bottom: -10px
 }
 
-header #heading #menu-placement {
+header .heading .menu-placement {
     float: right;
 }
 
-header #heading #menu-placement>*+* {
+header .heading .menu-placement>*+* {
     margin-left: 20px;
 }
 
-header #heading #menu-placement .hamburger-box span {
+header .heading .menu-placement .hamburger-box span {
     font-size: 1.438rem;
     line-height: 45px
 }
 
-header #header-floor #bottom-header-one #submit-button {
+header .header-floor .bottom-header-one .submit-button {
     background: none;
     border: none;
     color: #333645;
@@ -125,53 +124,53 @@ header #header-floor #bottom-header-one #submit-button {
     -webkit-font-smoothing: antialiased;
 }
 
-header #header-floor #bottom-header-one {
+header .header-floor .bottom-header-one {
     margin-top: 11px;
     position: relative;
 }
 
-#con-and-dev span {
+.con-and-dev span {
     color: #67809f;
     font-size: 1.438rem;
 }
 
-#it span {
+.it span {
     color: #4183d7;
     font-size: 1.438rem;
 }
 
-#digital-marketing span {
+.digital-marketing span {
     color: #2ecc71;
     font-size: 1.438rem;
 }
 
-#telecom-services span {
+.telecom-services span {
     color: #d64541;
     font-size: 1.438rem;
 }
 
-#web span {
+.web span {
     color: #926fb1;
     font-size: 1.438rem;
 }
 
-#cyber-security span {
+.cyber-security span {
     color: #f62459;
     font-size: 1.438rem;
 }
 
-#developer-course span {
+.developer-course span {
     color: #ce4125;
     font-size: 1.438rem;
 }
 
-#con-and-dev:hover span,
-#it:hover span,
-#digital-marketing:hover span,
-#telecom-services:hover span,
-#web:hover span,
-#cyber-security:hover span,
-#developer-course:hover span {
+.con-and-dev:hover span,
+.it:hover span,
+.digital-marketing:hover span,
+.telecom-services:hover span,
+.web:hover span,
+.cyber-security:hover span,
+.developer-course:hover span {
     color: white;
     text-decoration: none;
 }
