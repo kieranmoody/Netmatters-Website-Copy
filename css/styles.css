@@ -455,7 +455,7 @@ cite {
   bottom: 0;
   left: 0;
   right: 0;
-  z-index: 100;
+  z-index: 999999;
   background-color: rgba(0, 0, 0, 0.7);
   display: flex;
   -webkit-overflow-scrolling: touch;
