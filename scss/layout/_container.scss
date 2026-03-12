@@ -692,9 +692,7 @@ html.menu-active #menu-colorchange::after {
     display: block;
 }
 
-#software,
-#ai,
-#job     {
+.article-position article {
     display: block;
     margin-top: 30px;
 }
@@ -827,3 +825,200 @@ footer #floor-wrapper {
     margin-left: auto;
     margin-right: auto;
 }
+
+//contact-us
+
+
+#middle {
+    margin-bottom: 40px;
+    overflow: hidden;
+}
+
+#offices {
+    margin-top: 20px;
+}
+
+#offices-container {
+    display: block;
+    margin-left: -15px;
+    margin-right: -15px;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+
+
+.office-location {
+    margin-bottom: 30px;
+    display: flex;
+    flex-direction: column;
+    max-width: 100%;
+    position: relative;
+    min-height: 1px;
+    width: 100%;
+    border-radius: 20px;
+    overflow: hidden;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+    border: 1px solid rgb(204, 204, 204);
+    box-shadow: 0 3px 35px rgba(0, 0, 0, 0.1);
+}
+
+.office-location img {
+    vertical-align: middle;
+}
+
+.office-location .content {
+    padding: 30px;
+    text-align: left;
+    display: flex;
+    height: 100%;
+    flex-direction: column;
+    color: #666;
+    align-content: flex-start;
+}
+
+.office-location .content h3 {
+    font-size: 1.25rem;
+    position: relative;
+    margin-bottom: 15px;
+    font-weight: 400;
+    margin: 0 0 15px;
+    color: #333645;
+    text-decoration: none;
+}
+
+.office-location .content h3:hover {
+    text-decoration: underline;
+}
+
+.office-location .content ul {
+    font-size: .8125rem;
+    line-height: 1.375rem;
+    font-weight: 400;
+    margin-bottom: 25px;
+    list-style: none;
+}
+
+.office-location .content .phone-number {
+    color: #926fb1 !important;
+    font-weight: 700;
+    font-size: 1.625rem;
+    line-height: 1.1;
+}
+
+.office-location .content .phone-number:hover {
+    text-decoration: underline;
+}
+
+.office-location .content .office-button {
+    margin-top: 15px;
+    font-size: .9em;
+    padding: 5px 30px;
+    color: #fff;
+    background-color: #926fb1;
+    border: 1px solid #926fb1;
+    height: auto;
+    line-height: 35px;
+    border-radius: 3px;
+    white-space: normal;
+    display: inline-block;
+    margin-bottom: 0;
+    font-weight: 400;
+    text-align: center;
+    vertical-align: middle;
+    cursor: pointer;
+    align-self: flex-start;
+}
+.office-location .content .office-button:hover {
+    background-color: rgb(126, 87, 160);
+    border-color: rgb(115, 80, 147);
+}
+
+#lower {
+    padding-top: 0;
+    padding-bottom: 50px;
+}
+
+#lower-flex {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: -15px;
+    margin-right: -15px;
+}
+
+#form-preview-padding {
+    flex: 0 0 auto;
+    max-width: 100%;
+    position: relative;
+    min-height: 1px;
+    padding-left: 15px;
+    padding-right: 15px;
+    width: 100%;
+}
+
+#form-preview p {
+    line-height: 1.875rem;
+    margin-bottom: 25px;
+    display: block;
+}
+
+.prompt-title {
+    font-weight: 600;
+    color: #333645;
+}
+
+.prompt-answer {
+    font-weight: 600;
+    color: #926fb1 !important;
+    font-size: 1.625rem;
+}
+
+.prompt-answer:hover {
+    text-decoration: underline;
+}
+
+
+#accordion .container {
+    padding: 0;
+    width: auto;
+}
+
+#accordion-hidden {
+    display: none;
+}
+
+#accordion-title h4 {
+    font-size: 1rem;
+    font-weight: 600;
+    margin: 0 0 25px;
+    color: #333645;
+    line-height: 1.875rem;
+}
+
+#accordion-title h4:hover {
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+#accordion-hidden p {
+    line-height: 1.875rem;
+    margin-bottom: 25px;
+    display: block;
+    font-size: 1rem;
+    letter-spacing: .4px;
+    color: #666;
+}
+
+#accordion-hidden #accordion-hidden-special {
+    font-weight: 600;
+    color: #333645;
+}
+
+
+
+
+
+
+
+

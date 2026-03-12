@@ -1,0 +1,172 @@
+//forms
+
+#form-submit {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#form-button {
+    height: auto;
+    line-height: 35px;
+    padding: 5px 15px;
+    text-transform: uppercase;
+    font-size: 1.063rem;
+    border-radius: 3px;
+    white-space: normal;
+    color: #fff;
+    background-color: #333645;
+    border-color: #333645;
+    display: inline-block;
+    margin-bottom: 0;
+    font-weight: 400;
+    text-align: center;
+    vertical-align: middle;
+    cursor: pointer;
+    background-image: none;
+    border: 1px solid transparent;
+    margin: 0;
+}
+
+#form-button:hover {
+    cursor: pointer;
+    background-color: rgb(34, 36, 46);
+    border-color: rgb(25, 26, 34);
+}
+
+#form-submit p {
+    color: #333645;
+    font-size: 85%;
+    letter-spacing: .4px;
+    line-height: 1.42857143;
+    font-weight: 400;
+}
+
+#form-submit span {
+    color: #a94442;
+}
+
+.success {
+    text-align: center;
+    padding-top: 15px;
+    font-weight: 600;
+    color: #333645;
+    display: inline-block;
+    margin-bottom: 5px;
+    line-height: 1.15;
+}
+
+.form-control {
+    height: 47px;
+    padding: 5px 15px;
+    border-color: #ccc;
+    width: 100%;
+    background-color: #fff;
+    background-image: none;
+    border: 1px solid #e5e5e5;
+    border-radius: 2px;
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
+    transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+    display: block;
+    font-size: 14px;
+    line-height: 1.42857143;
+    color: #555;
+    margin: 0;
+}
+
+#contact-us-form,
+.input-positioning {
+    flex: 0 0 auto;
+    max-width: 100%;
+    position: relative;
+    min-height: 1px;
+    width: 100%;
+}
+
+.input-positioning {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+#contact-form {
+    background-color: #e6e7e9;
+    border-radius: 10px;
+    padding: 30px;
+    margin-top: 0em;
+}
+
+#form-top {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: -15px;
+    margin-right: -15px;
+}
+
+.input-group {
+    margin-bottom: 15px;
+}
+
+.input-group label {
+    font-weight: 600;
+    color: #333645;
+    display: inline-block;
+    margin-bottom: 5px;
+}
+
+label.required:after {
+    content: " *";
+    color: #d24d57;
+}
+
+#message {
+    min-height: 100px;
+    height: 100px;
+}
+
+#checkbox-button {
+    appearance: none;
+    border-radius: 3px;
+    border: 3px solid #333645 !important;
+    height: 32px;
+    width: 32px;
+    position: relative;
+    float: left;
+    margin-right: 20px;
+    display: block;
+}
+
+#checkbox-button:hover {
+    cursor: pointer;
+}
+
+#checkbox-button:checked {
+  background-color: #333645;
+}
+
+#checkbox-button:checked::after {
+  content: "✓";
+  color: white;
+  font-size: 18px;
+  position: absolute;
+  left: 6px;
+  top: 1px;
+}
+
+
+.checkbox-text {
+    display: table-cell;
+    vertical-align: top;
+    width: 10000px;
+    zoom: 1;
+    overflow: hidden;
+    font-weight: 600;
+    color: #333645;
+    font-size: 1rem;
+    letter-spacing: .4px;
+    line-height: 32px;
+}
+
+.checkbox-text a {
+    color: #333645;
+    text-decoration: underline;
+}

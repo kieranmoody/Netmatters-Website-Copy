@@ -137,7 +137,6 @@ small {
     line-height: 1.5rem;
     margin-top: 0;
     margin-bottom: 15px;
-    color: #67809f;
     font-weight: 600;
     letter-spacing: 0.4px;
 }
@@ -147,8 +146,11 @@ small {
     font-weight: 600;
 }
 
-#job .article-desc h4 {
+.job-article .article-desc h4 {
     color: #4183d7;
+}
+.news-article .article-desc h4 {
+    color: #67809f;
 }
 
 #view-all {

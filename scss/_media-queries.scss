@@ -365,10 +365,6 @@
         display: flex;
     }
 
-    #job-position {
-        display: none;
-    }
-
     #article-wrap {
         display: flex;
         flex-wrap: wrap;
@@ -394,20 +390,14 @@
     .article-desc .paragraph-sizing {
         min-height: 66px;
     }
+
+    #article-wrap .article-position:nth-child(3) {
+        display: none;
+    }
 }
 
 @media (min-width: 1260px) {
-    #job-position {
-        display: block;
-        width: 33.33333333%;
-        float: left;
-    }
-
-    #software-position {
-        width: 33.33333333%;
-    }
-
-    #ai-position {
+    .article-position {
         width: 33.33333333%;
     }
 }
@@ -489,6 +479,70 @@
     
 }
 
+//contact us page
+@media (min-width: 768px) {
+    #link-back {
+        display: block;
+    }
+}
+
+@media (min-width: 992px) {
+    #link-back {
+        border-top: 0;
+    }
+    #upper #title {
+        padding-top: 50px;
+        padding-bottom: 0px;
+        background-color: white;
+        color: #333645;
+        margin: 0 0 28px;
+    }
+    
+    .office-padding {
+        width: 33.33333333%;
+    }
+
+    #offices-positioning {
+        display: flex;
+        gap: 30px;
+    }
+
+    .office-location {
+        flex: 1;
+    }
+}
+
+//contact-us
+
+@media (max-width: 375px) {
+    #contact-form #form-submit {
+        flex-direction: column-reverse;
+    }
+    #form-submit p {
+        margin-bottom: 10px;
+    }
+}
+
+@media (min-width: 992px) {
+    #form-top .input-positioning {
+        width: 50%;
+    }
+}
+
+@media (min-width: 1260px) {
+    #form-preview-padding {
+        width: 33.33333333%;
+    }
+    #contact-us-form {
+        width: 66.66666667%;
+    }
+    #lower-flex {
+        flex-direction: row-reverse;
+    }
+
+}
+
+
 /* Bug Fixes*/
 
 /* Puts a red outline over every container so overlapping is visable (For bugfixing*/
@@ -498,3 +552,66 @@
     background: rgba(255,0,0,0.1) !important;
 } 
 */
+
+
+
+#my-details {
+    font-weight: 600;
+}
+
+#call-to-action {
+    text-align: center;
+    padding-top: 15px;
+}
+
+#foot-buttons {
+    display: none;
+}
+.js-enabled #foot-buttons {
+    display: block;
+}
+
+#reference-form {
+    display: none
+}
+.js-enabled #reference-form {
+    display: contents;
+}
+
+#foot-buttons {
+    margin-top: 1rem;
+}
+
+//Failure Form Popups
+.field-error {
+    font-size: 0.85rem;
+    color: red;
+    margin-top: 6px;
+    min-height: 18px; /* prevents layout jumping */
+    opacity: 0;
+    transition: opacity 0.25s ease;
+}
+
+.field-error.show {
+    opacity: 1;
+}
+
+.input-invalid {
+    border: 2px solid red !important;
+    outline: none;
+}
+
+.input-valid {
+    border: 2px solid green !important;
+}
+
+#form-status {
+    margin-top: 10px;
+    font-weight: 600;
+    opacity: 0;
+    transition: opacity 0.25s ease;
+}
+
+#form-status.show {
+    opacity: 1;
+}

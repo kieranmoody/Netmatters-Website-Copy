@@ -220,7 +220,7 @@
 
 /*---------------Articles Buttons---------------*/
 
-.article-desc button {
+.news-article .article-desc button {
     background-color: rgb(247, 179, 34);
     color: white;
     border: 1px solid #f7b322;
@@ -232,9 +232,16 @@
     white-space: normal;
 }
 
-#job .article-desc button {
+.job-article .article-desc button {
     background-color: #4183d7;
     border-color: #4183d7;
+    color: white;
+    height: auto;
+    line-height: 35px;
+    padding: 5px 15px;
+    font-size: 1.063rem;
+    border-radius: 3px;
+    white-space: normal;
 }
 
 /*---------------Clients Buttons---------------*/

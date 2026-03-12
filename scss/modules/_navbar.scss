@@ -204,3 +204,48 @@ header .header-floor .bottom-header-one .search-first {
     clear: both;
 }
 
+//contact us page
+#link-back {
+    display: none;
+    color: #333645;
+    font-size: .8125rem;
+    letter-spacing: .4px;
+    border-top: 1px solid #333645;
+    padding: 14px 0 13px;
+    box-shadow: 0 5px 35px rgba(0, 0, 0, .1);
+    line-height: 1.42857143;
+}
+
+#link-back a {
+    color: #333645;
+    font-weight: 700;
+}
+
+#link-back a:hover {
+    text-decoration: underline;
+}
+
+#link-back ul {
+    list-style: none;
+    border-radius: 2px;
+}
+
+#link-back li {
+    display: inline-block;
+}
+
+#link-back li:nth-child(2):before {
+    content: "/\A0";
+    padding: 0 5px;
+}
+
+#upper #title {
+    width: 100%;
+    background-color: #333645;
+    padding: 24px 0;
+    margin-bottom: 50px;
+    color: #fff;
+    font-size: 2.25rem;
+    font-weight: 400;
+    letter-spacing: 0.4px;
+}
