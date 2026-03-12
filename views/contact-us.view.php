@@ -182,7 +182,9 @@
                                     </div>
                                     <div id="form-submit">
                                         <button type="submit" id="form-button">Send Enquiry</button>
-                                        <p><span>*</span> Fields Required</p>
+                                        <div>
+                                            <p><span>*</span> Fields Required</p>
+                                        </div>
                                     </div>
                                     <?php if ($formSuccess): ?>
                                     <div class="container success">Your enquiry has been sent successfully.</div>
