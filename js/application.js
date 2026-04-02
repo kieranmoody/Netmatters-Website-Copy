@@ -148,25 +148,32 @@ accordion.on("click", function(e) {
 //contact form verification
 
 let formDirty = false;
+let isSubmitting = false;
 const form = document.getElementById("contact-form");
 const emailInput = document.getElementById("email");
 
     //If the user has interacted with the form, do they really want to refresh?
 document.addEventListener("DOMContentLoaded", () => {
     
+    //If the user is submitting, recognise this
+    form.addEventListener("submit", () => {
+        isSubmitting = true;
+    });
+
     //If the user has content in the form, do they really want to refresh?
     window.addEventListener("beforeunload", (event) => {
-        if (!formDirty) return;
+        if (!formDirty || isSubmitting) return;
+        form.reset;
         event.preventDefault();
     });
 
     //The user has typed something = dirty form
     form.addEventListener("input", () => {
-    const hasData = [...form.elements].some(el =>
-        el.tagName === "INPUT" || el.tagName === "TEXTAREA" ? el.value.trim() !== "" : false
-    );
-    formDirty = hasData;
-});
+        const hasData = [...form.elements].some(el =>
+            el.tagName === "INPUT" || el.tagName === "TEXTAREA" ? el.value.trim() !== "" : false
+        );
+        formDirty = hasData;
+    });
 
   //Dynamic validation as user types
     const fields = ['name', 'email', 'telephone', 'message', 'company'];
@@ -239,7 +246,7 @@ function markValid(input) {
 
     input.classList.remove("input-invalid");
     input.classList.add("input-valid");
-  console.log("valid");
+    //console.log("valid"); //Test
     if (errorBox) {
         errorBox.textContent = "";
         errorBox.classList.remove("show");
@@ -260,51 +267,51 @@ function validateForm() {
     //FIRST NAME
     if (nameInput.value.trim() === "") {
         markInvalid(nameInput, "Name is required");
-        console.log("Name is required");//Test
+        //console.log("Name is required"); //Test
         valid = false;
         missingFields = true;
     } else {
         markValid(nameInput);
-        console.log("Name Success");//Test
+        //console.log("Name Success"); //Test
     }
 
     //EMAIL
     if (emailInput.value.trim() === "") {
         markInvalid(emailInput, "Email is required");
-        console.log("Email is required");//Test
+        //console.log("Email is required"); //Test
         valid = false;
         missingFields = true;
     }
     else if (!emailRegex.test(emailInput.value.trim())) {
         markInvalid(emailInput, "Enter a valid email address");
-        console.log("Enter a valid email address");//Test
+        //console.log("Enter a valid email address"); //Test
         valid = false;
         emailInvalid = true;
     } else {
         markValid(emailInput);
-        console.log("Email Success");//Test
+        //console.log("Email Success"); //Test
     }
 
     //Phone
     if (phoneInput.value.trim() === "") {
         markInvalid(phoneInput, "Phone is required");
-        console.log("Phone is required");//Test
+        //console.log("Phone is required"); //Test
         valid = false;
         missingFields = true;
     } else {
         markValid(phoneInput);
-        console.log("Phone Success");//Test
+        //console.log("Phone Success"); //Test
     }
 
     //MESSAGE
     if (messageInput.value.trim() === "") {
         markInvalid(messageInput, "Message cannot be empty");
-        console.log("Message cannot be empty");//Test
+        //console.log("Message cannot be empty"); //Test
         valid = false;
         missingFields = true;
     } else {
         markValid(messageInput);
-        console.log("Message Success");//Test
+        //console.log("Message Success"); //Test
     }
 
     //RESULT LOGIC
