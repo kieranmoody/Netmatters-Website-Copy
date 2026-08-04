@@ -515,7 +515,7 @@
 //contact-us
 
 @media (max-width: 375px) {
-    #contact-form #form-submit {
+    #foot-buttons #form-submit {
         flex-direction: column-reverse;
     }
     #form-submit p {
@@ -533,7 +533,7 @@
     #form-preview-padding {
         width: 33.33333333%;
     }
-    #contact-us-form {
+    #contact-form {
         width: 66.66666667%;
     }
     #lower-flex {
@@ -564,19 +564,6 @@
     padding-top: 15px;
 }
 
-#foot-buttons {
-    display: none;
-}
-.js-enabled #foot-buttons {
-    display: block;
-}
-
-#reference-form {
-    display: none
-}
-.js-enabled #reference-form {
-    display: contents;
-}
 
 #foot-buttons {
     margin-top: 1rem;

@@ -5,8 +5,6 @@
 //ini_set('display_startup_errors', 1);
 //error_reporting(E_ALL);
 
-
-
 //Database Connecting//
 require_once __DIR__ . '/vendor/autoload.php';
 
@@ -55,15 +53,15 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $companyClass = "input-valid";
     }
 
-    if (empty($_POST["email"])) {
+    if (empty($_POST["email-address"])) {
         $emailErr = "Email is Required";
         $emailClass = "input-invalid";
-    } elseif (!filter_var($_POST["email"], FILTER_VALIDATE_EMAIL)) {
-        $email = test_input($_POST["email"]);
+    } elseif (!filter_var($_POST["email-address"], FILTER_VALIDATE_EMAIL)) {
+        $email = test_input($_POST["email-address"]);
         $emailErr = "Invalid email format";
         $emailClass = "input-invalid";
     } else {
-        $email = test_input($_POST["email"]);
+        $email = test_input($_POST["email-address"]);
         $emailClass = "input-valid";
     }
 
@@ -104,7 +102,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         ]);
 
 
-        header("Location: contact-us.php?success=1#contact-us-form");
+        header("Location: contact-us.php?success=1");
         exit;
     }
 }

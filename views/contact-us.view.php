@@ -137,25 +137,25 @@
                                 </div>
                             </div>
                         
-                            <div id="contact-us-form">
-                                <form method="post" id="contact-form" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>#contact-us-form" accept-charset="UTF-8"  onsubmit="return validateForm()" novalidate="novalidate">
+                            <div id="contact-form">
+                                <form method="POST" id="foot-buttons" method="POST" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>#foot-buttons" accept-charset="UTF-8"  onsubmit="return validateForm()" novalidate>
                                     <div id="form-top">
                                         <div class="input-positioning">
                                             <div class="input-group">
                                                 <label class="required">Your Name</label>
-                                                <input class="form-control <?php echo $nameClass; ?>" name="name" type="text" id="name" value="<?php echo htmlspecialchars($name); ?>">
+                                                <input type="text" class="form-control <?php echo $nameClass; ?>" name="name" id="name" value="<?php echo htmlspecialchars($name); ?>">
                                             </div>
                                         </div>
                                         <div class="input-positioning">
                                             <div class="input-group">
                                                 <label>Company Name</label>
-                                                <input class="form-control <?php echo $companyClass; ?>" name="company" type="text" id="company" value="<?php echo htmlspecialchars($company); ?>">
+                                                <input type="text" class="form-control <?php echo $companyClass; ?>" name="company" id="company" value="<?php echo htmlspecialchars($company); ?>">
                                             </div>
                                         </div>
                                         <div class="input-positioning">
                                             <div class="input-group">
                                                 <label class="required">Your Email</label>
-                                                <input class="form-control <?php echo $emailClass; ?>" name="email" type="email" id="email" value="<?php echo htmlspecialchars($email); ?>">
+                                                <input type="email" class="form-control <?php echo $emailClass; ?>" id="email-address" name="email-address" value="<?php echo htmlspecialchars($email); ?>">
                                             </div>
                                         </div>
                                         <div class="input-positioning">
@@ -167,7 +167,7 @@
                                     </div>
                                     <div class="input-group">
                                         <label class="required">Message</label>
-                                        <textarea class="form-control <?php echo $messageClass; ?>" name="message" cols="50" rows="10" id="message"><?php echo htmlspecialchars($message); ?></textarea>
+                                        <textarea class="form-control <?php echo $messageClass; ?>"  id="message" name="message" cols="50" rows="10"><?php echo htmlspecialchars($message); ?></textarea>
                                     </div>
                                     <div class="input-group">
                                         <div class="checkbox">
@@ -186,9 +186,9 @@
                                             <p><span>*</span> Fields Required</p>
                                         </div>
                                     </div>
-                                    <?php if ($formSuccess): ?>
-                                    <div class="container success">Your enquiry has been sent successfully.</div>
-                                    <?php endif; ?>
+                                    <div id="form-status" role="alert" class="container alert">
+                                        <strong>Your enquiry has been sent successfully.</strong>
+                                    </div>
                                     <?php
                                         if ($formSuccess) {
                                             $name = "";
@@ -205,6 +205,29 @@
                     </div>
 
                 </main>
+
+                <?php if ($formSuccess): ?>
+                    <script>
+                        document.addEventListener("DOMContentLoaded", function() {
+                            const form = document.getElementById("foot-buttons");
+
+                            if (form) {
+                                form.scrollIntoView({ behavior: "instant", block: "start" });
+                            }
+
+                            showFormStatus("Form submitted successfully!", true);
+
+                            //Changes url so refresh doesn't repeat the success message
+                            if (window.history.replaceState) {
+                                const url = new URL(window.location);
+                                url.searchParams.delete('success');
+                                window.history.replaceState({}, document.title, url.pathname + "#foot-buttons");
+                            }
+                        });
+                    </script>
+                <?php endif; ?>
+
+
                 <?php require("partials/sticky-header.php") ?>
                 <?php require("partials/footer.php") ?>
                 

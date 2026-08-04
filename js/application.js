@@ -145,25 +145,26 @@ accordion.on("click", function(e) {
 
 
 
+
+
+
+
+
+
+
+
 //contact form verification
 
 let formDirty = false;
-let isSubmitting = false;
-const form = document.getElementById("contact-form");
-const emailInput = document.getElementById("email");
+const form = document.getElementById("foot-buttons");
+const emailInput = document.getElementById("email-address");
 
     //If the user has interacted with the form, do they really want to refresh?
 document.addEventListener("DOMContentLoaded", () => {
     
-    //If the user is submitting, recognise this
-    form.addEventListener("submit", () => {
-        isSubmitting = true;
-    });
-
     //If the user has content in the form, do they really want to refresh?
     window.addEventListener("beforeunload", (event) => {
-        if (!formDirty || isSubmitting) return;
-        form.reset;
+        if (!formDirty) return;
         event.preventDefault();
     });
 
@@ -175,8 +176,8 @@ document.addEventListener("DOMContentLoaded", () => {
         formDirty = hasData;
     });
 
-  //Dynamic validation as user types
-    const fields = ['name', 'email', 'telephone', 'message', 'company'];
+    //Dynamic validation as user types
+    const fields = ['name', 'company', 'email-address', 'telephone', 'message'];
     fields.forEach(id => {
       const input = document.getElementById(id);
       if (!input) return;
@@ -190,7 +191,15 @@ document.addEventListener("DOMContentLoaded", () => {
                       : markValid(input);
                   break;
 
-              case 'email':
+                case 'company':
+                    if (input.value.trim() !== "") {
+                    markValid(input);
+                } else {
+                    input.classList.remove("input-valid");
+                }
+                break;
+
+              case 'email-address':
                   if (input.value.trim() === "") {
                       markInvalid(input, "Email is required");
                   } else if (!emailRegex.test(input.value.trim())) {
@@ -201,10 +210,10 @@ document.addEventListener("DOMContentLoaded", () => {
                   break;
 
               case 'telephone':
-                  input.value.trim() === "" 
-                      ? markInvalid(input, "Phone is required")
-                      : markValid(input);
-                  break;
+                    input.value.trim() === "" 
+                        ? markInvalid(input, "Telephone number is required")
+                        : markValid(input);
+                    break;
 
               case 'message':
                   input.value.trim() === "" 
@@ -212,13 +221,6 @@ document.addEventListener("DOMContentLoaded", () => {
                       : markValid(input);
                   break;
 
-              case 'company':
-              if (input.value.trim() !== "") {
-                  markValid(input);
-              } else {
-                  input.classList.remove("input-valid");
-              }
-              break;
           }
       });
      });
@@ -233,7 +235,6 @@ function markInvalid(input, message) {
 
     input.classList.add("input-invalid");
     input.classList.remove("input-valid");
-    console.log("invalid");
 
     if (errorBox) {
         errorBox.textContent = message;
@@ -246,7 +247,7 @@ function markValid(input) {
 
     input.classList.remove("input-invalid");
     input.classList.add("input-valid");
-    //console.log("valid"); //Test
+
     if (errorBox) {
         errorBox.textContent = "";
         errorBox.classList.remove("show");
@@ -261,57 +262,49 @@ function validateForm() {
     let missingFields = false;
 
     const nameInput = document.getElementById("name");
-    const phoneInput = document.getElementById("telephone");
+    const emailInput = document.getElementById("email-address");
+    const telephoneInput = document.getElementById("telephone");
     const messageInput = document.getElementById("message");
 
-    //FIRST NAME
+    //NAME
     if (nameInput.value.trim() === "") {
         markInvalid(nameInput, "Name is required");
-        //console.log("Name is required"); //Test
         valid = false;
         missingFields = true;
     } else {
         markValid(nameInput);
-        //console.log("Name Success"); //Test
     }
 
     //EMAIL
     if (emailInput.value.trim() === "") {
         markInvalid(emailInput, "Email is required");
-        //console.log("Email is required"); //Test
         valid = false;
         missingFields = true;
     }
     else if (!emailRegex.test(emailInput.value.trim())) {
         markInvalid(emailInput, "Enter a valid email address");
-        //console.log("Enter a valid email address"); //Test
         valid = false;
         emailInvalid = true;
     } else {
         markValid(emailInput);
-        //console.log("Email Success"); //Test
     }
 
-    //Phone
-    if (phoneInput.value.trim() === "") {
-        markInvalid(phoneInput, "Phone is required");
-        //console.log("Phone is required"); //Test
+    //TELEPHONE
+    if (telephoneInput.value.trim() === "") {
+        markInvalid(telephoneInput, "Telephone is required");
         valid = false;
         missingFields = true;
     } else {
-        markValid(phoneInput);
-        //console.log("Phone Success"); //Test
+        markValid(telephoneInput);
     }
 
     //MESSAGE
     if (messageInput.value.trim() === "") {
         markInvalid(messageInput, "Message cannot be empty");
-        //console.log("Message cannot be empty"); //Test
         valid = false;
         missingFields = true;
     } else {
         markValid(messageInput);
-        //console.log("Message Success"); //Test
     }
 
     //RESULT LOGIC
@@ -326,7 +319,8 @@ function validateForm() {
         return false;
     }
 
-    showFormStatus("Form Completed Successfully!", true);
+    showFormStatus("Form submitted Successfully!", true);
+    
     formDirty = false;
     return true;
 }
